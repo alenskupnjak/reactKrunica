@@ -10,8 +10,10 @@
 
 # production
 /build
+/krunica
 
 .vscode
+
 
 # misc
 .DS_Store
