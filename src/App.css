@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -116,12 +101,14 @@ body {
   font-size: 1rem;
   font-size: 1.2rem;
   /* margin: auto; */
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: blue;
   /* background-color: rgba(255, 255, 255, 0.8); */
   /* background-size: 1.5rem; */
   padding: 0.3rem;
   border-radius: 0.2rem;
   box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: auto;
   /* transition: transform 0.5s; */
 }
 
@@ -131,14 +118,13 @@ body {
   height: 40px;
 }
 
-.polja-smjer a:link {
-  text-decoration: none;
-  color: #a8a846;
-  opacity: 0.5;
+.sakrij:hover {
+  color: red;
+  display: none;
 }
 
-.polja-smjer i {
-  color: #a8a846;
+.polja-smjer.span:hover {
+  color: red;
   font-size: 1.2rem;
 }
 
@@ -165,7 +151,7 @@ body {
   /* border-radius: 0.2rem; */
   box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: transform 3s;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 
   /* https://www.w3schools.com/css/css3_animations.asp */
   /* animation-name: example;
@@ -211,7 +197,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: '0';
   width: 420px;
   height: 600px;
 
@@ -235,7 +221,7 @@ body {
   left: 50%;
   /* right: 50%; */
   /* left: rem; */
-  z-index: 2;
+  /* z-index: 2; */
   border-radius: 5rem;
   /* transform: scale(0.8); */
   color: red;
@@ -484,6 +470,11 @@ a:active {
   width: 100%;
 }
 
+.sli-baza:hover {
+  background-color: red;
+  display: none;
+}
+
 /*Mobile*/
 /* aktivira se na sve manje od 768 px*/
 @media only screen and (max-width: 768px) {
@@ -532,4 +523,3 @@ a:active {
     width: 100%;
   }
 }
-
