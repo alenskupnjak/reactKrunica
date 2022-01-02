@@ -5,15 +5,13 @@ import Typography from '@mui/material/Typography';
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
-import Amen from './Amen';
+import SlavaOcu from './SlavaOcu';
 
-function Zrno() {
+function Zrno(props) {
   // const { brojZrna } = props;
-  const { aktivnaZemlja, aktivnoOtajstvo, zrno } = storeKrunica;
+  const { aktivnaZemlja, zrno, aktivnoOtajstvo } = storeKrunica;
 
   // console.log('aktivanTekstZrno', aktivanTekstZrno);
-  console.log('aktivnaZemlja', aktivnaZemlja);
-  // console.log('aktivnoOtajstvo*----', aktivnoOtajstvo);
 
   return (
     <Fragment>
@@ -21,95 +19,79 @@ function Zrno() {
         <ZdravoMarijaPocetak />
         <div>
           <Typography className="zeleno" variant="h5">
-            {/* Prva desetica */}
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
-              zrno > 6 &&
-              zrno < 16 &&
+              zrno === 16 &&
               aktivnaZemlja.prvaDeseticaZalosna}
             {aktivnoOtajstvo === 'otajstvoSlavno' &&
-              zrno > 6 &&
-              zrno < 16 &&
+              zrno === 16 &&
               aktivnaZemlja.prvaDeseticaSlavna}
             {aktivnoOtajstvo === 'otajstvoRadosna' &&
-              zrno > 6 &&
-              zrno < 16 &&
+              zrno === 16 &&
               aktivnaZemlja.prvaDeseticaRadosna}
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
-              zrno > 6 &&
-              zrno < 16 &&
+              zrno === 16 &&
               aktivnaZemlja.prvaDeseticaSvjetla}
-            {/* Druga desetica */}
+
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
-              zrno > 17 &&
-              zrno < 27 &&
+              zrno === 27 &&
               aktivnaZemlja.drugaDeseticaZalosna}
             {aktivnoOtajstvo === 'otajstvoSlavno' &&
-              zrno > 17 &&
-              zrno < 27 &&
+              zrno === 27 &&
               aktivnaZemlja.drugaDeseticaSlavna}
             {aktivnoOtajstvo === 'otajstvoRadosna' &&
-              zrno > 17 &&
-              zrno < 27 &&
+              zrno === 27 &&
               aktivnaZemlja.drugaDeseticaRadosna}
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
-              zrno > 17 &&
-              zrno < 27 &&
+              zrno === 27 &&
               aktivnaZemlja.drugaDeseticaSvjetla}
-            {/* Treca desetica */}
+
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
-              zrno > 28 &&
-              zrno < 38 &&
+              zrno === 38 &&
               aktivnaZemlja.trecaDeseticaZalosna}
             {aktivnoOtajstvo === 'otajstvoSlavno' &&
-              zrno > 28 &&
-              zrno < 38 &&
+              zrno === 38 &&
               aktivnaZemlja.trecaDeseticaSlavna}
             {aktivnoOtajstvo === 'otajstvoRadosna' &&
-              zrno > 28 &&
-              zrno < 38 &&
+              zrno === 38 &&
               aktivnaZemlja.trecaDeseticaRadosna}
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
-              zrno > 28 &&
-              zrno < 38 &&
+              zrno === 38 &&
               aktivnaZemlja.trecaDeseticaSvjetla}
-            {/* Četvrta desetica */}
+
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
-              zrno > 39 &&
-              zrno < 49 &&
+              zrno === 49 &&
               aktivnaZemlja.cetvrtaDeseticaZalosna}
             {aktivnoOtajstvo === 'otajstvoSlavno' &&
-              zrno > 39 &&
-              zrno < 49 &&
+              zrno === 49 &&
               aktivnaZemlja.cetvrtaDeseticaSlavna}
             {aktivnoOtajstvo === 'otajstvoRadosna' &&
-              zrno > 39 &&
-              zrno < 49 &&
+              zrno === 49 &&
               aktivnaZemlja.cetvrtaDeseticaRadosna}
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
-              zrno > 39 &&
-              zrno < 49 &&
+              zrno === 49 &&
               aktivnaZemlja.cetvrtaDeseticaSvjetla}
-            {/* Peta desetica */}
+
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
-              zrno > 50 &&
-              zrno < 60 &&
+              zrno === 60 &&
               aktivnaZemlja.petaDeseticaZalosna}
             {aktivnoOtajstvo === 'otajstvoSlavno' &&
-              zrno > 50 &&
-              zrno < 60 &&
+              zrno === 60 &&
               aktivnaZemlja.petaDeseticaSlavna}
             {aktivnoOtajstvo === 'otajstvoRadosna' &&
-              zrno > 50 &&
-              zrno < 60 &&
+              zrno === 60 &&
               aktivnaZemlja.petaDeseticaRadosna}
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
-              zrno > 50 &&
-              zrno < 60 &&
+              zrno === 60 &&
               aktivnaZemlja.petaDeseticaSvjetla}
           </Typography>
         </div>
-        <ZdravoMarijaKraj />
-        <Amen />
+        <div>
+          <ZdravoMarijaKraj />
+        </div>
+        <div>
+          <SlavaOcu />
+        </div>
+        {aktivnaZemlja.oMojIsuse}
       </div>
     </Fragment>
   );

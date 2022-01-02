@@ -1,15 +1,18 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
+import Amen from './Amen';
 
 function SlavaOcu() {
+  const { aktivnaZemlja } = storeKrunica;
+
   return (
     <Fragment>
-      <div class="opis-molitve">
-        <strong>Slava Ocu</strong> i Sinu{' '}
-        <span style={{ fontSize: '24px' }}>†</span> i Duhu Svetomu. Kako bijaše
-        na početku, tako i sada i vazda i u vijeke vjekova.
-        <div>Amen.</div>
+      <div className="opis-molitve">
+        {aktivnaZemlja.slavaOcu}
+        <div>
+          <Amen />
+        </div>
       </div>
     </Fragment>
   );

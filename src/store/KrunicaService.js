@@ -4,10 +4,10 @@ import { talijanski } from './zemlje/Talijanski';
 
 // Vrijednosti otajstva
 export const getOtajstva = () => [
-  'otajstvoRadosna',
-  'otajstvoSvjetla',
-  'otajstvoZalosno',
-  'otajstvoSlavno',
+  { id: 'otajstvoRadosna', text: null },
+  { id: 'otajstvoSvjetla', text: null },
+  { id: 'otajstvoZalosno', text: null },
+  { id: 'otajstvoSlavno', text: null },
 ];
 
 //

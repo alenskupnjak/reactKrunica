@@ -1,17 +1,20 @@
-// import { makeObservable, observable, action, computed } from 'mobx';
 import { makeObservable, observable, computed, action } from 'mobx';
-import { filter, head } from 'lodash';
+import { filter, head, find } from 'lodash';
 
-import { getListaZemalja } from './KrunicaService';
+import { getListaZemalja, getOtajstva } from './KrunicaService';
 
 class KrunicaStore {
   constructor(fn) {
     makeObservable(this, {
       trenutnaZemlja: observable,
       aktivnaZemlja: computed,
+      otajstvoTekst: computed,
+      aktivanTekstZrno: computed,
       zrno: observable,
       naprijed: action,
       nazad: action,
+      aktivnoOtajstvo: observable,
+      // otajstva: action,
       // pages: observable,
       // page: observable,
       // setPage: action,
@@ -32,32 +35,75 @@ class KrunicaStore {
     this.fn = fn;
   }
 
-  // IInicijalna zemlja
+  // Inicijalna zemlja
   trenutnaZemlja = 'Hrvatski';
+  // aktivnoOtajstvo = 'otajstvoRadosna';
+  // aktivnoOtajstvo = 'otajstvoSlavno';
+  // aktivnoOtajstvo = 'otajstvoSvjetla';
+  aktivnoOtajstvo = 'otajstvoZalosno';
+  listaOtajstva = [];
   zrno = 0;
 
   get aktivnaZemlja() {
-    return head(
+    const podaciZemlje = head(
       filter(getListaZemalja(), (data) => {
         return data.jezik === this.trenutnaZemlja;
       }),
     );
+
+    if (this.zrno === 0) {
+      this.initOtajstva(podaciZemlje);
+    }
+    return podaciZemlje;
   }
 
-  naprijed = () => {
-    this.zrno++;
-    console.log('Naprijed =', this.zrno);
+  initOtajstva = (podaciZemlje) => {
+    // console.log(podaciZemlje);
+    // console.log(getOtajstva());
+    this.listaOtajstva = getOtajstva().map((data) => {
+      return {
+        ...data,
+        text: podaciZemlje[data.id],
+      };
+    });
+    // console.log(this.listaOtajstva);
   };
 
-  get dodaj() {
-    return this.zrno++;
+  // Ocitava vrijednost otajstva text prijevod
+  get otajstvoTekst() {
+    return find(this.listaOtajstva, (data) => {
+      return data.id === this.aktivnoOtajstvo;
+    }).text;
+  }
+  //Pronalazi text vrijednost
+  get aktivanTekstZrno() {
+    let podatak;
+    for (const [key, value] of Object.entries(this.aktivnaZemlja)) {
+      // console.log(`${key}: ${value}`);
+      if (key === `text${this.zrno}`) {
+        // console.log('%c evo ga', 'color:red', `text${this.zrno}`);
+        podatak = `${value}`;
+      }
+    }
+    return podatak;
   }
 
+  // mijenja zrno naprijed
+  naprijed = () => {
+    if (this.zrno === 61) {
+      return;
+    }
+    this.zrno++;
+    console.log('Zrno =', this.zrno);
+  };
+
+  // Mijenja zrno nazad
   nazad = () => {
     if (this.zrno === 0) {
       return;
     }
-    return this.zrno--;
+    this.zrno--;
+    console.log('Zrno =', this.zrno);
   };
 
   // dataExample = this.data;

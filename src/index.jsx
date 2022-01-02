@@ -4,11 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { red } from '@mui/material/colors';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // main: red[500],
+      main: red[300],
+    },
+  },
+  typography: {
+    fontFamily: ['Cardo', 'Open Sans'].join(','),
+    typography: {
+      h1: {
+        fontFamily: 'Arial, Open Sans',
+      },
+    },
+  },
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
