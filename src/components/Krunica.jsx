@@ -51,6 +51,15 @@ import zrno49 from '../img/49.png';
 import zrno50 from '../img/50.png';
 import zrno51 from '../img/51.png';
 import zrno52 from '../img/52.png';
+import zrno53 from '../img/53.png';
+import zrno54 from '../img/54.png';
+import zrno55 from '../img/55.png';
+import zrno56 from '../img/56.png';
+import zrno57 from '../img/57.png';
+import zrno58 from '../img/58.png';
+import zrno59 from '../img/59.png';
+import zrno60 from '../img/60.png';
+import zrno61 from '../img/61.png';
 
 import { observer } from 'mobx-react';
 // import { Fragment } from 'react';
@@ -65,6 +74,7 @@ import OceNas from './OceNas';
 import Zrno from './Zrno';
 import SlavaOcu from './SlavaOcu';
 import ZrnoDeset from './ZrnoDeset';
+import KrajKrunice from './KrajKrunice';
 
 function Krunica() {
   const { zrno, naprijed, nazad, aktivnaZemlja, otajstvoTekst } = storeKrunica;
@@ -125,6 +135,17 @@ function Krunica() {
         {zrno === 48 && <img src={zrno48} className="sli-baza" alt="krunica" />}
         {zrno === 49 && <img src={zrno49} className="sli-baza" alt="krunica" />}
         {zrno === 50 && <img src={zrno50} className="sli-baza" alt="krunica" />}
+        {zrno === 51 && <img src={zrno51} className="sli-baza" alt="krunica" />}
+        {zrno === 52 && <img src={zrno52} className="sli-baza" alt="krunica" />}
+        {zrno === 53 && <img src={zrno53} className="sli-baza" alt="krunica" />}
+        {zrno === 54 && <img src={zrno54} className="sli-baza" alt="krunica" />}
+        {zrno === 55 && <img src={zrno55} className="sli-baza" alt="krunica" />}
+        {zrno === 56 && <img src={zrno56} className="sli-baza" alt="krunica" />}
+        {zrno === 57 && <img src={zrno57} className="sli-baza" alt="krunica" />}
+        {zrno === 58 && <img src={zrno58} className="sli-baza" alt="krunica" />}
+        {zrno === 59 && <img src={zrno59} className="sli-baza" alt="krunica" />}
+        {zrno === 60 && <img src={zrno60} className="sli-baza" alt="krunica" />}
+        {zrno === 61 && <img src={zrno61} className="sli-baza" alt="krunica" />}
       </div>
 
       <div className="col-1-of-2">
@@ -155,6 +176,7 @@ function Krunica() {
           </Typography>
         </div>
 
+        {/* {zrno === 0 && <KrajKrunice />} */}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}
         {zrno === 2 && <Zrno />}
@@ -216,7 +238,7 @@ function Krunica() {
         {zrno === 58 && <Zrno />}
         {zrno === 59 && <Zrno />}
         {zrno === 60 && <ZrnoDeset />}
-        {zrno === 61 && <OceNas />}
+        {zrno === 61 && <KrajKrunice />}
       </div>
     </div>
   );

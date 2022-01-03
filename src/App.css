@@ -138,6 +138,10 @@ body {
   /* animation: slideInFromLeft 1s ease-out; */
 }
 
+.slomiLiniju {
+  white-space: pre-line;
+}
+
 .cijela-stranica {
   font-size: 1.3rem;
 }
