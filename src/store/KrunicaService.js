@@ -2,6 +2,7 @@ import { hrvatski } from './zemlje/Hrvatski';
 import { engleski } from './zemlje/Engleski';
 import { talijanski } from './zemlje/Talijanski';
 
+//
 // Vrijednosti otajstva
 export const getOtajstva = () => [
   { id: 'otajstvoRadosna', text: null },

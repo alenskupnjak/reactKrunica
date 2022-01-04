@@ -62,7 +62,7 @@ import zrno60 from '../img/60.png';
 import zrno61 from '../img/61.png';
 
 import { observer } from 'mobx-react';
-// import { Fragment } from 'react';
+import { Fragment } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Typography from '@mui/material/Typography';
@@ -75,91 +75,110 @@ import Zrno from './Zrno';
 import SlavaOcu from './SlavaOcu';
 import ZrnoDeset from './ZrnoDeset';
 import KrajKrunice from './KrajKrunice';
+import { Container } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  zaglavlje: {
+    display: 'flex',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+  },
+  opisZrna: {
+    fontFamily: 'Cardo',
+    display: 'flex',
+    fontSize: '2rem',
+    marginTop: '1rem',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+    backgroundSize: '1.5rem',
+    padding: '0.5rem',
+    marginBottom: '2rem',
+    textAlign: 'center',
+    borderRadius: '0.2rem',
+    boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
+    // transition: transform ,'1s'
+  },
+  slikaKrunice: {
+    position: 'relative',
+    left: '0',
+    top: '0',
+    margin: 'auto',
+    /* background-color: #6730ff; */
+    /* height: 60vh; */
+    width: '100%',
+  },
+  sliBaza: {
+    position: 'fixed',
+    // display: 'block',
+    top: '0',
+    left: '0',
+    // zIndex: '-1',
+    width: '420px',
+    height: '600px',
+    translateX: '-50%',
+    opacity: '0.2',
+    // '&:hover': {
+    //   display: 'none',
+    // },
+  },
+  slomiLiniju: {
+    whiteSpace: 'pre-line',
+  },
+  nivo: {
+    zIndex: '5',
+  },
+
+  // container: {
+  //   height: "100vh",
+  //   color: "white",
+  //   paddingTop: theme.spacing(10),
+  //   backgroundColor: theme.palette.primary.main,
+  //   position: "sticky",
+  //   top: 0,
+  //   [theme.breakpoints.up("sm")]: {
+  //     backgroundColor: "white",
+  //     color: "#555",
+  //     border: "1px solid #ece7e7",
+  //   },
+  // },
+  // item: {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   marginBottom: theme.spacing(4),
+  //   [theme.breakpoints.up("sm")]: {
+  //     marginBottom: theme.spacing(3),
+  //     cursor: "pointer",
+  //   },
+  // },
+  // icon: {
+  //   marginRight: theme.spacing(1),
+  //   [theme.breakpoints.up("sm")]: {
+  //     fontSize: "18px",
+  //   },
+  // },
+  // text: {
+  //   fontWeight: 500,
+  //   [theme.breakpoints.down("sm")]: {
+  //     display: "none",
+  //   },
+  // },
+}));
 
 function Krunica() {
   const { zrno, naprijed, nazad, aktivnaZemlja, otajstvoTekst } = storeKrunica;
-
-  // console.log(otajstvoTekst);
+  const classes = useStyles();
 
   return (
-    <div className="row">
-      <div className="col-1-of-2 slika-krunice">
-        {zrno === 0 && <img src={zrno00} className="sli-baza" alt="krunica" />}
-        {zrno === 1 && <img src={zrno01} className="sli-baza" alt="krunica" />}
-        {zrno === 2 && <img src={zrno02} className="sli-baza" alt="krunica" />}
-        {zrno === 3 && <img src={zrno03} className="sli-baza" alt="krunica" />}
-        {zrno === 4 && <img src={zrno04} className="sli-baza" alt="krunica" />}
-        {zrno === 5 && <img src={zrno05} className="sli-baza" alt="krunica" />}
-        {zrno === 6 && <img src={zrno06} className="sli-baza" alt="krunica" />}
-        {zrno === 7 && <img src={zrno07} className="sli-baza" alt="krunica" />}
-        {zrno === 8 && <img src={zrno08} className="sli-baza" alt="krunica" />}
-        {zrno === 9 && <img src={zrno09} className="sli-baza" alt="krunica" />}
-        {zrno === 10 && <img src={zrno10} className="sli-baza" alt="krunica" />}
-        {zrno === 11 && <img src={zrno11} className="sli-baza" alt="krunica" />}
-        {zrno === 12 && <img src={zrno12} className="sli-baza" alt="krunica" />}
-        {zrno === 13 && <img src={zrno13} className="sli-baza" alt="krunica" />}
-        {zrno === 14 && <img src={zrno14} className="sli-baza" alt="krunica" />}
-        {zrno === 15 && <img src={zrno15} className="sli-baza" alt="krunica" />}
-        {zrno === 16 && <img src={zrno16} className="sli-baza" alt="krunica" />}
-        {zrno === 17 && <img src={zrno17} className="sli-baza" alt="krunica" />}
-        {zrno === 18 && <img src={zrno18} className="sli-baza" alt="krunica" />}
-        {zrno === 19 && <img src={zrno19} className="sli-baza" alt="krunica" />}
-        {zrno === 20 && <img src={zrno20} className="sli-baza" alt="krunica" />}
-        {zrno === 21 && <img src={zrno21} className="sli-baza" alt="krunica" />}
-        {zrno === 22 && <img src={zrno22} className="sli-baza" alt="krunica" />}
-        {zrno === 23 && <img src={zrno23} className="sli-baza" alt="krunica" />}
-        {zrno === 24 && <img src={zrno24} className="sli-baza" alt="krunica" />}
-        {zrno === 25 && <img src={zrno25} className="sli-baza" alt="krunica" />}
-        {zrno === 26 && <img src={zrno26} className="sli-baza" alt="krunica" />}
-        {zrno === 27 && <img src={zrno27} className="sli-baza" alt="krunica" />}
-        {zrno === 28 && <img src={zrno28} className="sli-baza" alt="krunica" />}
-        {zrno === 29 && <img src={zrno29} className="sli-baza" alt="krunica" />}
-        {zrno === 30 && <img src={zrno30} className="sli-baza" alt="krunica" />}
-        {zrno === 31 && <img src={zrno31} className="sli-baza" alt="krunica" />}
-        {zrno === 32 && <img src={zrno32} className="sli-baza" alt="krunica" />}
-        {zrno === 33 && <img src={zrno33} className="sli-baza" alt="krunica" />}
-        {zrno === 34 && <img src={zrno34} className="sli-baza" alt="krunica" />}
-        {zrno === 35 && <img src={zrno35} className="sli-baza" alt="krunica" />}
-        {zrno === 36 && <img src={zrno36} className="sli-baza" alt="krunica" />}
-        {zrno === 37 && <img src={zrno37} className="sli-baza" alt="krunica" />}
-        {zrno === 38 && <img src={zrno38} className="sli-baza" alt="krunica" />}
-        {zrno === 39 && <img src={zrno39} className="sli-baza" alt="krunica" />}
-        {zrno === 40 && <img src={zrno40} className="sli-baza" alt="krunica" />}
-        {zrno === 41 && <img src={zrno41} className="sli-baza" alt="krunica" />}
-        {zrno === 42 && <img src={zrno42} className="sli-baza" alt="krunica" />}
-        {zrno === 43 && <img src={zrno43} className="sli-baza" alt="krunica" />}
-        {zrno === 44 && <img src={zrno44} className="sli-baza" alt="krunica" />}
-        {zrno === 45 && <img src={zrno45} className="sli-baza" alt="krunica" />}
-        {zrno === 46 && <img src={zrno46} className="sli-baza" alt="krunica" />}
-        {zrno === 47 && <img src={zrno47} className="sli-baza" alt="krunica" />}
-        {zrno === 48 && <img src={zrno48} className="sli-baza" alt="krunica" />}
-        {zrno === 49 && <img src={zrno49} className="sli-baza" alt="krunica" />}
-        {zrno === 50 && <img src={zrno50} className="sli-baza" alt="krunica" />}
-        {zrno === 51 && <img src={zrno51} className="sli-baza" alt="krunica" />}
-        {zrno === 52 && <img src={zrno52} className="sli-baza" alt="krunica" />}
-        {zrno === 53 && <img src={zrno53} className="sli-baza" alt="krunica" />}
-        {zrno === 54 && <img src={zrno54} className="sli-baza" alt="krunica" />}
-        {zrno === 55 && <img src={zrno55} className="sli-baza" alt="krunica" />}
-        {zrno === 56 && <img src={zrno56} className="sli-baza" alt="krunica" />}
-        {zrno === 57 && <img src={zrno57} className="sli-baza" alt="krunica" />}
-        {zrno === 58 && <img src={zrno58} className="sli-baza" alt="krunica" />}
-        {zrno === 59 && <img src={zrno59} className="sli-baza" alt="krunica" />}
-        {zrno === 60 && <img src={zrno60} className="sli-baza" alt="krunica" />}
-        {zrno === 61 && <img src={zrno61} className="sli-baza" alt="krunica" />}
-      </div>
-
-      <div className="col-1-of-2">
-        <div className="row zaglavlje">
-          <div className="col-2-of-4" title={aktivnaZemlja.title}>
-            <Typography>{otajstvoTekst}</Typography>
-          </div>
-          <div className="col-2-of-4 povratak" title={aktivnaZemlja.title}>
-            Link na pocetak
-          </div>
+    <Container className={classes.slikaKrunice}>
+      <Container>
+        <div className={classes.zaglavlje}>
+          <Typography>{otajstvoTekst}</Typography>
+          <Typography> Link na pocetak</Typography>
         </div>
 
-        <div className="opis-zrna">
-          <Typography align="left" body="span">
+        <div className={classes.opisZrna}>
+          <Typography align="left" body="span" className={classes.nivo}>
             <ArrowBackIosIcon
               onClick={() => {
                 nazad();
@@ -167,7 +186,7 @@ function Krunica() {
             />
           </Typography>
           <Typography body="span">{aktivnaZemlja[`naslov${zrno}`]}</Typography>
-          <Typography align="right" body="span">
+          <Typography align="right" body="span" className={classes.nivo}>
             <ArrowForwardIosIcon
               onClick={() => {
                 naprijed();
@@ -239,8 +258,74 @@ function Krunica() {
         {zrno === 59 && <Zrno />}
         {zrno === 60 && <ZrnoDeset />}
         {zrno === 61 && <KrajKrunice />}
+      </Container>
+      {/* <Container> */}
+      <div className={classes.sliBaza}>
+        {zrno === 0 && <img src={zrno00} alt="krunica" />}
+        {zrno === 1 && <img src={zrno01} alt="krunica" />}
+        {zrno === 2 && <img src={zrno02} alt="krunica" />}
+        {zrno === 3 && <img src={zrno03} alt="krunica" />}
+        {zrno === 4 && <img src={zrno04} alt="krunica" />}
+        {zrno === 5 && <img src={zrno05} alt="krunica" />}
+        {zrno === 6 && <img src={zrno06} alt="krunica" />}
+        {zrno === 7 && <img src={zrno07} alt="krunica" />}
+        {zrno === 8 && <img src={zrno08} alt="krunica" />}
+        {zrno === 9 && <img src={zrno09} alt="krunica" />}
+        {zrno === 10 && <img src={zrno10} alt="krunica" />}
+        {zrno === 11 && <img src={zrno11} alt="krunica" />}
+        {zrno === 12 && <img src={zrno12} alt="krunica" />}
+        {zrno === 13 && <img src={zrno13} alt="krunica" />}
+        {zrno === 14 && <img src={zrno14} alt="krunica" />}
+        {zrno === 15 && <img src={zrno15} alt="krunica" />}
+        {zrno === 16 && <img src={zrno16} alt="krunica" />}
+        {zrno === 17 && <img src={zrno17} alt="krunica" />}
+        {zrno === 18 && <img src={zrno18} alt="krunica" />}
+        {zrno === 19 && <img src={zrno19} alt="krunica" />}
+        {zrno === 20 && <img src={zrno20} alt="krunica" />}
+        {zrno === 21 && <img src={zrno21} alt="krunica" />}
+        {zrno === 22 && <img src={zrno22} alt="krunica" />}
+        {zrno === 23 && <img src={zrno23} alt="krunica" />}
+        {zrno === 24 && <img src={zrno24} alt="krunica" />}
+        {zrno === 25 && <img src={zrno25} alt="krunica" />}
+        {zrno === 26 && <img src={zrno26} alt="krunica" />}
+        {zrno === 27 && <img src={zrno27} alt="krunica" />}
+        {zrno === 28 && <img src={zrno28} alt="krunica" />}
+        {zrno === 29 && <img src={zrno29} alt="krunica" />}
+        {zrno === 30 && <img src={zrno30} alt="krunica" />}
+        {zrno === 31 && <img src={zrno31} alt="krunica" />}
+        {zrno === 32 && <img src={zrno32} alt="krunica" />}
+        {zrno === 33 && <img src={zrno33} alt="krunica" />}
+        {zrno === 34 && <img src={zrno34} alt="krunica" />}
+        {zrno === 35 && <img src={zrno35} alt="krunica" />}
+        {zrno === 36 && <img src={zrno36} alt="krunica" />}
+        {zrno === 37 && <img src={zrno37} alt="krunica" />}
+        {zrno === 38 && <img src={zrno38} alt="krunica" />}
+        {zrno === 39 && <img src={zrno39} alt="krunica" />}
+        {zrno === 40 && <img src={zrno40} alt="krunica" />}
+        {zrno === 41 && <img src={zrno41} alt="krunica" />}
+        {zrno === 42 && <img src={zrno42} alt="krunica" />}
+        {zrno === 43 && <img src={zrno43} alt="krunica" />}
+        {zrno === 44 && <img src={zrno44} alt="krunica" />}
+        {zrno === 45 && <img src={zrno45} alt="krunica" />}
+        {zrno === 46 && <img src={zrno46} alt="krunica" />}
+        {zrno === 47 && <img src={zrno47} alt="krunica" />}
+        {zrno === 48 && <img src={zrno48} alt="krunica" />}
+        {zrno === 49 && <img src={zrno49} alt="krunica" />}
+        {zrno === 50 && <img src={zrno50} alt="krunica" />}
+        {zrno === 51 && <img src={zrno51} alt="krunica" />}
+        {zrno === 52 && <img src={zrno52} alt="krunica" />}
+        {zrno === 53 && <img src={zrno53} alt="krunica" />}
+        {zrno === 54 && <img src={zrno54} alt="krunica" />}
+        {zrno === 55 && <img src={zrno55} alt="krunica" />}
+        {zrno === 56 && <img src={zrno56} alt="krunica" />}
+        {zrno === 57 && <img src={zrno57} alt="krunica" />}
+        {zrno === 58 && <img src={zrno58} alt="krunica" />}
+        {zrno === 59 && <img src={zrno59} alt="krunica" />}
+        {zrno === 60 && <img src={zrno60} alt="krunica" />}
+        {zrno === 61 && <img src={zrno61} alt="krunica" />}
       </div>
-    </div>
+      {/* </Container> */}
+    </Container>
   );
 }
 
