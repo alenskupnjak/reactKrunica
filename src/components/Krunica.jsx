@@ -166,14 +166,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Krunica() {
-  const { zrno, naprijed, nazad, aktivnaZemlja, otajstvoTekst } = storeKrunica;
+  const {
+    zrno,
+    naprijed,
+    nazad,
+    aktivnaZemlja,
+    otajstvoTekst,
+    trenutniJezik,
+    prijevodOtajstvatext,
+  } = storeKrunica;
   const classes = useStyles();
+
+  console.log('prijevodOtajstvatext', prijevodOtajstvatext);
 
   return (
     <Container className={classes.slikaKrunice}>
       <Container>
         <div className={classes.zaglavlje}>
-          <Typography>{otajstvoTekst}</Typography>
+          {prijevodOtajstvatext && (
+            <Typography>{prijevodOtajstvatext}</Typography>
+          )}
           <Typography> Link na pocetak</Typography>
         </div>
 

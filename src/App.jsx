@@ -28,7 +28,7 @@ function App() {
   return (
     <Fragment>
       <Menu></Menu>
-      <Grid xs={12} md={6} className={classes.container}>
+      <Grid item xs={12} md={6} className={classes.container}>
         <Krunica></Krunica>
       </Grid>
     </Fragment>
