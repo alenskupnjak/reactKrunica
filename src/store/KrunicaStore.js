@@ -7,29 +7,35 @@ class KrunicaStore {
   constructor(fn) {
     makeObservable(this, {
       trenutniJezik: observable,
+      aktivniDan: observable,
       aktivnaZemlja: computed,
-      otajstvoTekst: computed,
       aktivanTekstZrno: computed,
-      // prijevodOtajstva: action,
-      // prijevodOtajstvatext: observable,
+      getlistaJezika: computed,
+      nazivdanTjedan: observable,
+      getnazivdanTjedan: computed,
+      prijevodOtajstva: action,
+      prijevodOtajstvatext: observable,
       zrno: observable,
       naprijed: action,
+      promjeniListuJezika: action,
       nazad: action,
       aktivnoOtajstvo: observable,
-      // listaJezika: observable,
+      listaJezika: observable,
       promjeniJezik: action,
+      promjeniNazivTjedna: action,
+      promjeniAktivniDan: action,
     });
   }
 
   // Inicijalna zemlja
   trenutniJezik = 'Hrvatski';
-  // aktivnoOtajstvo = 'otajstvoRadosna';
-  // aktivnoOtajstvo = 'otajstvoSlavno';
-  // aktivnoOtajstvo = 'otajstvoSvjetla';
-  aktivnoOtajstvo = 'otajstvoZalosno';
+  aktivnoOtajstvo = 'otajstvoRadosna';
   listaOtajstva = [];
   listaJezika = [];
-  zrno = 0;
+  nazivdanTjedan = [];
+  aktivniDan = 'pon';
+  prijevodOtajstvatext = null;
+  zrno = -1;
 
   get aktivnaZemlja() {
     const podaciZemlje = head(
@@ -38,15 +44,19 @@ class KrunicaStore {
       }),
     );
 
-    console.log(podaciZemlje);
-    // if (this.zrno === 0) {
     this.initPodataka(podaciZemlje);
-    // }
+
+    console.log(podaciZemlje);
+    this.promjeniNazivTjedna(podaciZemlje);
     return podaciZemlje;
   }
 
+  promjeniNazivTjedna = (podaciZemlje) => {
+    this.nazivdanTjedan = podaciZemlje.daniTjedan;
+  };
+
+  //  inicijalizacija podataka
   initPodataka = (podaciZemlje) => {
-    console.log(podaciZemlje);
     this.listaOtajstva = getOtajstva().map((data) => {
       return {
         ...data,
@@ -54,21 +64,62 @@ class KrunicaStore {
       };
     });
 
-    console.log(this.listaOtajstva);
+    console.log('*********', this.listaOtajstva);
 
-    this.listaJezika = getListaZemalja().map((data) => {
-      return { label: data.jezik, value: data.jezik };
-    });
+    this.promjeniListuJezika();
     this.prijevodOtajstva();
   };
 
+  //
+  get getlistaJezika() {
+    return this.listaJezika;
+  }
+
+  // poziva dane u tjednu
+  get getnazivdanTjedan() {
+    return this.nazivdanTjedan;
+  }
+
+  promjeniDanUTjednu = (e) => {
+    this.promjeniAktivniDan(e.target.value);
+
+    console.log(this.aktivniDan);
+    if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
+      this.aktivnoOtajstvo = 'otajstvoRadosna';
+    }
+    if (this.aktivniDan === 'uto' || this.aktivniDan === 'pet') {
+      this.aktivnoOtajstvo = 'otajstvoZalosno';
+    }
+    if (this.aktivniDan === 'sri' || this.aktivniDan === 'ned') {
+      console.log('SLAVNO');
+      this.aktivnoOtajstvo = 'otajstvoSlavno';
+    }
+    if (this.aktivniDan === 'cet') {
+      this.aktivnoOtajstvo = 'otajstvoSvjetla';
+    }
+    this.prijevodOtajstva();
+  };
+
+  // action promjeni aktivni dan
+  promjeniAktivniDan = (data) => {
+    this.aktivniDan = data;
+  };
+
+  promjeniaktivnoOtajstvo = () => {};
+
+  promjeniListuJezika = () => {
+    this.listaJezika = getListaZemalja().map((data) => {
+      return { label: data.jezik, value: data.jezik };
+    });
+  };
+
+  // prevodi OTAJSTVO t
   prijevodOtajstva() {
     this.listaOtajstva.forEach((data) => {
       if (data.id === this.aktivnoOtajstvo) {
         this.prijevodOtajstvatext = data.text;
       }
     });
-    console.log(this.prijevodOtajstvatext);
   }
 
   getlistaSvihJezika() {
@@ -77,12 +128,6 @@ class KrunicaStore {
     });
   }
 
-  // Ocitava vrijednost otajstva text prijevod
-  get otajstvoTekst() {
-    return find(this.listaOtajstva, (data) => {
-      return data.id === this.aktivnoOtajstvo;
-    }).text;
-  }
   //Pronalazi text vrijednost
   get aktivanTekstZrno() {
     let podatak;
@@ -107,7 +152,7 @@ class KrunicaStore {
 
   // Mijenja zrno nazad
   nazad = () => {
-    if (this.zrno === 0) {
+    if (this.zrno === -1) {
       return;
     }
     this.zrno--;
@@ -117,15 +162,35 @@ class KrunicaStore {
   //
   // Promjena jezika
   promjeniJezik = (e) => {
-    console.log(e.target.value);
+    console.log('Jezik=', e.target.value);
     this.trenutniJezik = e.target.value;
-
+    // pronadi podatke zemlje
     const podaciZemlje = head(
       filter(getListaZemalja(), (data) => {
         return data.jezik === this.trenutniJezik;
       }),
     );
-    this.initPodataka(podaciZemlje);
+    console.log(podaciZemlje);
+
+    console.log('Aktivan=', this.aktivniDan);
+    this.prijevodOtajstva();
+    console.log('Lista otajstva=', this.listaOtajstva);
+
+    // this.initPodataka(podaciZemlje);
+
+    if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
+      this.aktivnoOtajstvo = 'otajstvoRadosna';
+    }
+    if (this.aktivniDan === 'uto' || this.aktivniDan === 'pet') {
+      this.aktivnoOtajstvo = 'otajstvoZalosno';
+    }
+    if (this.aktivniDan === 'sri' || this.aktivniDan === 'ned') {
+      console.log('SLAVNO');
+      this.aktivnoOtajstvo = 'otajstvoSlavno';
+    }
+    if (this.aktivniDan === 'cet') {
+      this.aktivnoOtajstvo = 'otajstvoSvjetla';
+    }
   };
 }
 

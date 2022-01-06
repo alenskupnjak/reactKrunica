@@ -1,6 +1,15 @@
 export const hrvatski = {
   id: 'hr',
   jezik: 'Hrvatski',
+  daniTjedan: [
+    { value: 'pon', label: 'Ponedeljak' },
+    { value: 'uto', label: 'Utorak' },
+    { value: 'sri', label: 'Srijeda' },
+    { value: 'cet', label: 'Četvrtak' },
+    { value: 'pet', label: 'Petak' },
+    { value: 'sub', label: 'Subota' },
+    { value: 'ned', label: 'Nedelja' },
+  ],
   title: 'Molitva gospine krunice',
   otajstvoSvjetla: 'Svijetlo',
   otajstvoZalosno: 'Žalosno',

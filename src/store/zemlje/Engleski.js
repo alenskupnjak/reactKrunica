@@ -2,6 +2,15 @@ export const engleski = {
   id: 'en',
   jezik: 'Engleski',
   title: "Our Lady's Rosary Prayer",
+  daniTjedan: [
+    { value: 'pon', label: 'Monday ' },
+    { value: 'uto', label: 'Tuesday' },
+    { value: 'sri', label: 'Wednesday ' },
+    { value: 'cet', label: 'Thursday' },
+    { value: 'pet', label: 'Friday' },
+    { value: 'sub', label: 'Saturday' },
+    { value: 'ned', label: 'Sunday' },
+  ],
   otajstvoSvjetla: 'Light',
   otajstvoZalosno: 'Sorry',
   otajstvoSlavno: 'Famously',
@@ -22,7 +31,7 @@ export const engleski = {
     'O moj Isuse, oprosti nam naše grijehe, očuvaj nas od paklenog ognja, dovedi u raj sve duše, osobito one, kojima je najpotrebnije tvoje milosrđe.',
   zdravoKraljice:
     'Zdravo Kraljice, Majko milosrđa, živote, slasti i ufanje naše, zdravo!\n K tebi vapijemo prognani sinovi Evini. \n K tebi uzdišemo tugujući i plačući u ovoj suznoj dolini. \n Svrni, dakle, Zagovornice naša one svoje milostive oči na nas te nam poslije ovoga progonstva pokaži Isusa, blagoslovljeni plod utrobe svoje. \n O blaga, o mila, o slatka Djevice Marijo.',
-  naslov0: 'Početak krunice - †',
+  naslov0: 'Start english - †',
   text0a: 'U ime Oca i Sina † i Duha Svetoga.',
   text0b:
     ', to je tebi za ljubav, za obraćenje grješnika i kao naknada za uvrede koje se nanose Bezgrešnom Srcu Marijinu.',

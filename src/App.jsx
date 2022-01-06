@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid';
 import { Fragment } from 'react';
 import './App.css';
+import './Okretanje.css';
 import { makeStyles } from '@mui/styles';
 
 import Krunica from './components/Krunica';

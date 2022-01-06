@@ -62,7 +62,7 @@ import zrno60 from '../img/60.png';
 import zrno61 from '../img/61.png';
 
 import { observer } from 'mobx-react';
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Typography from '@mui/material/Typography';
@@ -77,6 +77,7 @@ import ZrnoDeset from './ZrnoDeset';
 import KrajKrunice from './KrajKrunice';
 import { Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import SlikaGospeNaslovna from './SlikaGospeNaslovna';
 
 const useStyles = makeStyles((theme) => ({
   zaglavlje: {
@@ -166,17 +167,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Krunica() {
-  const {
-    zrno,
-    naprijed,
-    nazad,
-    aktivnaZemlja,
-    otajstvoTekst,
-    trenutniJezik,
-    prijevodOtajstvatext,
-  } = storeKrunica;
+  const { zrno, naprijed, nazad, aktivnaZemlja, prijevodOtajstvatext } =
+    storeKrunica;
   const classes = useStyles();
 
+  // console.log('prijevodOtajstvatext', getPrijevodOtajstvatext);
   console.log('prijevodOtajstvatext', prijevodOtajstvatext);
 
   return (
@@ -207,7 +202,7 @@ function Krunica() {
           </Typography>
         </div>
 
-        {/* {zrno === 0 && <KrajKrunice />} */}
+        {zrno === -1 && <SlikaGospeNaslovna />}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}
         {zrno === 2 && <Zrno />}
