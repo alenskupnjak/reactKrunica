@@ -172,26 +172,30 @@ function Krunica() {
   const classes = useStyles();
 
   // console.log('prijevodOtajstvatext', getPrijevodOtajstvatext);
-  console.log('prijevodOtajstvatext', prijevodOtajstvatext);
+  // console.log('prijevodOtajstvatext', prijevodOtajstvatext);
 
   return (
     <Container className={classes.slikaKrunice}>
       <Container>
-        <div className={classes.zaglavlje}>
-          {prijevodOtajstvatext && (
-            <Typography>{prijevodOtajstvatext}</Typography>
-          )}
-          <Typography> Link na pocetak</Typography>
-        </div>
+        {zrno !== -1 && (
+          <div className={classes.zaglavlje}>
+            {prijevodOtajstvatext && (
+              <Typography>{prijevodOtajstvatext}</Typography>
+            )}
+            <Typography> Link na pocetak</Typography>
+          </div>
+        )}
 
         <div className={classes.opisZrna}>
-          <Typography align="left" body="span" className={classes.nivo}>
-            <ArrowBackIosIcon
-              onClick={() => {
-                nazad();
-              }}
-            />
-          </Typography>
+          {zrno !== -1 && (
+            <Typography align="left" body="span" className={classes.nivo}>
+              <ArrowBackIosIcon
+                onClick={() => {
+                  nazad();
+                }}
+              />
+            </Typography>
+          )}
           <Typography body="span">{aktivnaZemlja[`naslov${zrno}`]}</Typography>
           <Typography align="right" body="span" className={classes.nivo}>
             <ArrowForwardIosIcon

@@ -1,6 +1,6 @@
-import { hrvatski } from './zemlje/Hrvatski';
-import { engleski } from './zemlje/Engleski';
-import { talijanski } from './zemlje/Talijanski';
+import { hrvatski } from './language/Hrvatski';
+import { engleski } from './language/Engleski';
+import { newlanguage } from './language/NewLanguage';
 
 //
 // Vrijednosti otajstva
@@ -13,7 +13,7 @@ export const getOtajstva = () => [
 
 //
 // lista zemalja
-const listaZemalja = () => [hrvatski, engleski, talijanski];
+const listaZemalja = () => [hrvatski, engleski, newlanguage];
 export const getListaZemalja = () => {
   return listaZemalja();
 };

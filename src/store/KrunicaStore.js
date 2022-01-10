@@ -28,7 +28,7 @@ class KrunicaStore {
   }
 
   // Inicijalna zemlja
-  trenutniJezik = 'Hrvatski';
+  trenutniJezik = 'Engleski';
   aktivnoOtajstvo = 'otajstvoRadosna';
   listaOtajstva = [];
   listaJezika = [];

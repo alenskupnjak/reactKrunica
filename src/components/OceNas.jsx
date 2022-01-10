@@ -1,16 +1,29 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
+import { makeStyles } from '@mui/styles';
+
 import { storeKrunica } from '../store/KrunicaStore';
 import Amen from './Amen';
 
+const useStyles = makeStyles((theme) => ({
+  opisMolitve: {
+    fontFamily: 'Cardo',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+    marginTop: '0.5rem',
+    textAlign: 'center',
+  },
+}));
+
 function OceNas() {
+  const classes = useStyles();
   const {
     aktivnaZemlja: { oceNas, oceNasText },
   } = storeKrunica;
 
   return (
     <Fragment>
-      <div className="opis-molitve">
+      <div className={classes.opisMolitve}>
         <strong>{oceNas}</strong>
         {oceNasText}
         <div>

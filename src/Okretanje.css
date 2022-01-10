@@ -81,7 +81,7 @@
 /* Slika djevice marije */
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, #ffb900, #2b1f19),
-    url(./slike/slika01.jpg);
+    url(./slike/gospaBistricka.jpg);
 }
 
 .card__heading-span--2 {
@@ -99,6 +99,7 @@
 }
 
 .card__details ul li {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;

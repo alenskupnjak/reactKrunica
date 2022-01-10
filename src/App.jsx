@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import './App.css';
 import './Okretanje.css';
 import { makeStyles } from '@mui/styles';
+// import { storeKrunica } from './store/KrunicaStore';
 
 import Krunica from './components/Krunica';
 import Menu from './components/Menu';
@@ -25,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
+  // const {
+  //   aktivnaZemlja: { zrno },
+  // } = storeKrunica;
   const classes = useStyles();
   return (
     <Fragment>

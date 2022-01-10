@@ -44,6 +44,9 @@ function Zrno() {
         <ZdravoMarijaPocetak />
         <div>
           <Typography className="zeleno" variant="h5">
+            {zrno === 2 && aktivnaZemlja.vjera}
+            {zrno === 3 && aktivnaZemlja.ufanje}
+            {zrno === 4 && aktivnaZemlja.ljubav}
             {/* Prva desetica */}
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
               zrno > 6 &&

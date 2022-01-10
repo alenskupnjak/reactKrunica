@@ -19,13 +19,14 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     zIndex: '5',
     justifyContent: 'space-between',
+    backgroundColor: '#FFE100',
   },
 }));
 
 export default observer(function Menu() {
   const {
     promjeniJezik,
-    // listaJezika,
+    zrno,
     trenutniJezik,
     getlistaJezika,
     getnazivdanTjedan,
@@ -42,7 +43,7 @@ export default observer(function Menu() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar className={classes.menu}>
-          <IconButton
+          {/* <IconButton
             // className={classes.menu}
             size="large"
             edge="start"
@@ -52,7 +53,8 @@ export default observer(function Menu() {
             // onChange={() => promjeniJezik()}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
+          {zrno}
 
           <TextField
             fullWidth
