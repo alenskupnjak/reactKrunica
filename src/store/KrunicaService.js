@@ -1,5 +1,5 @@
 import { hrvatski } from './language/Hrvatski';
-import { engleski } from './language/Engleski';
+import { english } from './language/Engleski';
 import { newlanguage } from './language/NewLanguage';
 
 //
@@ -13,7 +13,7 @@ export const getOtajstva = () => [
 
 //
 // lista zemalja
-const listaZemalja = () => [hrvatski, engleski, newlanguage];
+const listaZemalja = () => [hrvatski, english, newlanguage];
 export const getListaZemalja = () => {
   return listaZemalja();
 };

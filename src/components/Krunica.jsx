@@ -65,6 +65,7 @@ import { observer } from 'mobx-react';
 // import { Fragment } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import Typography from '@mui/material/Typography';
 
 import { storeKrunica } from '../store/KrunicaStore';
@@ -167,8 +168,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Krunica() {
-  const { zrno, naprijed, nazad, aktivnaZemlja, prijevodOtajstvatext } =
-    storeKrunica;
+  const {
+    zrno,
+    naprijed,
+    nazad,
+    aktivnaZemlja,
+    prijevodOtajstvatext,
+    povratakNaPocetak,
+  } = storeKrunica;
   const classes = useStyles();
 
   // console.log('prijevodOtajstvatext', getPrijevodOtajstvatext);
@@ -182,7 +189,16 @@ function Krunica() {
             {prijevodOtajstvatext && (
               <Typography>{prijevodOtajstvatext}</Typography>
             )}
-            <Typography> Link na pocetak</Typography>
+            <Typography
+              className={classes.nivo}
+              align="right"
+              onClick={() => {
+                povratakNaPocetak();
+              }}
+            >
+              {/* {aktivnaZemlja.pocetak} */}
+              <RestartAltIcon />
+            </Typography>
           </div>
         )}
 

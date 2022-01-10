@@ -1,12 +1,12 @@
 import { observer } from 'mobx-react';
-import * as React from 'react';
+// import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 // import Typography from '@mui/material/Typography';
 // import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { makeStyles } from '@mui/styles';
@@ -17,7 +17,7 @@ import { storeKrunica } from '../store/KrunicaStore';
 
 const useStyles = makeStyles((theme) => ({
   menu: {
-    zIndex: '5',
+    zIndex: '3',
     justifyContent: 'space-between',
     backgroundColor: '#FFE100',
   },
@@ -64,7 +64,7 @@ export default observer(function Menu() {
             value={trenutniJezik}
             // onChange={(e) => handleChange(e)}
             onChange={(e) => promjeniJezik(e)}
-            helperText="Jezik"
+            // helperText={jezik}
             // className={classes.menu}
           >
             {getlistaJezika.map((option) => (
@@ -85,7 +85,7 @@ export default observer(function Menu() {
             onChange={(e) => {
               promjeniDanUTjednu(e);
             }}
-            helperText="Dan u tjednu"
+            // helperText="Dan u tjednu"
             // className={classes.menu}
           >
             {getnazivdanTjedan.map((dan) => (

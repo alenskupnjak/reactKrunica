@@ -257,14 +257,6 @@
   background-color: #f7f7f7;
 } */
 
-/* .card__side--back {
-  transform: rotateY(180deg);
-} */
-
-/* .card__side--back-1 {
-  background-image: linear-gradient(to right bottom, #fff, #ffe100);
-} */
-
 /* .card:hover .card__side--front {
   transform: rotateY(-180deg);
   transition: all 2s ease-in;
@@ -283,52 +275,6 @@
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 } */
-
-/* .card__picture--1 {
-  /* background-image: linear-gradient(to right bottom, #ffb900, #2b1f19),
-    url('/img/slika01.jpg'); 
-} */
-
-.card__heading {
-  font-size: 2.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: right;
-  color: #fff;
-  position: absolute;
-  top: 28rem;
-  right: 2rem;
-}
-
-.card__heading-span {
-  padding: 1rem 1rem;
-}
-
-.card__heading-span--1 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(41, 152, 255, 0.7),
-    rgba(236, 236, 236, 0.7)
-  );
-}
-
-.card__heading-span--2 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(255, 185, 0, 0.7),
-    rgba(85, 197, 122, 0.7)
-  );
-}
-
-/* //straznja strana karte */
-.card__cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
-}
 
 .card__price-box {
   display: flex;

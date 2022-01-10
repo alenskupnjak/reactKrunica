@@ -1,6 +1,7 @@
-export const engleski = {
+export const english = {
   id: 'en',
-  jezik: 'Engleski',
+  jezik: 'English',
+  pocetak: 'Start',
   naslovna01: 'Hail Mary and Jesus!',
   naslovna02: 'Holy Mary rosary',
   daniTjedan: [

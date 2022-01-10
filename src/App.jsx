@@ -1,4 +1,5 @@
 import Grid from '@mui/material/Grid';
+import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import './App.css';
 import './Okretanje.css';
@@ -11,7 +12,7 @@ import Menu from './components/Menu';
 const useStyles = makeStyles((theme) => ({
   container: {
     height: '80vh',
-    // margin: 'auto',
+    margin: 'auto',
     // color: 'white',
     // paddingTop: theme.spacing(10),
     // backgroundColor: theme.palette.primary.main,
@@ -26,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
-  // const {
-  //   aktivnaZemlja: { zrno },
-  // } = storeKrunica;
+  // const { zrno } = storeKrunica;
+
   const classes = useStyles();
   return (
     <Fragment>
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);
