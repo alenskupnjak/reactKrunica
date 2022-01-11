@@ -276,13 +276,6 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 } */
 
-.card__price-box {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  /* color: blueviolet; */
-}
-
 .text-srednji {
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -319,11 +312,6 @@ a:hover {
 a:active {
   text-decoration: none;
   color: #c2280c;
-}
-
-.aktivna {
-  font-size: 1.5rem;
-  color: blueviolet;
 }
 
 .zeleno {

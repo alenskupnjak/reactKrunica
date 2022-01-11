@@ -212,7 +212,11 @@ function Krunica() {
               />
             </Typography>
           )}
-          <Typography body="span">{aktivnaZemlja[`naslov${zrno}`]}</Typography>
+          <Typography body="span">
+            {' '}
+            {`${zrno}z-`}
+            {aktivnaZemlja[`naslov${zrno}`]}
+          </Typography>
           <Typography align="right" body="span" className={classes.nivo}>
             <ArrowForwardIosIcon
               onClick={() => {
@@ -286,72 +290,72 @@ function Krunica() {
         {zrno === 60 && <ZrnoDeset />}
         {zrno === 61 && <KrajKrunice />}
       </Container>
-      {/* <Container> */}
-      <div className={classes.sliBaza}>
-        {zrno === 0 && <img src={zrno00} alt="krunica" />}
-        {zrno === 1 && <img src={zrno01} alt="krunica" />}
-        {zrno === 2 && <img src={zrno02} alt="krunica" />}
-        {zrno === 3 && <img src={zrno03} alt="krunica" />}
-        {zrno === 4 && <img src={zrno04} alt="krunica" />}
-        {zrno === 5 && <img src={zrno05} alt="krunica" />}
-        {zrno === 6 && <img src={zrno06} alt="krunica" />}
-        {zrno === 7 && <img src={zrno07} alt="krunica" />}
-        {zrno === 8 && <img src={zrno08} alt="krunica" />}
-        {zrno === 9 && <img src={zrno09} alt="krunica" />}
-        {zrno === 10 && <img src={zrno10} alt="krunica" />}
-        {zrno === 11 && <img src={zrno11} alt="krunica" />}
-        {zrno === 12 && <img src={zrno12} alt="krunica" />}
-        {zrno === 13 && <img src={zrno13} alt="krunica" />}
-        {zrno === 14 && <img src={zrno14} alt="krunica" />}
-        {zrno === 15 && <img src={zrno15} alt="krunica" />}
-        {zrno === 16 && <img src={zrno16} alt="krunica" />}
-        {zrno === 17 && <img src={zrno17} alt="krunica" />}
-        {zrno === 18 && <img src={zrno18} alt="krunica" />}
-        {zrno === 19 && <img src={zrno19} alt="krunica" />}
-        {zrno === 20 && <img src={zrno20} alt="krunica" />}
-        {zrno === 21 && <img src={zrno21} alt="krunica" />}
-        {zrno === 22 && <img src={zrno22} alt="krunica" />}
-        {zrno === 23 && <img src={zrno23} alt="krunica" />}
-        {zrno === 24 && <img src={zrno24} alt="krunica" />}
-        {zrno === 25 && <img src={zrno25} alt="krunica" />}
-        {zrno === 26 && <img src={zrno26} alt="krunica" />}
-        {zrno === 27 && <img src={zrno27} alt="krunica" />}
-        {zrno === 28 && <img src={zrno28} alt="krunica" />}
-        {zrno === 29 && <img src={zrno29} alt="krunica" />}
-        {zrno === 30 && <img src={zrno30} alt="krunica" />}
-        {zrno === 31 && <img src={zrno31} alt="krunica" />}
-        {zrno === 32 && <img src={zrno32} alt="krunica" />}
-        {zrno === 33 && <img src={zrno33} alt="krunica" />}
-        {zrno === 34 && <img src={zrno34} alt="krunica" />}
-        {zrno === 35 && <img src={zrno35} alt="krunica" />}
-        {zrno === 36 && <img src={zrno36} alt="krunica" />}
-        {zrno === 37 && <img src={zrno37} alt="krunica" />}
-        {zrno === 38 && <img src={zrno38} alt="krunica" />}
-        {zrno === 39 && <img src={zrno39} alt="krunica" />}
-        {zrno === 40 && <img src={zrno40} alt="krunica" />}
-        {zrno === 41 && <img src={zrno41} alt="krunica" />}
-        {zrno === 42 && <img src={zrno42} alt="krunica" />}
-        {zrno === 43 && <img src={zrno43} alt="krunica" />}
-        {zrno === 44 && <img src={zrno44} alt="krunica" />}
-        {zrno === 45 && <img src={zrno45} alt="krunica" />}
-        {zrno === 46 && <img src={zrno46} alt="krunica" />}
-        {zrno === 47 && <img src={zrno47} alt="krunica" />}
-        {zrno === 48 && <img src={zrno48} alt="krunica" />}
-        {zrno === 49 && <img src={zrno49} alt="krunica" />}
-        {zrno === 50 && <img src={zrno50} alt="krunica" />}
-        {zrno === 51 && <img src={zrno51} alt="krunica" />}
-        {zrno === 52 && <img src={zrno52} alt="krunica" />}
-        {zrno === 53 && <img src={zrno53} alt="krunica" />}
-        {zrno === 54 && <img src={zrno54} alt="krunica" />}
-        {zrno === 55 && <img src={zrno55} alt="krunica" />}
-        {zrno === 56 && <img src={zrno56} alt="krunica" />}
-        {zrno === 57 && <img src={zrno57} alt="krunica" />}
-        {zrno === 58 && <img src={zrno58} alt="krunica" />}
-        {zrno === 59 && <img src={zrno59} alt="krunica" />}
-        {zrno === 60 && <img src={zrno60} alt="krunica" />}
-        {zrno === 61 && <img src={zrno61} alt="krunica" />}
-      </div>
-      {/* </Container> */}
+      <Container>
+        <div className={classes.sliBaza}>
+          {zrno === 0 && <img src={zrno00} alt="krunica" />}
+          {zrno === 1 && <img src={zrno01} alt="krunica" />}
+          {zrno === 2 && <img src={zrno02} alt="krunica" />}
+          {zrno === 3 && <img src={zrno03} alt="krunica" />}
+          {zrno === 4 && <img src={zrno04} alt="krunica" />}
+          {zrno === 5 && <img src={zrno05} alt="krunica" />}
+          {zrno === 6 && <img src={zrno06} alt="krunica" />}
+          {zrno === 7 && <img src={zrno07} alt="krunica" />}
+          {zrno === 8 && <img src={zrno08} alt="krunica" />}
+          {zrno === 9 && <img src={zrno09} alt="krunica" />}
+          {zrno === 10 && <img src={zrno10} alt="krunica" />}
+          {zrno === 11 && <img src={zrno11} alt="krunica" />}
+          {zrno === 12 && <img src={zrno12} alt="krunica" />}
+          {zrno === 13 && <img src={zrno13} alt="krunica" />}
+          {zrno === 14 && <img src={zrno14} alt="krunica" />}
+          {zrno === 15 && <img src={zrno15} alt="krunica" />}
+          {zrno === 16 && <img src={zrno16} alt="krunica" />}
+          {zrno === 17 && <img src={zrno17} alt="krunica" />}
+          {zrno === 18 && <img src={zrno18} alt="krunica" />}
+          {zrno === 19 && <img src={zrno19} alt="krunica" />}
+          {zrno === 20 && <img src={zrno20} alt="krunica" />}
+          {zrno === 21 && <img src={zrno21} alt="krunica" />}
+          {zrno === 22 && <img src={zrno22} alt="krunica" />}
+          {zrno === 23 && <img src={zrno23} alt="krunica" />}
+          {zrno === 24 && <img src={zrno24} alt="krunica" />}
+          {zrno === 25 && <img src={zrno25} alt="krunica" />}
+          {zrno === 26 && <img src={zrno26} alt="krunica" />}
+          {zrno === 27 && <img src={zrno27} alt="krunica" />}
+          {zrno === 28 && <img src={zrno28} alt="krunica" />}
+          {zrno === 29 && <img src={zrno29} alt="krunica" />}
+          {zrno === 30 && <img src={zrno30} alt="krunica" />}
+          {zrno === 31 && <img src={zrno31} alt="krunica" />}
+          {zrno === 32 && <img src={zrno32} alt="krunica" />}
+          {zrno === 33 && <img src={zrno33} alt="krunica" />}
+          {zrno === 34 && <img src={zrno34} alt="krunica" />}
+          {zrno === 35 && <img src={zrno35} alt="krunica" />}
+          {zrno === 36 && <img src={zrno36} alt="krunica" />}
+          {zrno === 37 && <img src={zrno37} alt="krunica" />}
+          {zrno === 38 && <img src={zrno38} alt="krunica" />}
+          {zrno === 39 && <img src={zrno39} alt="krunica" />}
+          {zrno === 40 && <img src={zrno40} alt="krunica" />}
+          {zrno === 41 && <img src={zrno41} alt="krunica" />}
+          {zrno === 42 && <img src={zrno42} alt="krunica" />}
+          {zrno === 43 && <img src={zrno43} alt="krunica" />}
+          {zrno === 44 && <img src={zrno44} alt="krunica" />}
+          {zrno === 45 && <img src={zrno45} alt="krunica" />}
+          {zrno === 46 && <img src={zrno46} alt="krunica" />}
+          {zrno === 47 && <img src={zrno47} alt="krunica" />}
+          {zrno === 48 && <img src={zrno48} alt="krunica" />}
+          {zrno === 49 && <img src={zrno49} alt="krunica" />}
+          {zrno === 50 && <img src={zrno50} alt="krunica" />}
+          {zrno === 51 && <img src={zrno51} alt="krunica" />}
+          {zrno === 52 && <img src={zrno52} alt="krunica" />}
+          {zrno === 53 && <img src={zrno53} alt="krunica" />}
+          {zrno === 54 && <img src={zrno54} alt="krunica" />}
+          {zrno === 55 && <img src={zrno55} alt="krunica" />}
+          {zrno === 56 && <img src={zrno56} alt="krunica" />}
+          {zrno === 57 && <img src={zrno57} alt="krunica" />}
+          {zrno === 58 && <img src={zrno58} alt="krunica" />}
+          {zrno === 59 && <img src={zrno59} alt="krunica" />}
+          {zrno === 60 && <img src={zrno60} alt="krunica" />}
+          {zrno === 61 && <img src={zrno61} alt="krunica" />}
+        </div>
+      </Container>
     </Container>
   );
 }

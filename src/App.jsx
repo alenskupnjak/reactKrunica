@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import './App.css';
 import './Okretanje.css';
 import { makeStyles } from '@mui/styles';
+
 // import { storeKrunica } from './store/KrunicaStore';
 
 import Krunica from './components/Krunica';
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     // position: 'sticky',
     // top: 0,
     [theme.breakpoints.up('sm')]: {
-      backgroundColor: 'white',
+      backgroundColor: 'orange',
       color: '#555',
       border: '1px solid #ece7e7',
     },
@@ -32,8 +33,8 @@ function App() {
   const classes = useStyles();
   return (
     <Fragment>
-      <Menu></Menu>
-      <Grid item xs={12} md={6} className={classes.container}>
+      <Grid item xs={12} sm alignItems="center" className={classes.container}>
+        <Menu></Menu>
         <Krunica></Krunica>
       </Grid>
     </Fragment>

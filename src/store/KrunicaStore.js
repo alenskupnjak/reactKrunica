@@ -24,6 +24,7 @@ class KrunicaStore {
       promjeniJezik: action,
       promjeniNazivTjedna: action,
       promjeniAktivniDan: action,
+      promjeniaktivnoOtajstvo: action,
     });
   }
 
@@ -64,43 +65,38 @@ class KrunicaStore {
       };
     });
 
-    console.log('*********', this.listaOtajstva);
+    console.log('001', this.listaOtajstva);
 
-    // postavi dan u tjednu
+    // postavi dan u tjednu i aktivno otajstvo
     const d = new Date();
-
-    console.log(d);
-    console.log(d.getDay());
-    // let day = d.getDay();
-
     switch (d.getDay()) {
       case 0:
-        this.aktivniDan = 'ned';
-        this.aktivnoOtajstvo = 'otajstvoSlavno';
+        this.promjeniAktivniDan('ned');
+        this.promjeniaktivnoOtajstvo('otajstvoSlavno');
         break;
       case 1:
-        this.aktivniDan = 'pon';
-        this.aktivnoOtajstvo = 'otajstvoRadosna';
+        this.promjeniAktivniDan('pon');
+        this.promjeniaktivnoOtajstvo('otajstvoRadosna');
         break;
       case 2:
-        this.aktivniDan = 'uto';
-        this.aktivnoOtajstvo = 'otajstvoZalosno';
+        this.promjeniAktivniDan('uto');
+        this.promjeniaktivnoOtajstvo('otajstvoZalosno');
         break;
       case 3:
-        this.aktivniDan = 'sri';
-        this.aktivnoOtajstvo = 'otajstvoSlavno';
+        this.promjeniAktivniDan('sri');
+        this.promjeniaktivnoOtajstvo('otajstvoSlavno');
         break;
       case 4:
-        this.aktivniDan = 'cet';
-        this.aktivnoOtajstvo = 'otajstvoSvjetla';
+        this.promjeniAktivniDan('cet');
+        this.promjeniaktivnoOtajstvo('otajstvoSvjetla');
         break;
       case 5:
-        this.aktivniDan = 'pet';
-        this.aktivnoOtajstvo = 'otajstvoZalosno';
+        this.promjeniAktivniDan('pet');
+        this.promjeniaktivnoOtajstvo('otajstvoZalosno');
         break;
       case 6:
-        this.aktivniDan = 'sub';
-        this.aktivnoOtajstvo = 'otajstvoRadosna';
+        this.promjeniAktivniDan('sub');
+        this.promjeniaktivnoOtajstvo('otajstvoRadosna');
         break;
       default:
         console.log('Dani u tjednu');
@@ -120,9 +116,9 @@ class KrunicaStore {
     return this.nazivdanTjedan;
   }
 
+  // Vracamo na pocetak
   povratakNaPocetak = () => {
     this.zrno = -1;
-    console.log('Idi na pocetak');
   };
 
   // promjeni datum u tjednu
@@ -131,16 +127,16 @@ class KrunicaStore {
 
     console.log(this.aktivniDan);
     if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
-      this.aktivnoOtajstvo = 'otajstvoRadosna';
+      this.promjeniaktivnoOtajstvo('otajstvoRadosna');
     }
     if (this.aktivniDan === 'uto' || this.aktivniDan === 'pet') {
-      this.aktivnoOtajstvo = 'otajstvoZalosno';
+      this.promjeniaktivnoOtajstvo('otajstvoZalosno');
     }
     if (this.aktivniDan === 'sri' || this.aktivniDan === 'ned') {
-      this.aktivnoOtajstvo = 'otajstvoSlavno';
+      this.promjeniaktivnoOtajstvo('otajstvoSlavno');
     }
     if (this.aktivniDan === 'cet') {
-      this.aktivnoOtajstvo = 'otajstvoSvjetla';
+      this.promjeniaktivnoOtajstvo('otajstvoSvjetla');
     }
     this.prijevodOtajstva();
   };
@@ -150,7 +146,9 @@ class KrunicaStore {
     this.aktivniDan = data;
   };
 
-  promjeniaktivnoOtajstvo = () => {};
+  promjeniaktivnoOtajstvo = (otajstvo) => {
+    this.aktivnoOtajstvo = otajstvo;
+  };
 
   promjeniListuJezika = () => {
     this.listaJezika = getListaZemalja().map((data) => {
