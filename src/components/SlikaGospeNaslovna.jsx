@@ -1,13 +1,24 @@
 // import { Fragment } from 'react';
 // import Typography from '@mui/material/Typography';
-// import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@mui/styles';
 // import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 // import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 // import { Container } from '@mui/material';
 
 import { storeKrunica } from '../store/KrunicaStore';
 
+const useStyles = makeStyles((theme) => ({
+  pokus: {
+    fontFamily: 'Cardo',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+    marginTop: '0.5rem',
+    textAlign: 'center',
+  },
+}));
+
 function SlikaGospeNaslovna() {
+  const classes = useStyles();
   // const { zrno, naprijed, nazad, aktivnaZemlja, prijevodOtajstvatext } =
   // storeKrunica;
   const { aktivnaZemlja } = storeKrunica;

@@ -1,0 +1,147 @@
+.pulsiranjeDesno {
+  position: absolute;
+  top: 0px;
+  background-color: yellow;
+  left: 50px;
+  height: 20px;
+  width: 20px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: grow;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: grow;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.4);
+  }
+}
+@-moz-keyframes grow {
+  from {
+    -moz-transform: scale(1);
+  }
+  to {
+    -moz-transform: scale(1.4);
+  }
+}
+@keyframes grow {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    transform: translateX(0%) scale(1.5);
+  }
+}
+
+/* Sa desna na lijevo */
+.pulsiranjeLijevo {
+  position: absolute;
+  top: 0px;
+  background-color: yellow;
+  left: -50px;
+  height: 20px;
+  width: 20px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: lijevo;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: lijevo;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: lijevo;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes lijevo {
+  from {
+    transform: translateX(50%) scale(1);
+  }
+  to {
+    transform: translateX(0%) scale(1.5);
+  }
+}
+
+/* Naslovna starna */
+.pulsiranjeDesnoNaslovna {
+  position: absolute;
+  top: 10px;
+  background-color: yellow;
+  left: -40%;
+  height: 25px;
+  width: 25px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: naslovna;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: naslovna;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: naslovna;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes naslovna {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.4);
+  }
+}
+@-moz-keyframes naslovna {
+  from {
+    -moz-transform: scale(1);
+  }
+  to {
+    -moz-transform: scale(1.4);
+  }
+}
+@keyframes naslovna {
+  from {
+    transform: translateX(-70%) scale(1);
+  }
+  to {
+    transform: translateX(0%) scale(2);
+  }
+}

@@ -81,6 +81,7 @@
 
 /* Slika djevice marije */
 .card__picture--1 {
+  z-index: 100;
   background-image: linear-gradient(to right bottom, #ffb900, #2b1f19),
     url(./slike/gospaBistricka.jpg);
 }
@@ -128,4 +129,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+@keyframes prikaziSliku {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

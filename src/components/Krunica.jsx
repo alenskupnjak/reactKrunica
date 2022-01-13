@@ -63,8 +63,7 @@ import zrno61 from '../img/61.png';
 
 import { observer } from 'mobx-react';
 // import { Fragment } from 'react';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import Typography from '@mui/material/Typography';
 
@@ -79,6 +78,8 @@ import KrajKrunice from './KrajKrunice';
 import { Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SlikaGospeNaslovna from './SlikaGospeNaslovna';
+import Pokus from './Pokus';
+import Navigacija from './Navigacija';
 
 const useStyles = makeStyles((theme) => ({
   zaglavlje: {
@@ -130,6 +131,7 @@ const useStyles = makeStyles((theme) => ({
   nivo: {
     zIndex: '5',
   },
+  slika: {},
 
   // container: {
   //   height: "100vh",
@@ -196,13 +198,14 @@ function Krunica() {
                 povratakNaPocetak();
               }}
             >
-              {/* {aktivnaZemlja.pocetak} */}
               <RestartAltIcon />
             </Typography>
           </div>
         )}
 
-        <div className={classes.opisZrna}>
+        <Navigacija />
+
+        {/* <div className={classes.opisZrna}>
           {zrno !== -1 && (
             <Typography align="left" body="span" className={classes.nivo}>
               <ArrowBackIosIcon
@@ -218,14 +221,17 @@ function Krunica() {
             {aktivnaZemlja[`naslov${zrno}`]}
           </Typography>
           <Typography align="right" body="span" className={classes.nivo}>
-            <ArrowForwardIosIcon
+            <Avatar
+              src={avatarslika}
               onClick={() => {
                 naprijed();
               }}
+              className="pulsiranje"
             />
           </Typography>
-        </div>
+        </div> */}
 
+        {/* {zrno === -1 && <Pokus />} */}
         {zrno === -1 && <SlikaGospeNaslovna />}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}
