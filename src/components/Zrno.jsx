@@ -14,29 +14,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
+    margin: ' auto',
+    fontSize: '1.5rem',
+    textAlign: 'center',
     /* background-size: 1.5rem; */
     /* padding: 0.3rem; */
-    textAlign: 'center',
     /* border-radius: 0.2rem; */
     /* box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.15); */
     /* transition: transform 3s; */
-    /* font-size: 1.3rem;  */
-
-    /* https://www.w3schools.com/css/css3_animations.asp */
-    /* animation-name: example;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
-    /* animation: slideInFromLeft 500ms ease-out 1 normal; */
-    /* animation: slideInFromLeft 1s ease-out; */
+    // /* font-size: 1.3rem;
   },
 }));
 
 function Zrno() {
-  const { aktivnaZemlja, aktivnoOtajstvo, zrno } = storeKrunica;
   const classes = useStyles();
+  const { aktivnaZemlja, aktivnoOtajstvo, zrno } = storeKrunica;
 
   return (
     <Fragment>

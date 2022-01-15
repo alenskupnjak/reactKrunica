@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
+    fontSize: '1.2rem',
   },
 }));
 

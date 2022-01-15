@@ -19,6 +19,7 @@ import { storeKrunica } from '../store/KrunicaStore';
 const useStyles = makeStyles((theme) => ({
   menu: {
     color: 'transparent',
+    // fontSize: '1.5rem',
     zIndex: '6',
     justifyContent: 'space-between',
     backgroundColor: '#FFE100',

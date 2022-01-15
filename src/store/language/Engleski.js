@@ -42,7 +42,7 @@ export const english = {
   vjera: 'Isus, which may increase our faith!',
   ufanje: 'Isus, which may increase our hope!',
   ljubav: 'Isus, which may increase our love!',
-  naslov0: 'The beginning of the rosary - †',
+  naslov0: 'Holy Mary rosary †',
   naslov1: '1. bead',
   naslov2: '2. bead',
   naslov3: '3. bead',

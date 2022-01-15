@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-/* body {
+body {
   font-family: 'Cardo', cursive;
   box-sizing: border-box;
   background-color: #fff;
   text-align: center;
-} */
+}
 
 /* .podjela {
   height: 90vh;
@@ -253,10 +253,6 @@
   animation: okrenistranicu 4s forwards ease-in;
 } */
 
-/* .card__side--front {
-  background-color: #f7f7f7;
-} */
-
 /* .card:hover .card__side--front {
   transform: rotateY(-180deg);
   transition: all 2s ease-in;
@@ -347,13 +343,6 @@ a:active {
   margin-top: 1rem;
   margin-bottom: 3rem;
   /* padding: 1rem; */
-}
-
-.uljepsaj_sliku {
-  width: 420px;
-  height: 600px;
-  /* background-color: blue; */
-  background-color: #f7f7f7;
 }
 
 /* .slika-krunice {

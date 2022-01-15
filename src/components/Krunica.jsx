@@ -108,22 +108,22 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     margin: 'auto',
     /* background-color: #6730ff; */
-    /* height: 60vh; */
+    height: '60vh',
     width: '100%',
   },
   sliBaza: {
     position: 'fixed',
-    // display: 'block',
-    top: '0',
-    left: '0',
+    display: 'block',
+    top: '45px',
+    left: '-7%',
     // zIndex: '-1',
-    width: '420px',
-    height: '600px',
+    width: '400px',
+    height: '400px',
     translateX: '-50%',
-    opacity: '0.2',
-    // '&:hover': {
-    //   display: 'none',
-    // },
+    opacity: '0.10',
+    '&:hover': {
+      display: 'none',
+    },
   },
   slomiLiniju: {
     whiteSpace: 'pre-line',
@@ -204,32 +204,6 @@ function Krunica() {
         )}
 
         <Navigacija />
-
-        {/* <div className={classes.opisZrna}>
-          {zrno !== -1 && (
-            <Typography align="left" body="span" className={classes.nivo}>
-              <ArrowBackIosIcon
-                onClick={() => {
-                  nazad();
-                }}
-              />
-            </Typography>
-          )}
-          <Typography body="span">
-            {' '}
-            {`${zrno}z-`}
-            {aktivnaZemlja[`naslov${zrno}`]}
-          </Typography>
-          <Typography align="right" body="span" className={classes.nivo}>
-            <Avatar
-              src={avatarslika}
-              onClick={() => {
-                naprijed();
-              }}
-              className="pulsiranje"
-            />
-          </Typography>
-        </div> */}
 
         {/* {zrno === -1 && <Pokus />} */}
         {zrno === -1 && <SlikaGospeNaslovna />}

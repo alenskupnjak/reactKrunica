@@ -94,7 +94,7 @@
 /* Naslovna starna */
 .pulsiranjeDesnoNaslovna {
   position: absolute;
-  top: 10px;
+  top: 30px;
   background-color: yellow;
   left: -40%;
   height: 25px;
@@ -143,5 +143,45 @@
   }
   to {
     transform: translateX(0%) scale(2);
+  }
+}
+
+/* Naslovna starna */
+.polagano-prikazivanje {
+  position: absolute;
+  top: -20px;
+  /* background-color: yellow; */
+  right: 5;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: naslovna;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: naslovna;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: strelica;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes strelica {
+  from {
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    transform: translateX(0%) scale(1.5);
   }
 }
