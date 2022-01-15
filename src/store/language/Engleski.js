@@ -33,7 +33,7 @@ export const english = {
   oMojIsuse:
     'O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven especially those who are in most need of Your mercy.',
   zdravoKraljice:
-    'Hail, holy Queen, mother of mercy; hail, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.',
+    'Hail, holy Queen, mother of mercy; hail, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. \n Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  \n O clement, O loving, O sweet Virgin Mary.',
   apostolskoUvod:
     ', to je tebi za ljubav, za obraćenje grješnika i kao naknada za uvrede koje se nanose Bezgrešnom Srcu Marijinu.',
   apostolskoVjerovanje: "The Apostles' Creed",

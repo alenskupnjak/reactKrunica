@@ -1,7 +1,7 @@
 import { makeObservable, observable, computed, action } from 'mobx';
 import { filter, head } from 'lodash';
 
-import { getListaZemalja, getOtajstva } from './KrunicaService';
+import { getListaZemalja, getOtajstva, getZrna } from './KrunicaService';
 
 class KrunicaStore {
   constructor(fn) {
@@ -32,6 +32,7 @@ class KrunicaStore {
   trenutniJezik = 'English';
   aktivnoOtajstvo = '';
   listaOtajstva = [];
+  listaZrnaRadno = [];
   listaJezika = [];
   nazivdanTjedan = [];
   aktivniDan = '';
@@ -65,7 +66,14 @@ class KrunicaStore {
       };
     });
 
-    console.log('001', this.listaOtajstva);
+    this.listaZrnaRadno = getZrna().map((data) => {
+      return {
+        ...data,
+        text: podaciZemlje[data.id],
+      };
+    });
+
+    console.log('this.listaZrnaRadno', this.listaZrnaRadno);
 
     // postavi dan u tjednu i aktivno otajstvo
     const d = new Date();
@@ -139,6 +147,10 @@ class KrunicaStore {
       this.promjeniaktivnoOtajstvo('otajstvoSvjetla');
     }
     this.prijevodOtajstva();
+  };
+
+  idiNaZrno = (zrno) => {
+    this.zrno = zrno.target.value;
   };
 
   // action promjeni aktivni dan

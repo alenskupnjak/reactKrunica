@@ -3,19 +3,21 @@ import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import './App.css';
 import './Okretanje.css';
+import './Pulsiranje.css';
 import { makeStyles } from '@mui/styles';
 
 // import { storeKrunica } from './store/KrunicaStore';
 
 import Krunica from './components/Krunica';
 import Menu from './components/Menu';
+import DireknoNaZrno from './components/DireknoNaZrno';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     height: '80vh',
     margin: 'auto',
     // color: 'white',
-    // paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(0),
     // backgroundColor: theme.palette.primary.main,
     // position: 'sticky',
     // top: 0,
@@ -28,14 +30,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
-  // const { zrno } = storeKrunica;
-
   const classes = useStyles();
   return (
     <Fragment>
       <Grid item xs={12} sm alignItems="center" className={classes.container}>
-        <Menu></Menu>
-        <Krunica></Krunica>
+        <Menu />
+        <Krunica />
+        <DireknoNaZrno />
       </Grid>
     </Fragment>
   );

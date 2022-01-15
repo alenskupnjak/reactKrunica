@@ -3,16 +3,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
-
-// import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { makeStyles } from '@mui/styles';
-
-// import { isEmpty } from 'lodash';
 
 import { storeKrunica } from '../store/KrunicaStore';
 
@@ -23,16 +16,33 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '6',
     justifyContent: 'space-between',
     backgroundColor: '#FFE100',
+    // backgroundColor: 'linear-gradient(45deg, blue 30%, orange 50%)',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: 'transparent',
       color: '#555',
       border: '1px solid #ece7e7',
     },
   },
+  pomaknidno: {
+    position: 'absolute',
+    left: '0',
+    bottom: '0',
+    width: '100%',
+    color: 'transparent',
+    // fontSize: '1.5rem',
+    zIndex: '6',
+    justifyContent: 'space-between',
+    backgroundColor: 'linear-gradient(45deg, red 30%, orange 90%)',
+    // [theme.breakpoints.up('sm')]: {
+    //   backgroundColor: 'transparent',
+    //   color: '#555',
+    //   border: '1px solid #ece7e7',
+    // },
+  },
 }));
 
 const CssTextField = styled(TextField)({
-  color: 'red',
+  color: 'blue',
   '& label.Mui-focused': {
     color: 'gold',
   },
@@ -56,23 +66,24 @@ const CssTextField = styled(TextField)({
   },
 });
 
-export default observer(function Menu() {
+export default observer(function DireknoNaZrno() {
   const {
     promjeniJezik,
     trenutniJezik,
     getlistaJezika,
-    getnazivdanTjedan,
-    promjeniDanUTjednu,
-    aktivniDan,
+    listaZrnaRadno,
+    idiNaZrno,
+    zrno,
   } = storeKrunica;
   const classes = useStyles();
 
-  // console.log('listaJezika=', listaJezika, isEmpty(listaJezika));
-  // console.log(trenutniJezik);
-  // console.log(getnazivdanTjedan);
+  console.log(listaZrnaRadno);
 
   return (
-    <Box sx={{ flexGrow: 1, color: 'transparent' }}>
+    <Box
+      sx={{ flexGrow: 1, color: 'transparent' }}
+      className={classes.pomaknidno}
+    >
       <AppBar position="static">
         <Toolbar className={classes.menu}>
           <CssTextField
@@ -83,7 +94,7 @@ export default observer(function Menu() {
             value={trenutniJezik}
             // onChange={(e) => handleChange(e)}
             onChange={(e) => promjeniJezik(e)}
-            // helperText={jezik}
+            helperText={'jezik'}
             // className={classes.menu}
           >
             {getlistaJezika.map((option) => (
@@ -100,15 +111,13 @@ export default observer(function Menu() {
             // id="outlined-select-currency"
             select
             // label="Select"
-            value={aktivniDan}
-            // onChange={(e) => handleChange(e)}
+            value={zrno}
             onChange={(e) => {
-              promjeniDanUTjednu(e);
+              idiNaZrno(e);
             }}
-            // helperText="Dan u tjednu"
-            // className={classes.menu}
+            helperText="Direkno na zrno"
           >
-            {getnazivdanTjedan.map((dan) => (
+            {listaZrnaRadno.map((dan) => (
               <MenuItem key={dan.value} value={dan.value}>
                 {dan.label}
               </MenuItem>

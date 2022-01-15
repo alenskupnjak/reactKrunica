@@ -1,9 +1,9 @@
 import { observer } from 'mobx-react';
 import { makeStyles } from '@mui/styles';
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import Typography from '@mui/material/Typography';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Avatar from '@mui/material/Avatar';
 import avatarslika from '../slike/Papacy.jpg';
@@ -11,8 +11,8 @@ import zgBiskupija from '../slike/zgBiskupija.jpg';
 
 const useStyles = makeStyles((theme) => ({
   opisZrna: {
-    display: 'flex',
     position: 'relative',
+    display: 'flex',
     width: '100%',
     fontFamily: 'Cardo',
     fontSize: '1.2rem',
@@ -43,49 +43,46 @@ function Navigacija() {
   console.log('zrno', zrno);
 
   return (
-    <Fragment>
-      <div className={classes.opisZrna}>
-        {zrno !== -1 && (
-          <Typography align="left" body="span" className={classes.nivo}>
-            <Avatar
-              src={zgBiskupija}
-              onClick={() => {
-                nazad();
-              }}
-              className="pulsiranjeLijevo"
-            />
-          </Typography>
-        )}
-        <Typography className={classes.opiszrna}>
-          {' '}
-          {aktivnaZemlja[`naslov${zrno}`]}
+    <div className={classes.opisZrna}>
+      {zrno !== -1 && (
+        <Typography align="left" body="span" className={classes.nivo}>
+          <Avatar
+            src={zgBiskupija}
+            onClick={() => {
+              nazad();
+            }}
+            className="pulsiranjeLijevo"
+          />
         </Typography>
-        <div className={classes.nivo}>
-          <Typography align="right" body="span" className={classes.nivo}>
-            <Avatar
-              src={avatarslika}
+      )}
+      <Typography className={classes.opiszrna}>
+        {aktivnaZemlja[`naslov${zrno}`]}
+      </Typography>
+      <div className={classes.nivo}>
+        <Typography align="right" body="span" className={classes.nivo}>
+          <Avatar
+            src={avatarslika}
+            onClick={() => {
+              naprijed();
+            }}
+            className={
+              zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
+            }
+          />
+        </Typography>
+        {zrno === -1 && (
+          <Typography align="right" className={classes.nivo}>
+            <ArrowRightAltIcon
               onClick={() => {
                 naprijed();
               }}
-              className={
-                zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
-              }
+              className={'polagano-prikazivanje'}
+              color="action"
             />
           </Typography>
-          {zrno === -1 && (
-            <Typography align="right" className={classes.nivo}>
-              <ArrowRightAltIcon
-                onClick={() => {
-                  naprijed();
-                }}
-                className={'polagano-prikazivanje'}
-                color="action"
-              />
-            </Typography>
-          )}
-        </div>
+        )}
       </div>
-    </Fragment>
+    </div>
   );
 }
 

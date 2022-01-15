@@ -78,7 +78,7 @@ import KrajKrunice from './KrajKrunice';
 import { Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SlikaGospeNaslovna from './SlikaGospeNaslovna';
-import Pokus from './Pokus';
+// import Pokus from './Pokus';
 import Navigacija from './Navigacija';
 
 const useStyles = makeStyles((theme) => ({
@@ -170,15 +170,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Krunica() {
-  const {
-    zrno,
-    naprijed,
-    nazad,
-    aktivnaZemlja,
-    prijevodOtajstvatext,
-    povratakNaPocetak,
-  } = storeKrunica;
   const classes = useStyles();
+  const { zrno, prijevodOtajstvatext, povratakNaPocetak } = storeKrunica;
 
   // console.log('prijevodOtajstvatext', getPrijevodOtajstvatext);
   // console.log('prijevodOtajstvatext', prijevodOtajstvatext);
