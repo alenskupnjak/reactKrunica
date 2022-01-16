@@ -6,7 +6,7 @@ import './Okretanje.css';
 import './Pulsiranje.css';
 import { makeStyles } from '@mui/styles';
 
-// import { storeKrunica } from './store/KrunicaStore';
+import { storeKrunica } from './store/KrunicaStore';
 
 import Krunica from './components/Krunica';
 import Menu from './components/Menu';
@@ -36,7 +36,7 @@ function App() {
       <Grid item xs={12} sm alignItems="center" className={classes.container}>
         <Menu />
         <Krunica />
-        <DireknoNaZrno />
+        {process.env.NODE_ENV === 'development' && <DireknoNaZrno />}
       </Grid>
     </Fragment>
   );

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 const CssTextField = styled(TextField)({
   color: 'blue',
   '& label.Mui-focused': {
-    color: 'gold',
+    color: 'blue',
   },
   '& label.Mui-selected': {
     color: 'blue',
@@ -60,7 +60,7 @@ const CssTextField = styled(TextField)({
       borderColor: 'yellow',
     },
     '&.Mui-focused fieldset': {
-      borderColor: 'gold',
+      borderColor: 'red',
       // background: 'linear-gradient(45deg, red 30%, orange 90%)',
     },
   },
@@ -88,13 +88,11 @@ export default observer(function DireknoNaZrno() {
         <Toolbar className={classes.menu}>
           <CssTextField
             fullWidth
-            // id="outlined-select-currency"
             select
-            // label="Select"
+            label="Select"
             value={trenutniJezik}
-            // onChange={(e) => handleChange(e)}
             onChange={(e) => promjeniJezik(e)}
-            helperText={'jezik'}
+            helperText={'Language'}
             // className={classes.menu}
           >
             {getlistaJezika.map((option) => (
@@ -106,16 +104,14 @@ export default observer(function DireknoNaZrno() {
 
           <CssTextField
             fullWidth
-            // error
             width="50px"
-            // id="outlined-select-currency"
             select
-            // label="Select"
+            label={zrno}
             value={zrno}
             onChange={(e) => {
               idiNaZrno(e);
             }}
-            helperText="Direkno na zrno"
+            helperText="Bead"
           >
             {listaZrnaRadno.map((dan) => (
               <MenuItem key={dan.value} value={dan.value}>

@@ -19,6 +19,7 @@ import { storeKrunica } from '../store/KrunicaStore';
 const useStyles = makeStyles((theme) => ({
   menu: {
     color: 'transparent',
+    width: '100%',
     // fontSize: '1.5rem',
     zIndex: '6',
     justifyContent: 'space-between',
@@ -64,8 +65,11 @@ export default observer(function Menu() {
     getnazivdanTjedan,
     promjeniDanUTjednu,
     aktivniDan,
+    aktivnaZemlja: { naslovna02 },
   } = storeKrunica;
   const classes = useStyles();
+
+  document.title = naslovna02;
 
   // console.log('listaJezika=', listaJezika, isEmpty(listaJezika));
   // console.log(trenutniJezik);

@@ -40,8 +40,6 @@ function Navigacija() {
   const classes = useStyles();
   const { aktivnaZemlja, zrno, nazad, naprijed } = storeKrunica;
 
-  console.log('zrno', zrno);
-
   return (
     <div className={classes.opisZrna}>
       {zrno !== -1 && (

@@ -2,7 +2,7 @@
   position: absolute;
   top: 0px;
   background-color: yellow;
-  left: 50px;
+  left: 40px;
   height: 20px;
   width: 20px;
   -webkit-transition-property: -webkit-transform;
@@ -57,7 +57,7 @@
   position: absolute;
   top: 0px;
   background-color: yellow;
-  left: -50px;
+  left: -40px;
   height: 20px;
   width: 20px;
   -webkit-transition-property: -webkit-transform;
@@ -96,7 +96,7 @@
   position: absolute;
   top: 30px;
   background-color: yellow;
-  left: -40%;
+  left: -30px;
   height: 25px;
   width: 25px;
   -webkit-transition-property: -webkit-transform;
