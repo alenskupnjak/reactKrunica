@@ -1,21 +1,32 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
 import SlavaOcu from './SlavaOcu';
 
-function Zrno(props) {
-  // const { brojZrna } = props;
-  const { aktivnaZemlja, zrno, aktivnoOtajstvo } = storeKrunica;
+const useStyles = makeStyles((theme) => ({
+  opisMolitve: {
+    fontFamily: 'Cardo',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+    marginTop: '0.5rem',
+    margin: ' auto',
+    fontSize: '1.5rem',
+    textAlign: 'center',
+  },
+}));
 
-  // console.log('aktivanTekstZrno', aktivanTekstZrno);
+function Zrno() {
+  const classes = useStyles();
+  const { aktivnaZemlja, zrno, aktivnoOtajstvo } = storeKrunica;
 
   return (
     <Fragment>
-      <div className="opis-molitve">
+      <div className={classes.opisMolitve}>
         <ZdravoMarijaPocetak />
         <div>
           <Typography className="zeleno" variant="h5">
@@ -91,7 +102,7 @@ function Zrno(props) {
         <div>
           <SlavaOcu />
         </div>
-        {aktivnaZemlja.oMojIsuse}
+        <div>{aktivnaZemlja.oMojIsuse}</div>
       </div>
     </Fragment>
   );

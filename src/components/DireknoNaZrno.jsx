@@ -77,7 +77,7 @@ export default observer(function DireknoNaZrno() {
   } = storeKrunica;
   const classes = useStyles();
 
-  console.log(listaZrnaRadno);
+  // console.log(listaZrnaRadno);
 
   return (
     <Box

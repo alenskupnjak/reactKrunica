@@ -17,12 +17,6 @@ const useStyles = makeStyles((theme) => ({
     margin: ' auto',
     fontSize: '1.5rem',
     textAlign: 'center',
-    /* background-size: 1.5rem; */
-    /* padding: 0.3rem; */
-    /* border-radius: 0.2rem; */
-    /* box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.15); */
-    /* transition: transform 3s; */
-    // /* font-size: 1.3rem;
   },
 }));
 

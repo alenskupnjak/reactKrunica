@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { Typography } from '@mui/material';
-
 import { storeKrunica } from '../store/KrunicaStore';
 
 function Amen() {

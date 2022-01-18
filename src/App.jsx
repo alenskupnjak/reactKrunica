@@ -6,8 +6,6 @@ import './Okretanje.css';
 import './Pulsiranje.css';
 import { makeStyles } from '@mui/styles';
 
-import { storeKrunica } from './store/KrunicaStore';
-
 import Krunica from './components/Krunica';
 import Menu from './components/Menu';
 import DireknoNaZrno from './components/DireknoNaZrno';
@@ -16,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     height: '80vh',
     margin: 'auto',
-    // color: 'white',
     paddingTop: theme.spacing(0),
     // backgroundColor: theme.palette.primary.main,
     // position: 'sticky',
