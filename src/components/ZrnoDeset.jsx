@@ -15,8 +15,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     textAlign: 'center',
+  },
+  zeleno: {
+    fontFamily: 'Cardo',
+    backgroundColor: '#f7f7f7',
+    justifyContent: 'space-between',
+    marginTop: '0.5rem',
+    margin: ' auto',
+    fontSize: '1.3rem',
+    textAlign: 'center',
+    color: '#1b921b;',
   },
 }));
 
@@ -29,7 +39,7 @@ function Zrno() {
       <div className={classes.opisMolitve}>
         <ZdravoMarijaPocetak />
         <div>
-          <Typography className="zeleno" variant="h5">
+          <div className={classes.zeleno}>
             {aktivnoOtajstvo === 'otajstvoZalosno' &&
               zrno === 16 &&
               aktivnaZemlja.prvaDeseticaZalosna}
@@ -94,7 +104,7 @@ function Zrno() {
             {aktivnoOtajstvo === 'otajstvoSvjetla' &&
               zrno === 60 &&
               aktivnaZemlja.petaDeseticaSvjetla}
-          </Typography>
+          </div>
         </div>
         <div>
           <ZdravoMarijaKraj />

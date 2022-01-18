@@ -7,13 +7,13 @@
 }
 
 .card__side {
-  width: 90%;
+  width: 92%;
   position: absolute;
   margin: auto;
   height: 550px;
   transition: all 1s;
   top: 0;
-  left: 5%;
+  left: 4%;
   backface-visibility: hidden;
   border-radius: 0.3rem;
   overflow: hidden;

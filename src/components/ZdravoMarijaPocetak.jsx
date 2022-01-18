@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     textAlign: 'center',
   },
 }));
