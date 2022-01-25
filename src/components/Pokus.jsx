@@ -2,18 +2,21 @@ import avatarslika from '../slike/Papacy.jpg';
 import { makeStyles } from '@mui/styles';
 import Avatar from '@mui/material/Avatar';
 import { Fragment } from 'react';
+// import { alpha } from '@material-ui/core';
+import { alpha } from '@mui/material';
 import '../Pulsiranje.css';
 
 import { storeKrunica } from '../store/KrunicaStore';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   pokus: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
     zIndex: 0,
+    backgroundColor: alpha(theme.palette.primary.main, 0.25),
   },
 }));
 

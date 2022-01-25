@@ -1,6 +1,5 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
-import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 
 import { storeKrunica } from '../store/KrunicaStore';

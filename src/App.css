@@ -361,49 +361,52 @@ a:active {
 
 /*Mobile*/
 /* aktivira se na sve manje od 768 px*/
-/* @media only screen and (max-width: 768px) { */
-/* .uljepsaj_sliku {
+@media only screen and (max-width: 768px) {
+  .uljepsaj_sliku {
     display: none;
-  } */
+  }
 
-/* .row .col-1-of-2 {
+  .row .col-1-of-2 {
     width: 100%;
   }
 
   .col-1-of-2 {
     width: 100%;
   }
+
   .card__picture {
     width: 100%;
-  } */
-/* .card__side {
-    width: 100%;
-  } */
+  }
 
-/* .sli-baza {
+  .card__side {
+    width: 100%;
+    height: 550px;
+  }
+
+  .sli-baza {
     left: 50%;
     width: 360px;
-    height: 540px;
+    height: 740px;
     transform: translateX(-50%);
-    /* color: transparent !important; */
-/* opacity: 0.2; */
-/* transition: opacity 2s ease-in; */
-/* }  */
+    color: transparent !important;
+    opacity: 0.2;
+    transition: opacity 2s ease-in;
+  }
 
-/* .sli-gore {
+  .sli-gore {
     display: none;
-  } */
+  }
 
-/* .col-1-of-2.slika-krunice {
-    /* display: none; */
-/* position: absolute; */
-/* background-color: red; */
-/* left: 50%; */
-/* top: 5px; */
-/* transform: translateX(-50%); */
-/* } */
+  .col-1-of-2.slika-krunice {
+    display: none;
+    position: absolute;
+    background-color: red;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+  }
 
-/* .row .col-2-of-4 {
+  .row .col-2-of-4 {
     width: 100%;
-  } */
-/* } */
+  }
+}

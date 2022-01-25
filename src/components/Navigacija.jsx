@@ -1,9 +1,7 @@
 import { observer } from 'mobx-react';
 import { makeStyles } from '@mui/styles';
-// import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import Typography from '@mui/material/Typography';
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Avatar from '@mui/material/Avatar';
 import avatarslika from '../slike/Papacy.jpg';
@@ -17,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cardo',
     fontSize: '1.2rem',
     marginTop: '1rem',
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#e9e9e9',
     justifyContent: 'space-between',
     backgroundSize: '1.5rem',
     // padding: '0.5rem',
-    marginBottom: '2rem',
+    // marginBottom: '2rem',
     textAlign: 'center',
     borderRadius: '0.2rem',
     boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',

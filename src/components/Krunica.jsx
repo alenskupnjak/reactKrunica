@@ -1,3 +1,9 @@
+import { observer } from 'mobx-react';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import Typography from '@mui/material/Typography';
+import { Container } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
 import zrno00 from '../img/00.png';
 import zrno01 from '../img/01.png';
 import zrno02 from '../img/02.png';
@@ -61,27 +67,24 @@ import zrno59 from '../img/59.png';
 import zrno60 from '../img/60.png';
 import zrno61 from '../img/61.png';
 
-import { observer } from 'mobx-react';
-// import { Fragment } from 'react';
-
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
-import Typography from '@mui/material/Typography';
-
 import { storeKrunica } from '../store/KrunicaStore';
-
 import ApostolskoVjerovanje from './ApostolskoVjerovanje';
 import OceNas from './OceNas';
 import Zrno from './Zrno';
 import SlavaOcu from './SlavaOcu';
 import ZrnoDeset from './ZrnoDeset';
 import KrajKrunice from './KrajKrunice';
-import { Container } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import SlikaGospeNaslovna from './SlikaGospeNaslovna';
-// import Pokus from './Pokus';
 import Navigacija from './Navigacija';
 
 const useStyles = makeStyles((theme) => ({
+  [theme.breakpoints.up('sm')]: {
+    backgroundColor: 'red',
+    color: '#555',
+    border: '1px solid #ece7e7',
+    width: '40%',
+    margin: 'auto',
+  },
   zaglavlje: {
     display: 'flex',
     backgroundColor: '#f7f7f7',
@@ -90,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
   opisZrna: {
     fontFamily: 'Cardo',
     display: 'flex',
+    margin: 'auto',
     fontSize: '2rem',
     marginTop: '1rem',
     backgroundColor: '#f7f7f7',
@@ -108,14 +112,14 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     margin: 'auto',
     /* background-color: #6730ff; */
-    height: '60vh',
+    height: '80vh',
     width: '100%',
   },
   sliBaza: {
     position: 'fixed',
     display: 'block',
     top: '45px',
-    left: '-7%',
+    left: '0',
     // zIndex: '-1',
     width: '400px',
     height: '400px',
@@ -131,7 +135,6 @@ const useStyles = makeStyles((theme) => ({
   nivo: {
     zIndex: '5',
   },
-  slika: {},
 
   // container: {
   //   height: "100vh",
@@ -197,8 +200,6 @@ function Krunica() {
         )}
 
         <Navigacija />
-
-        {/* {zrno === -1 && <Pokus />} */}
         {zrno === -1 && <SlikaGospeNaslovna />}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}

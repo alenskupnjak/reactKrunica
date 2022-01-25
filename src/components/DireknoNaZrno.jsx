@@ -28,10 +28,11 @@ const useStyles = makeStyles((theme) => ({
     left: '0',
     bottom: '0',
     width: '100%',
+    margin: 'auto',
     color: 'transparent',
     // fontSize: '1.5rem',
     zIndex: '6',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     backgroundColor: 'linear-gradient(45deg, red 30%, orange 90%)',
     // [theme.breakpoints.up('sm')]: {
     //   backgroundColor: 'transparent',
@@ -82,7 +83,7 @@ export default observer(function DireknoNaZrno() {
   return (
     <Box
       sx={{ flexGrow: 1, color: 'transparent' }}
-      className={classes.pomaknidno}
+      // className={classes.pomaknidno}
     >
       <AppBar position="static">
         <Toolbar className={classes.menu}>

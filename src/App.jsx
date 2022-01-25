@@ -12,15 +12,15 @@ import DireknoNaZrno from './components/DireknoNaZrno';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: '80vh',
+    height: '100vh',
     margin: 'auto',
     paddingTop: theme.spacing(0),
     // backgroundColor: theme.palette.primary.main,
     // position: 'sticky',
     // top: 0,
     [theme.breakpoints.up('sm')]: {
-      backgroundColor: 'orange',
-      color: '#555',
+      backgroundColor: '#e9e9e9',
+      color: '#fff',
       border: '1px solid #ece7e7',
     },
   },

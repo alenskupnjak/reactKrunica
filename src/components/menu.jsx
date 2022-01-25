@@ -20,15 +20,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     backgroundColor: '#FFE100',
     [theme.breakpoints.up('sm')]: {
-      backgroundColor: 'transparent',
+      backgroundColor: '#e9e9e9',
       color: '#555',
       border: '1px solid #ece7e7',
+      width: '50%',
+      margin: 'auto',
     },
   },
 }));
 
 const CssTextField = styled(TextField)({
-  color: 'red',
   '& label.Mui-focused': {
     color: 'gold',
   },
@@ -64,11 +65,8 @@ export default observer(function Menu() {
   } = storeKrunica;
   const classes = useStyles();
 
+  // Tab vrijednost
   document.title = naslovna02;
-
-  // console.log('listaJezika=', listaJezika, isEmpty(listaJezika));
-  // console.log(trenutniJezik);
-  // console.log(getnazivdanTjedan);
 
   return (
     <Box sx={{ flexGrow: 1, color: 'transparent' }}>

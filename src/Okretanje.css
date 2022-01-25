@@ -10,10 +10,12 @@
   width: 92%;
   position: absolute;
   margin: auto;
-  height: 550px;
+  /* height: 1000px; */
+  height: 100%;
+  height: 'auto';
   transition: all 1s;
   top: 0;
-  left: 4%;
+  left: 7.5%;
   backface-visibility: hidden;
   border-radius: 0.3rem;
   overflow: hidden;
