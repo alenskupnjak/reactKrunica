@@ -14,13 +14,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     height: '100vh',
     margin: 'auto',
-    // paddingTop: theme.spacing(0),
-    // backgroundColor: theme.palette.primary.main,
-    // position: 'sticky',
-    // top: 0,
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
-      color: '#fff',
       border: '1px solid #ece7e7',
     },
   },

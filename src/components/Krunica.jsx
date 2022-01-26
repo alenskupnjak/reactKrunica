@@ -78,13 +78,6 @@ import SlikaGospeNaslovna from './SlikaGospeNaslovna';
 import Navigacija from './Navigacija';
 
 const useStyles = makeStyles((theme) => ({
-  [theme.breakpoints.up('sm')]: {
-    backgroundColor: 'red',
-    color: '#555',
-    border: '1px solid #ece7e7',
-    width: '40%',
-    margin: 'auto',
-  },
   zaglavlje: {
     display: 'flex',
     backgroundColor: '#f7f7f7',
@@ -116,15 +109,15 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   sliBaza: {
-    position: 'fixed',
+    position: 'absolute',
     display: 'block',
-    top: '45px',
+    top: '0',
     left: '0',
     // zIndex: '-1',
-    width: '400px',
-    height: '400px',
+    // width: '400px',
+    // height: '400px',
     translateX: '-50%',
-    opacity: '0.10',
+    opacity: '0.12',
     '&:hover': {
       display: 'none',
     },
@@ -134,6 +127,26 @@ const useStyles = makeStyles((theme) => ({
   },
   nivo: {
     zIndex: '5',
+  },
+  [theme.breakpoints.up('sm')]: {
+    width: '50%',
+    backgroundColor: 'red',
+    color: '#555',
+    border: '1px solid #ece7e7',
+    margin: 'auto',
+    sliBaza: {
+      display: 'none',
+    },
+    slikaKrunice: {
+      width: '70%',
+    },
+    opisZrna: {
+      padding: '3rem',
+    },
+    zaglavlje: {
+      width: '60%',
+      margin: 'auto',
+    },
   },
 
   // container: {

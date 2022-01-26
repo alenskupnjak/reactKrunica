@@ -18,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.5rem',
     textAlign: 'center',
     padding: '0',
+    [theme.breakpoints.up('sm')]: {
+      backgroundColor: '#e9e9e9',
+      color: '#555',
+      border: '1px solid #ece7e7',
+      width: '60%',
+      margin: 'auto',
+    },
   },
 }));
 

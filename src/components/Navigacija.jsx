@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#e9e9e9',
     justifyContent: 'space-between',
     backgroundSize: '1.5rem',
+    margin: 'auto',
     // padding: '0.5rem',
     // marginBottom: '2rem',
     textAlign: 'center',
@@ -31,6 +32,15 @@ const useStyles = makeStyles((theme) => ({
   },
   opiszrna: {
     fontSize: '1.2rem',
+  },
+  [theme.breakpoints.up('sm')]: {
+    color: '#555',
+    border: '1px solid #ece7e7',
+    width: '30%',
+    margin: 'auto',
+    opisZrna: {
+      width: '60%',
+    },
   },
 }));
 
