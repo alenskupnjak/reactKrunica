@@ -176,9 +176,6 @@ function Krunica() {
   const classes = useStyles();
   const { zrno, prijevodOtajstvatext, povratakNaPocetak } = storeKrunica;
 
-  // console.log('prijevodOtajstvatext', getPrijevodOtajstvatext);
-  // console.log('prijevodOtajstvatext', prijevodOtajstvatext);
-
   return (
     <Container className={classes.slikaKrunice}>
       <Container>

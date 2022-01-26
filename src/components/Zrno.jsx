@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     margin: ' auto',
     fontSize: '1.5rem',
     textAlign: 'center',
+    padding: '0',
   },
 }));
 

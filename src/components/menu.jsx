@@ -1,12 +1,7 @@
 import { observer } from 'mobx-react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
-// import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { makeStyles } from '@mui/styles';
@@ -17,8 +12,10 @@ const useStyles = makeStyles((theme) => ({
     color: 'transparent',
     width: '100%',
     zIndex: '6',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     backgroundColor: '#FFE100',
+    paddingRight: '0',
+    padding: '0',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
       color: '#555',
@@ -30,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CssTextField = styled(TextField)({
+  // width: '10px',
   '& label.Mui-focused': {
     color: 'gold',
   },
@@ -69,50 +67,45 @@ export default observer(function Menu() {
   document.title = naslovna02;
 
   return (
-    <Box sx={{ flexGrow: 1, color: 'transparent' }}>
-      <AppBar position="static">
-        <Toolbar className={classes.menu}>
-          <CssTextField
-            fullWidth
-            // id="outlined-select-currency"
-            select
-            // label="Select"
-            value={trenutniJezik}
-            // onChange={(e) => handleChange(e)}
-            onChange={(e) => promjeniJezik(e)}
-            // helperText={jezik}
-            // className={classes.menu}
-          >
-            {getlistaJezika.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </CssTextField>
+    <Box
+      sx={{
+        color: 'transparent',
+        padding: '0',
+      }}
+    >
+      <Toolbar className={classes.menu}>
+        <CssTextField
+          fullWidth
+          select
+          inputProps={{ MenuProps: { disableScrollLock: true } }}
+          id="jezik"
+          value={trenutniJezik}
+          onChange={(e) => promjeniJezik(e)}
+        >
+          {getlistaJezika.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </CssTextField>
 
-          <CssTextField
-            fullWidth
-            // error
-            width="50px"
-            // id="outlined-select-currency"
-            select
-            // label="Select"
-            value={aktivniDan}
-            // onChange={(e) => handleChange(e)}
-            onChange={(e) => {
-              promjeniDanUTjednu(e);
-            }}
-            // helperText="Dan u tjednu"
-            // className={classes.menu}
-          >
-            {getnazivdanTjedan.map((dan) => (
-              <MenuItem key={dan.value} value={dan.value}>
-                {dan.label}
-              </MenuItem>
-            ))}
-          </CssTextField>
-        </Toolbar>
-      </AppBar>
+        <CssTextField
+          fullWidth
+          select
+          inputProps={{ MenuProps: { disableScrollLock: true } }}
+          id="danTjedany"
+          value={aktivniDan}
+          onChange={(e) => {
+            promjeniDanUTjednu(e);
+          }}
+        >
+          {getnazivdanTjedan.map((dan) => (
+            <MenuItem key={dan.value} value={dan.value}>
+              {dan.label}
+            </MenuItem>
+          ))}
+        </CssTextField>
+      </Toolbar>
     </Box>
   );
 });
