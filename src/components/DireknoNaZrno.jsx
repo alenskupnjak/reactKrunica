@@ -30,15 +30,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     margin: 'auto',
     color: 'transparent',
-    // fontSize: '1.5rem',
+
     zIndex: '6',
     // justifyContent: 'space-between',
     backgroundColor: 'linear-gradient(45deg, red 30%, orange 90%)',
-    // [theme.breakpoints.up('sm')]: {
-    //   backgroundColor: 'transparent',
-    //   color: '#555',
-    //   border: '1px solid #ece7e7',
-    // },
   },
 }));
 

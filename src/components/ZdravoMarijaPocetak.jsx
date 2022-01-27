@@ -9,8 +9,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
     textAlign: 'center',
+    lineHeight: '1.2',
   },
 }));
 

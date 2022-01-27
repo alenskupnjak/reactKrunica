@@ -12,10 +12,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cardo',
     backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
-    marginTop: '0.5rem',
+    // marginTop: '0.5rem',
     margin: ' auto',
     fontSize: '1.3rem',
     textAlign: 'center',
+    lineHeight: '1.2',
   },
   zeleno: {
     fontFamily: 'Cardo',
@@ -111,7 +112,7 @@ function Zrno() {
         <div>
           <SlavaOcu />
         </div>
-        <div>{aktivnaZemlja.oMojIsuse}</div>
+        <div className={classes.opisMolitve}>{aktivnaZemlja.oMojIsuse}</div>
       </div>
     </Fragment>
   );

@@ -18,7 +18,7 @@ export const english = {
   otajstvoSlavno: 'The Glorious Mysteries',
   otajstvoRadosna: 'The Joyful Mysteries',
   uImeOcaSina:
-    'In the name of the Father and of the Son  † and of the Holy Spirit.',
+    'In the name of the Father and of the Son † and of the Holy Spirit.',
   oceNas: 'Our father',
   isuse: 'Jesus',
   oceNasText:

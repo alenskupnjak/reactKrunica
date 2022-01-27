@@ -6,33 +6,36 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Avatar from '@mui/material/Avatar';
 import avatarslika from '../slike/Papacy.jpg';
 import zgBiskupija from '../slike/zgBiskupija.jpg';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 const useStyles = makeStyles((theme) => ({
+  zaglavlje: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: '1rem',
+  },
   opisZrna: {
     position: 'relative',
     display: 'flex',
     width: '100%',
     fontFamily: 'Cardo',
-    fontSize: '1.2rem',
+    fontSize: '1.5rem',
     marginTop: '1rem',
-    backgroundColor: '#e9e9e9',
+    backgroundColor: 'transparent',
     justifyContent: 'space-between',
-    backgroundSize: '1.5rem',
     margin: 'auto',
-    // padding: '0.5rem',
-    // marginBottom: '2rem',
+    marginLeft: '0',
     textAlign: 'center',
     borderRadius: '0.2rem',
     boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
     // transition: transform ,'1s'
   },
   nivo: {
+    position: 'relative',
     zIndex: '5',
     margin: '0',
   },
-  opiszrna: {
-    fontSize: '1.2rem',
-  },
+
   [theme.breakpoints.up('sm')]: {
     color: '#555',
     border: '1px solid #ece7e7',
@@ -46,7 +49,14 @@ const useStyles = makeStyles((theme) => ({
 
 function Navigacija() {
   const classes = useStyles();
-  const { aktivnaZemlja, zrno, nazad, naprijed } = storeKrunica;
+  const {
+    aktivnaZemlja,
+    zrno,
+    nazad,
+    naprijed,
+    prijevodOtajstvatext,
+    povratakNaPocetak,
+  } = storeKrunica;
 
   return (
     <div className={classes.opisZrna}>
@@ -61,11 +71,31 @@ function Navigacija() {
           />
         </Typography>
       )}
-      <Typography className={classes.opiszrna}>
-        {aktivnaZemlja[`naslov${zrno}`]}
-      </Typography>
+
+      {zrno !== -1 &&
+        zrno !== 0 &&
+        zrno !== 16 &&
+        zrno !== 27 &&
+        zrno !== 38 &&
+        zrno !== 49 &&
+        zrno !== 60 &&
+        zrno !== 61 && (
+          <div className={classes.zaglavlje}>
+            <span>{prijevodOtajstvatext}</span>
+            <span> † </span>
+            <span
+              className={classes.nivo}
+              onClick={() => {
+                povratakNaPocetak();
+              }}
+            >
+              <RestartAltIcon />
+            </span>
+          </div>
+        )}
+
       <div className={classes.nivo}>
-        <Typography align="right" body="span" className={classes.nivo}>
+        <Typography align="right">
           <Avatar
             src={avatarslika}
             onClick={() => {
@@ -76,8 +106,9 @@ function Navigacija() {
             }
           />
         </Typography>
+
         {zrno === -1 && (
-          <Typography align="right" className={classes.nivo}>
+          <div align="right" className={classes.nivo}>
             <ArrowRightAltIcon
               onClick={() => {
                 naprijed();
@@ -85,7 +116,7 @@ function Navigacija() {
               className={'polagano-prikazivanje'}
               color="action"
             />
-          </Typography>
+          </div>
         )}
       </div>
     </div>

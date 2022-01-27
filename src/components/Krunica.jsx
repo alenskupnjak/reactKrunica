@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
   },
-  opisZrna: {
+  opisZrnaKrunica: {
     fontFamily: 'Cardo',
     display: 'flex',
     margin: 'auto',
@@ -111,19 +111,25 @@ const useStyles = makeStyles((theme) => ({
   sliBaza: {
     position: 'absolute',
     display: 'block',
-    top: '0',
-    left: '0',
-    // zIndex: '-1',
-    // width: '400px',
-    // height: '400px',
-    translateX: '-50%',
-    opacity: '0.12',
+    marginTop: '0',
+    top: '-15px',
+    left: '-20px',
+    width: '400px',
+    height: '300px',
+    translateX: '-45%',
+    opacity: '0.15',
     '&:hover': {
       display: 'none',
     },
   },
   slomiLiniju: {
     whiteSpace: 'pre-line',
+  },
+  opisZrnaDesetice: {
+    fontSize: '1.3rem',
+    // color: '#FFE100',
+    fontStyle: 'italic',
+    marginTop: '0.5rem',
   },
   nivo: {
     zIndex: '5',
@@ -140,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
     slikaKrunice: {
       width: '70%',
     },
-    opisZrna: {
+    opisZrnaKrunica: {
       padding: '3rem',
     },
     zaglavlje: {
@@ -148,68 +154,21 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
   },
-
-  // container: {
-  //   height: "100vh",
-  //   color: "white",
-  //   paddingTop: theme.spacing(10),
-  //   backgroundColor: theme.palette.primary.main,
-  //   position: "sticky",
-  //   top: 0,
-  //   [theme.breakpoints.up("sm")]: {
-  //     backgroundColor: "white",
-  //     color: "#555",
-  //     border: "1px solid #ece7e7",
-  //   },
-  // },
-  // item: {
-  //   display: "flex",
-  //   alignItems: "center",
-  //   marginBottom: theme.spacing(4),
-  //   [theme.breakpoints.up("sm")]: {
-  //     marginBottom: theme.spacing(3),
-  //     cursor: "pointer",
-  //   },
-  // },
-  // icon: {
-  //   marginRight: theme.spacing(1),
-  //   [theme.breakpoints.up("sm")]: {
-  //     fontSize: "18px",
-  //   },
-  // },
-  // text: {
-  //   fontWeight: 500,
-  //   [theme.breakpoints.down("sm")]: {
-  //     display: "none",
-  //   },
-  // },
 }));
 
 function Krunica() {
   const classes = useStyles();
-  const { zrno, prijevodOtajstvatext, povratakNaPocetak } = storeKrunica;
+  const { zrno, prijevodOtajstvatext, povratakNaPocetak, aktivnaZemlja } =
+    storeKrunica;
 
   return (
     <Container className={classes.slikaKrunice}>
       <Container>
         {zrno !== -1 && (
-          <div className={classes.zaglavlje}>
-            {prijevodOtajstvatext && (
-              <Typography>{prijevodOtajstvatext}</Typography>
-            )}
-            <Typography
-              className={classes.nivo}
-              align="right"
-              onClick={() => {
-                povratakNaPocetak();
-              }}
-            >
-              <RestartAltIcon />
-            </Typography>
+          <div className={classes.opisZrnaDesetice}>
+            {aktivnaZemlja[`naslov${zrno}`]}-{zrno}
           </div>
         )}
-
-        <Navigacija />
         {zrno === -1 && <SlikaGospeNaslovna />}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}

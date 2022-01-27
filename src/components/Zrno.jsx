@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.5rem',
     textAlign: 'center',
     padding: '0',
+    height: '80vh',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
       color: '#555',

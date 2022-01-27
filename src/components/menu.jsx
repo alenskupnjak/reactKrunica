@@ -1,5 +1,7 @@
 import { observer } from 'mobx-react';
 import Box from '@mui/material/Box';
+import AppBar from '@mui/material/AppBar';
+
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
@@ -11,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     color: 'transparent',
     width: '100%',
+    // height: '10%',
     zIndex: '6',
     justifyContent: 'space-around',
     backgroundColor: '#FFE100',
@@ -27,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CssTextField = styled(TextField)({
-  // width: '10px',
+  // height: '10px',
   '& label.Mui-focused': {
     color: 'gold',
   },
@@ -67,12 +70,7 @@ export default observer(function Menu() {
   document.title = naslovna02;
 
   return (
-    <Box
-      sx={{
-        color: 'transparent',
-        padding: '0',
-      }}
-    >
+    <AppBar position="sticky">
       <Toolbar className={classes.menu}>
         <CssTextField
           fullWidth
@@ -106,6 +104,6 @@ export default observer(function Menu() {
           ))}
         </CssTextField>
       </Toolbar>
-    </Box>
+    </AppBar>
   );
 });
