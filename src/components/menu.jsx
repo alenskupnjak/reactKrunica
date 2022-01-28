@@ -13,12 +13,14 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     color: 'transparent',
     width: '100%',
-    // height: '10%',
+    margin: '0',
+    paddingLeft: '0',
     zIndex: '6',
     justifyContent: 'space-around',
     backgroundColor: '#FFE100',
     paddingRight: '0',
     padding: '0',
+    overflowX: 'hidden',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
       color: '#555',
@@ -28,31 +30,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-const CssTextField = styled(TextField)({
-  // height: '10px',
-  '& label.Mui-focused': {
-    color: 'gold',
-  },
-  '& label.Mui-selected': {
-    color: 'blue',
-  },
-  '& .MuiInput-underline:after': {
-    borderBottomColor: 'blue',
-  },
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: 'gold',
-    },
-    '&:hover fieldset': {
-      borderColor: 'yellow',
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: 'gold',
-      // background: 'linear-gradient(45deg, red 30%, orange 90%)',
-    },
-  },
-});
 
 export default observer(function Menu() {
   const {
@@ -70,9 +47,9 @@ export default observer(function Menu() {
   document.title = naslovna02;
 
   return (
-    <AppBar position="sticky">
-      <Toolbar className={classes.menu}>
-        <CssTextField
+    <Box component="div" sx={{ overflow: 'hidden' }} className={classes.menu}>
+      <Toolbar>
+        <TextField
           fullWidth
           select
           inputProps={{ MenuProps: { disableScrollLock: true } }}
@@ -85,9 +62,9 @@ export default observer(function Menu() {
               {option.label}
             </MenuItem>
           ))}
-        </CssTextField>
+        </TextField>
 
-        <CssTextField
+        <TextField
           fullWidth
           select
           inputProps={{ MenuProps: { disableScrollLock: true } }}
@@ -102,8 +79,8 @@ export default observer(function Menu() {
               {dan.label}
             </MenuItem>
           ))}
-        </CssTextField>
+        </TextField>
       </Toolbar>
-    </AppBar>
+    </Box>
   );
 });

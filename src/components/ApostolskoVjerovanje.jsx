@@ -1,17 +1,16 @@
 import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
-
 import { storeKrunica } from '../store/KrunicaStore';
 import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
   },
 }));
 
@@ -40,8 +39,10 @@ function ApostolskoVjerovanje() {
           <strong>{apostolskoVjerovanje}</strong>
         </div>
         {apostolskoVjerovanjeText}
+
         <div>
           <Amen />
+          {/* <Navigacija /> */}
         </div>
       </div>
     </Fragment>

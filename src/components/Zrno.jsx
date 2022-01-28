@@ -1,6 +1,5 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
-import Typography from '@mui/material/Typography';
 
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
@@ -11,11 +10,11 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     textAlign: 'center',
     padding: '0',
     height: '80vh',
@@ -38,7 +37,7 @@ function Zrno() {
       <div className={classes.opisMolitve}>
         <ZdravoMarijaPocetak />
         <div>
-          <Typography className="zeleno" variant="h5">
+          <div className="zeleno">
             {zrno === 2 && aktivnaZemlja.vjera}
             {zrno === 3 && aktivnaZemlja.ufanje}
             {zrno === 4 && aktivnaZemlja.ljubav}
@@ -127,7 +126,7 @@ function Zrno() {
               zrno > 50 &&
               zrno < 60 &&
               aktivnaZemlja.petaDeseticaSvjetla}
-          </Typography>
+          </div>
         </div>
         <ZdravoMarijaKraj />
         <Amen />

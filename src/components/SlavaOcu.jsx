@@ -7,11 +7,11 @@ import Amen from './Amen';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.2rem',
+    fontSize: '1.3rem',
   },
 }));
 

@@ -10,7 +10,7 @@ import SlavaOcu from './SlavaOcu';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     // marginTop: '0.5rem',
     margin: ' auto',
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   zeleno: {
     fontFamily: 'Cardo',
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',

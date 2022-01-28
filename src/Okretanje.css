@@ -73,7 +73,7 @@
 /* // prednja strana karte */
 .card__picture {
   background-size: cover;
-  height: 80%;
+  height: 100%;
   width: 100%;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
