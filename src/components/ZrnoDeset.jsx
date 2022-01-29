@@ -1,7 +1,6 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
-
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
@@ -10,17 +9,14 @@ import SlavaOcu from './SlavaOcu';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
-    // marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
     textAlign: 'center',
     lineHeight: '1.2',
   },
   zeleno: {
     fontFamily: 'Cardo',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',

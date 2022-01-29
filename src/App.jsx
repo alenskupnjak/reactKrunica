@@ -9,6 +9,7 @@ import Krunica from './components/Krunica';
 import Menu from './components/Menu';
 import Navigacija from './components/Navigacija';
 import Povratak from './components/Povratak';
+import DireknoNaZrno from './components/DireknoNaZrno';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -33,6 +34,7 @@ function App() {
         <Krunica />
         <Povratak />
         <Navigacija />
+        {process.env.NODE_ENV === 'development' && <DireknoNaZrno />}
       </Grid>
     </Fragment>
   );

@@ -1,6 +1,5 @@
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
-
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
@@ -27,6 +26,12 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
   },
+  zeleno: {
+    color: '#1b921b',
+    '&:hover': {
+      color: 'pink',
+    },
+  },
 }));
 
 function Zrno() {
@@ -38,7 +43,7 @@ function Zrno() {
       <div className={classes.opisMolitve}>
         <ZdravoMarijaPocetak />
         <div>
-          <div className="zeleno">
+          <div className={classes.zeleno} title={zrno}>
             {zrno === 2 && aktivnaZemlja.vjera}
             {zrno === 3 && aktivnaZemlja.ufanje}
             {zrno === 4 && aktivnaZemlja.ljubav}

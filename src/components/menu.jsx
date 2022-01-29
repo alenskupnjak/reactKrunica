@@ -1,9 +1,5 @@
 import { observer } from 'mobx-react';
-import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
-
 import Toolbar from '@mui/material/Toolbar';
-import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { makeStyles } from '@mui/styles';
@@ -11,7 +7,6 @@ import { storeKrunica } from '../store/KrunicaStore';
 
 const useStyles = makeStyles((theme) => ({
   menu: {
-    // height: '40px',
     color: 'transparent',
     width: '100%',
     margin: '0',
@@ -53,12 +48,9 @@ export default observer(function Menu() {
         <TextField
           fullWidth
           size="small"
-          // margin="dense"
-          // margin="normal"
           select
           inputProps={{ MenuProps: { disableScrollLock: true } }}
-          // id="jezik"
-          id="margin-none"
+          id="jezik"
           value={trenutniJezik}
           onChange={(e) => promjeniJezik(e)}
         >
@@ -73,10 +65,8 @@ export default observer(function Menu() {
           fullWidth
           select
           size="small"
-          // margin="dense"
           inputProps={{ MenuProps: { disableScrollLock: true } }}
-          // id="danTjedany"
-          id="margin-none"
+          id="danTjedany"
           value={aktivniDan}
           onChange={(e) => {
             promjeniDanUTjednu(e);

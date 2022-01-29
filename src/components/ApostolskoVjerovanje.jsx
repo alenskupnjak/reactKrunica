@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     opisZrna: {
       width: '60%',
       marginLeft: '20%',
-      // fontSize: '2rem',
       boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
     },
     opisMolitve: {

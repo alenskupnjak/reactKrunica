@@ -1,10 +1,3 @@
-// import { Fragment } from 'react';
-// import Typography from '@mui/material/Typography';
-// import { makeStyles } from '@mui/styles';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import { Container } from '@mui/material';
-
 import { storeKrunica } from '../store/KrunicaStore';
 
 // const useStyles = makeStyles((theme) => ({
@@ -29,7 +22,6 @@ function SlikaGospeNaslovna() {
     otajstvoSvjetla,
     otajstvoZalosno,
   } = aktivnaZemlja;
-  console.log('aktivnaZemlja=', aktivnaZemlja);
 
   return (
     <div className="card">

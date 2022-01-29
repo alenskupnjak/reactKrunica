@@ -77,7 +77,6 @@ import SlikaGospeNaslovna from './SlikaGospeNaslovna';
 const useStyles = makeStyles((theme) => ({
   zaglavlje: {
     display: 'flex',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
   },
   opisZrnaKrunica: {
@@ -93,15 +92,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2rem',
     textAlign: 'center',
     borderRadius: '0.2rem',
-    // boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
-    // transition: transform ,'1s'
   },
   slikaKrunice: {
     position: 'relative',
     left: '0',
     top: '0',
     margin: 'auto',
-    /* background-color: #6730ff; */
     height: '100vh',
     width: '100%',
   },
@@ -114,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     width: '400px',
     height: '300px',
     translateX: '-50%',
-    opacity: '0.15',
+    opacity: '0.17',
     '&:hover': {
       display: 'none',
     },
@@ -228,7 +224,6 @@ function Krunica() {
         {zrno === 59 && <Zrno />}
         {zrno === 60 && <ZrnoDeset />}
         {zrno === 61 && <KrajKrunice />}
-        {/* <Navigacija></Navigacija> */}
       </Container>
       <Container>
         <div className={classes.sliBaza}>
