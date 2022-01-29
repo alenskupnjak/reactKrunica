@@ -123,10 +123,10 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: 'pre-line',
   },
   opisZrnaDesetice: {
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
     // color: '#FFE100',
     fontStyle: 'italic',
-    marginTop: '0.5rem',
+    marginTop: '0.2rem',
   },
   nivo: {
     zIndex: '5',

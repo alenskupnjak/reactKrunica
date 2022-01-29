@@ -16,7 +16,7 @@ export const hrvatski = {
   otajstvoSvjetla: 'Svijetlo Otajstvo',
   otajstvoZalosno: 'Žalosno Otajstvo',
   otajstvoSlavno: 'Slavno Otajstvo',
-  otajstvoRadosna: 'Radosna Otajstvo',
+  otajstvoRadosna: 'Radosno Otajstvo',
   uImeOcaSina: 'U ime Oca i Sina † i Duha Svetoga.',
   oceNas: 'Oče naš',
   isuse: 'Isuse',
@@ -35,7 +35,7 @@ export const hrvatski = {
     'Zdravo Kraljice, Majko milosrđa, živote, slasti i ufanje naše, zdravo!\n K tebi vapijemo prognani sinovi Evini. \n K tebi uzdišemo tugujući i plačući u ovoj suznoj dolini. \n Svrni, dakle, Zagovornice naša one svoje milostive oči na nas te nam poslije ovoga progonstva pokaži Isusa, blagoslovljeni plod utrobe svoje. \n O blaga, o mila, o slatka Djevice Marijo.',
   apostolskoUvod:
     ', to je tebi za ljubav, za obraćenje grješnika i kao naknada za uvrede koje se nanose Bezgrešnom Srcu Marijinu.',
-  apostolskoVjerovanje: 'APOSTOLSKO VJEROVANJE',
+  apostolskoVjerovanje: 'Apostolsko Vjerovanje',
   apostolskoVjerovanjeText:
     'Vjerujem u Boga, Oca svemogućega, Stvoritelja neba i zemlje. I u Isusa Krista, Sina njegova jedinoga, Gospodina našega, koji je začet po Duhu Svetom, rođen od Marije Djevice, mučen pod Poncijem Pilatom, raspet, umro i pokopan; sašao nad pakao; treći dan uskrsnuo od mrtvih; uzašao na nebesa, sjedi o desnu Boga Oca svemogućega; odonud će doći suditi žive i mrtve. Vjerujem u Duha Svetoga, svetu Crkvu katoličku, općinstvo svetih, oproštenje grijeha, uskrsnuće tijela, i život vječni.',
   vjera: 'Isus, koji neka nam umnoži vjeru!',

@@ -10,7 +10,25 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.1rem',
+    fontSize: '1.2rem',
+    lineHeight: '1.1',
+  },
+  [theme.breakpoints.up('sm')]: {
+    color: '#555',
+    border: '1px solid #ece7e7',
+    width: '30%',
+    margin: 'auto',
+    opisZrna: {
+      width: '60%',
+      marginLeft: '20%',
+      // fontSize: '2rem',
+      boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
+    },
+    opisMolitve: {
+      fontSize: '2rem',
+      color: 'orange',
+      lineHeight: '1.3',
+    },
   },
 }));
 
@@ -39,10 +57,8 @@ function ApostolskoVjerovanje() {
           <strong>{apostolskoVjerovanje}</strong>
         </div>
         {apostolskoVjerovanjeText}
-
         <div>
           <Amen />
-          {/* <Navigacija /> */}
         </div>
       </div>
     </Fragment>

@@ -35,7 +35,7 @@ export const english = {
   zdravoKraljice:
     'Hail, holy Queen, mother of mercy; hail, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. \n Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  \n O clement, O loving, O sweet Virgin Mary.',
   apostolskoUvod:
-    ', to je tebi za ljubav, za obraćenje grješnika i kao naknada za uvrede koje se nanose Bezgrešnom Srcu Marijinu.',
+    ', it is for Your love, for the conversion of sinners, and in reparation for the sins done against the Immaculate Heart of Mary.',
   apostolskoVjerovanje: "The Apostles' Creed",
   apostolskoVjerovanjeText:
     "I believe in God, the Father almighty, creator of heaven and earth. I believe in Jesus Christ, God's only Son, our Lord, who was conceived by the Holy Spirit, born of the virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead. On the third day he rose again; he ascended into heaven, he is seated at the right hand of the Father, and he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Christian Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting.",

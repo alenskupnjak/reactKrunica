@@ -11,6 +11,7 @@ import { storeKrunica } from '../store/KrunicaStore';
 
 const useStyles = makeStyles((theme) => ({
   menu: {
+    // height: '40px',
     color: 'transparent',
     width: '100%',
     margin: '0',
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#e9e9e9',
       color: '#555',
       border: '1px solid #ece7e7',
-      width: '50%',
+      width: '40%',
       margin: 'auto',
     },
   },
@@ -47,13 +48,17 @@ export default observer(function Menu() {
   document.title = naslovna02;
 
   return (
-    <Box component="div" sx={{ overflow: 'hidden' }} className={classes.menu}>
-      <Toolbar>
+    <div className={classes.menu}>
+      <Toolbar variant="dense">
         <TextField
           fullWidth
+          size="small"
+          // margin="dense"
+          // margin="normal"
           select
           inputProps={{ MenuProps: { disableScrollLock: true } }}
-          id="jezik"
+          // id="jezik"
+          id="margin-none"
           value={trenutniJezik}
           onChange={(e) => promjeniJezik(e)}
         >
@@ -67,8 +72,11 @@ export default observer(function Menu() {
         <TextField
           fullWidth
           select
+          size="small"
+          // margin="dense"
           inputProps={{ MenuProps: { disableScrollLock: true } }}
-          id="danTjedany"
+          // id="danTjedany"
+          id="margin-none"
           value={aktivniDan}
           onChange={(e) => {
             promjeniDanUTjednu(e);
@@ -81,6 +89,6 @@ export default observer(function Menu() {
           ))}
         </TextField>
       </Toolbar>
-    </Box>
+    </div>
   );
 });

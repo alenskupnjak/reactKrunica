@@ -7,7 +7,6 @@ import './Pulsiranje.css';
 import { makeStyles } from '@mui/styles';
 import Krunica from './components/Krunica';
 import Menu from './components/Menu';
-// import DireknoNaZrno from './components/DireknoNaZrno';
 import Navigacija from './components/Navigacija';
 import Povratak from './components/Povratak';
 

@@ -9,9 +9,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.2rem',
+    fontSize: '1.4rem',
     textAlign: 'center',
     lineHeight: '1.2',
+    [theme.breakpoints.up('sm')]: {
+      color: 'orange',
+      fontSize: '2rem',
+    },
   },
 }));
 

@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #ece7e7',
     width: '30%',
     margin: 'auto',
+    povratak: {
+      left: '20%',
+    },
   },
 }));
 

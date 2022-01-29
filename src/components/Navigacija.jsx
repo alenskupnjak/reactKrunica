@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     fontSize: '1rem',
     color: 'blue',
-    // backgroundColor: 'orange',
+    marginBottom: '0',
   },
   opisZrna: {
     position: 'absolute',
@@ -22,16 +22,12 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     fontFamily: 'Cardo',
     fontSize: '1.5rem',
-    marginTop: '1rem',
+    marginTop: '1.5rem',
     color: 'red',
-    // backgroundColor: 'transparent',
     justifyContent: 'space-between',
-    margin: 'auto',
-    // marginLeft: '10px',
     textAlign: 'center',
+    margin: 'auto',
     borderRadius: '0.2rem',
-    // boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
-    // transition: transform ,'1s'
   },
   nivo: {
     position: 'relative',
@@ -46,6 +42,13 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     opisZrna: {
       width: '60%',
+      marginLeft: '20%',
+      // fontSize: '2rem',
+      boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
+    },
+    zaglavlje: {
+      fontSize: '2rem',
+      color: 'red',
     },
   },
 }));
@@ -55,52 +58,51 @@ function Navigacija() {
   const { zrno, nazad, naprijed, prijevodOtajstvatext } = storeKrunica;
 
   return (
-    <div>
-      <div className={classes.opisZrna}>
-        {zrno !== -1 && (
-          <div align="left" className={classes.nivo}>
-            <Avatar
-              src={zgBiskupija}
-              onClick={() => {
-                nazad();
-              }}
-              className="pulsiranjeLijevo"
-            />
-          </div>
-        )}
+    <div className={classes.opisZrna}>
+      {zrno !== -1 && (
+        <div align="left" className={classes.nivo}>
+          <Avatar
+            src={zgBiskupija}
+            onClick={() => {
+              nazad();
+            }}
+            className="pulsiranjeLijevo"
+          />
+        </div>
+      )}
 
-        {zrno !== -1 && (
-          <div className={classes.zaglavlje}>
-            <span>{prijevodOtajstvatext} †</span>
-          </div>
-        )}
+      {zrno !== -1 && (
+        <div className={classes.zaglavlje}>
+          <span>{prijevodOtajstvatext} †</span>
+        </div>
+      )}
 
-        <div className={classes.nivo}>
-          <div>
-            <Avatar
-              src={avatarslika}
-              style={{ borderRadius: 20, color: 'transparent' }}
+      <div className={classes.nivo}>
+        {zrno !== -1 && (
+          <Avatar
+            src={avatarslika}
+            style={{ borderRadius: 20, color: 'transparent' }}
+            onClick={() => {
+              naprijed();
+            }}
+            className={
+              zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
+            }
+          />
+        )}
+        <div></div>
+
+        {zrno === -1 && (
+          <div className={classes.nivo}>
+            <ArrowRightAltIcon
               onClick={() => {
                 naprijed();
               }}
-              className={
-                zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
-              }
+              className={'polagano-prikazivanje'}
+              color="action"
             />
           </div>
-
-          {zrno === -1 && (
-            <div className={classes.nivo}>
-              <ArrowRightAltIcon
-                onClick={() => {
-                  naprijed();
-                }}
-                className={'polagano-prikazivanje'}
-                color="action"
-              />
-            </div>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );
