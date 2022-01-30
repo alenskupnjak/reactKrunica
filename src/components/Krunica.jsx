@@ -81,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
   },
   opisZrnaKrunica: {
-    fontFamily: 'Cardo',
     display: 'flex',
     margin: 'auto',
     fontSize: '2rem',
@@ -151,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Krunica() {
   const classes = useStyles();
-  const { zrno, aktivnaZemlja } = storeKrunica;
+  const { zrno } = storeKrunica;
 
   return (
     <div className={classes.slikaKrunice}>

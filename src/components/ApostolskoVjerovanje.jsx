@@ -5,7 +5,6 @@ import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
-    fontFamily: 'Cardo',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
