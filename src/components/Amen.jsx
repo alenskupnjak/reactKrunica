@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import { makeStyles } from '@mui/styles';
+import { observer } from 'mobx-react';
 
 const useStyles = makeStyles((theme) => ({
   amen: {
@@ -24,4 +25,4 @@ function Amen() {
   );
 }
 
-export default Amen;
+export default observer(Amen);

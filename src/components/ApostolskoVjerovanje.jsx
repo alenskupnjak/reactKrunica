@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
 import { storeKrunica } from '../store/KrunicaStore';
+import { observer } from 'mobx-react';
 import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,15 +32,17 @@ const useStyles = makeStyles((theme) => ({
 
 function ApostolskoVjerovanje() {
   const classes = useStyles();
+  const { aktivnaZemlja } = storeKrunica;
   const {
-    aktivnaZemlja: {
-      uImeOcaSina,
-      isuse,
-      apostolskoUvod,
-      apostolskoVjerovanje,
-      apostolskoVjerovanjeText,
-    },
-  } = storeKrunica;
+    uImeOcaSina,
+    isuse,
+    apostolskoUvod,
+    apostolskoVjerovanje,
+    apostolskoVjerovanjeText,
+  } = aktivnaZemlja;
+
+  console.log('%c 00 ', 'color:green', aktivnaZemlja);
+
   return (
     <Fragment>
       <div className={classes.opisMolitve}>
@@ -62,4 +65,4 @@ function ApostolskoVjerovanje() {
   );
 }
 
-export default ApostolskoVjerovanje;
+export default observer(ApostolskoVjerovanje);

@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import { makeStyles } from '@mui/styles';
@@ -5,7 +6,6 @@ import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
@@ -35,4 +35,4 @@ function KrajKrunice() {
   );
 }
 
-export default KrajKrunice;
+export default observer(KrajKrunice);
