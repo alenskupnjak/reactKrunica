@@ -1,9 +1,9 @@
 .pulsiranjeDesno {
   position: absolute;
-  top: 0px;
+  top: -15px;
   /* color: 'transparent'; */
   background-color: transparent;
-  left: -10px;
+  left: -5px;
   height: 20px;
   width: 20px;
   -webkit-transition-property: -webkit-transform;
@@ -46,19 +46,19 @@
 }
 @keyframes grow {
   from {
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-40%) scale(1);
   }
   to {
-    transform: translateX(0%) scale(2);
+    transform: translateX(0%) scale(1.5);
   }
 }
 
 /* Sa desna na lijevo */
 .pulsiranjeLijevo {
   position: absolute;
-  top: 0px;
+  top: -15px;
   /* background-color: yellow; */
-  left: 0px;
+  left: 5px;
   height: 20px;
   width: 20px;
   -webkit-transition-property: -webkit-transform;
@@ -88,7 +88,7 @@
     transform: translateX(50%) scale(1);
   }
   to {
-    transform: translateX(0%) scale(2);
+    transform: translateX(0%) scale(1.5);
   }
 }
 
@@ -149,7 +149,7 @@
 /* Naslovna starna */
 .polagano-prikazivanje {
   position: absolute;
-  top: 0px;
+  top: -160px;
   /* background-color: yellow; */
   right: -300px;
   height: 5px;
@@ -159,11 +159,11 @@
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
-  -webkit-animation-name: naslovna;
+  /* -webkit-animation-name: naslovna; */
   -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-name: naslovna;
+  /* -moz-animation-name: naslovna; */
   -moz-animation-duration: 2s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;

@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.2rem',
     textAlign: 'center',
     lineHeight: '1.2',
+    [theme.breakpoints.up('sm')]: {
+      color: '#093145',
+      fontSize: '2rem',
+    },
   },
   zeleno: {
     fontFamily: 'Cardo',
@@ -23,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.3rem',
     textAlign: 'center',
     color: '#1b921b;',
+    [theme.breakpoints.up('sm')]: {
+      color: '#093145',
+      fontSize: '2rem',
+    },
   },
 }));
 

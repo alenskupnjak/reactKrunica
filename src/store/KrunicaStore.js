@@ -28,7 +28,7 @@ class KrunicaStore {
     });
   }
 
-  // Inicijalna zemlja
+  // Inicijalne vrijednosti u app
   trenutniJezik = 'English';
   aktivnoOtajstvo = '';
   listaOtajstva = [];
@@ -73,7 +73,7 @@ class KrunicaStore {
       };
     });
 
-    console.log('this.listaZrnaRadno', this.listaZrnaRadno);
+    // console.log('this.listaZrnaRadno', this.listaZrnaRadno);
 
     // postavi dan u tjednu i aktivno otajstvo
     const d = new Date();
@@ -114,7 +114,7 @@ class KrunicaStore {
     this.prijevodOtajstva();
   };
 
-  //
+  // Povlačimo listu jezika
   get getlistaJezika() {
     return this.listaJezika;
   }
@@ -168,7 +168,7 @@ class KrunicaStore {
     });
   };
 
-  // prevodi OTAJSTVO t
+  // prevodi OTAJSTVO
   prijevodOtajstva() {
     this.listaOtajstva.forEach((data) => {
       if (data.id === this.aktivnoOtajstvo) {
@@ -210,25 +210,21 @@ class KrunicaStore {
       return;
     }
     this.zrno--;
-    // console.log('Zrno =', this.zrno);
   };
 
-  //
   // Promjena jezika
   promjeniJezik = (e) => {
-    console.log('Jezik=', e.target.value);
     this.trenutniJezik = e.target.value;
     // pronadi podatke zemlje
-    const podaciZemlje = head(
-      filter(getListaZemalja(), (data) => {
-        return data.jezik === this.trenutniJezik;
-      }),
-    );
-    console.log(podaciZemlje);
+    // const podaciZemlje = head(
+    //   filter(getListaZemalja(), (data) => {
+    //     return data.jezik === this.trenutniJezik;
+    //   }),
+    // );
+    // console.log(podaciZemlje);
 
     // console.log('Aktivan=', this.aktivniDan);
     this.prijevodOtajstva();
-    // console.log('Lista otajstva=', this.listaOtajstva);
 
     if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
       this.aktivnoOtajstvo = 'otajstvoRadosna';

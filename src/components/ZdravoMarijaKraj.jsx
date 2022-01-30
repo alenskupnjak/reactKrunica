@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.4rem',
     textAlign: 'center',
     lineHeight: '1.2',
+    [theme.breakpoints.up('sm')]: {
+      color: '#093145',
+      fontSize: '2rem',
+    },
   },
   opisMolitveDeset: {
     justifyContent: 'space-between',
@@ -21,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     lineHeight: '1.2',
     [theme.breakpoints.up('sm')]: {
-      color: 'orange',
+      color: '#093145',
       fontSize: '2rem',
     },
   },

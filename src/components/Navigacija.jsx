@@ -11,19 +11,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     fontSize: '1rem',
-    color: 'blue',
+    color: '#3C6478',
     marginBottom: '0',
   },
   opisZrna: {
     position: 'absolute',
-    top: '570px',
+    bottom: '0%',
     left: '0',
     display: 'flex',
     width: '100%',
-    fontFamily: 'Cardo',
     fontSize: '1.5rem',
     marginTop: '1.5rem',
-    color: 'red',
+    color: '#3C6478',
     justifyContent: 'space-between',
     textAlign: 'center',
     margin: 'auto',
@@ -43,12 +42,10 @@ const useStyles = makeStyles((theme) => ({
     opisZrna: {
       width: '60%',
       marginLeft: '20%',
-      // fontSize: '2rem',
       boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
     },
     zaglavlje: {
       fontSize: '2rem',
-      color: 'red',
     },
   },
 }));
@@ -99,7 +96,6 @@ function Navigacija() {
                 naprijed();
               }}
               className={'polagano-prikazivanje'}
-              color="action"
             />
           </div>
         )}

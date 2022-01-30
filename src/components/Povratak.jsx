@@ -6,27 +6,22 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 const useStyles = makeStyles((theme) => ({
   povratak: {
     position: 'absolute',
-    top: '520px',
-    left: '10px',
+    backgroundColor: '#FFE100',
+    top: '9%',
+    right: '20px',
     display: 'flex',
     width: '100%',
-    fontFamily: 'Cardo',
-    fontSize: '1.5rem',
-    marginTop: '1rem',
-  },
-  nivo: {
-    position: 'relative',
+    fontSize: '4rem',
     zIndex: '5',
-    margin: '0',
+    borderRadius: '50%',
   },
-
   [theme.breakpoints.up('sm')]: {
-    color: '#555',
     border: '1px solid #ece7e7',
     width: '30%',
     margin: 'auto',
     povratak: {
-      left: '20%',
+      right: '20%',
+      top: '85%',
     },
   },
 }));
@@ -37,18 +32,15 @@ function Povratak() {
 
   return (
     <div>
-      <div className={classes.povratak}>
-        {zrno !== -1 && (
-          <div
-            className={classes.nivo}
-            onClick={() => {
-              povratakNaPocetak();
-            }}
-          >
-            <RestartAltIcon />
-          </div>
-        )}
-      </div>
+      {zrno === 61 ? (
+        <div
+          onClick={() => {
+            povratakNaPocetak();
+          }}
+        >
+          <RestartAltIcon className={classes.povratak} />
+        </div>
+      ) : null}
     </div>
   );
 }

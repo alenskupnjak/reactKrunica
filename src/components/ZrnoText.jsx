@@ -2,19 +2,16 @@ import { observer } from 'mobx-react';
 import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
 import { storeKrunica } from '../store/KrunicaStore';
-import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
-    fontFamily: 'Cardo',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.4rem',
+    fontSize: '1.1rem',
+    color: '#093145',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
-      color: '#093145',
       border: '1px solid #ece7e7',
       width: '50%',
       margin: 'auto',
@@ -23,23 +20,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function OceNas() {
+function ZrnoText() {
   const classes = useStyles();
-  const {
-    aktivnaZemlja: { oceNas, oceNasText },
-  } = storeKrunica;
+  const { aktivnaZemlja, zrno } = storeKrunica;
 
   return (
     <Fragment>
       <div className={classes.opisMolitve}>
-        <strong>{oceNas}</strong>
-        {oceNasText}
-        <div>
-          <Amen />
-        </div>
+        {zrno !== -1 && (
+          <div>
+            {process.env.NODE_ENV === 'development'
+              ? aktivnaZemlja[`naslov${zrno}`] + ' - ' + zrno
+              : aktivnaZemlja[`naslov${zrno}`]}
+          </div>
+        )}
       </div>
     </Fragment>
   );
 }
 
-export default observer(OceNas);
+export default observer(ZrnoText);

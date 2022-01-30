@@ -6,12 +6,11 @@ import Amen from './Amen';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     fontFamily: 'Cardo',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.2rem',
-    lineHeight: '1.1',
+    fontSize: '1.15rem',
+    lineHeight: '1.05',
   },
   [theme.breakpoints.up('sm')]: {
     color: '#555',
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     opisMolitve: {
       fontSize: '2rem',
-      color: 'orange',
+      color: '#093145',
       lineHeight: '1.3',
     },
   },

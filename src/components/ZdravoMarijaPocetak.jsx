@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     lineHeight: '1.2',
     [theme.breakpoints.up('sm')]: {
-      color: 'orange',
+      color: '#093145',
       fontSize: '2rem',
     },
   },
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     lineHeight: '1.2',
     [theme.breakpoints.up('sm')]: {
-      color: 'orange',
+      color: '#093145',
       fontSize: '2rem',
     },
   },

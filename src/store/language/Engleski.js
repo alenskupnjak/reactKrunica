@@ -1,7 +1,6 @@
 export const english = {
   id: 'en',
   jezik: 'English',
-  pocetak: 'Start',
   naslovna01: 'Hail Mary and Jesus!',
   naslovna02: 'Holy Mary Rosary',
   daniTjedan: [
@@ -104,28 +103,29 @@ export const english = {
   naslov59: '9. bead',
   naslov60: '10. bead',
   naslov61: 'The end of the rosary',
-  prvaDeseticaZalosna: 'Jesus, ENG koji se za nas krvlju znojio!',
-  prvaDeseticaSlavna: 'Jesus, ENG koji je od mrtvih uskrsnuo!',
+  prvaDeseticaZalosna: 'Jesus, who was sweating blood for us!',
+  prvaDeseticaSlavna: 'Jesus, who rose from the dead!',
   prvaDeseticaRadosna:
     'Jesus, whom you, the Virgin, by the Holy Spirit conceived!',
-  prvaDeseticaSvjetla: 'Jesus, ENG koji je na rijeci Jordanu kršten bio!',
-  drugaDeseticaZalosna: 'Jesus, ENG koji je za nas bičevan bio!',
-  drugaDeseticaSlavna: 'Jesus, ENG koji je na nebo uzašao!',
-  drugaDeseticaRadosna:
-    'Jesus, whom you, the Virgin, Elizabeti u pohode nosila!',
-  drugaDeseticaSvjetla: 'Jesus, ENG koji nam se na svadbi u Kani objavio!',
-  trecaDeseticaZalosna: 'Jesus, ENG koji je za nas trnjem okrunjen bio!',
-  trecaDeseticaSlavna: 'Jesus, ENG koji je Duha Svetog poslao!',
-  trecaDeseticaRadosna: 'Jesus, ENG koga si Djevice, rodila!',
+  prvaDeseticaSvjetla: 'Jesus, who was baptized on the Jordan River!',
+  drugaDeseticaZalosna: 'Jesus ,which was whipped for us!',
+  drugaDeseticaSlavna: 'Jesus, who ascended to heaven!',
+  drugaDeseticaRadosna: 'Jesus, whom you, the Virgin, Elizabeth went to visit!',
+  drugaDeseticaSvjetla:
+    'Jesus, which was revealed to us at the wedding in Cana!',
+  trecaDeseticaZalosna: 'Jesus, who for us was crowned with thorns!',
+  trecaDeseticaSlavna: 'Jesus, who sent the Holy Spirit!',
+  trecaDeseticaRadosna: 'Jesus, whom you, Virgin, gave birth to!',
   trecaDeseticaSvjetla:
-    'Jesus, ENG koji nam je Kraljevstvo Božje navijestio i na obraćenje pozvao!',
-  cetvrtaDeseticaZalosna: 'Jesus, ENG koji je za nas teški križ nosio!',
-  cetvrtaDeseticaSlavna: 'Jesus, ENG koji je Tebe Djevice, na nebo uzeo!',
-  cetvrtaDeseticaRadosna: 'Jesus, ENG koga si Djevice, u hramu prikazala!',
+    'Jesus, who proclaimed to us the Kingdom of God and called us to conversion!',
+  cetvrtaDeseticaZalosna: 'Jesus, who carried for us a heavy cross!',
+  cetvrtaDeseticaSlavna: 'Jesus, who took Thee, O Virgin, to heaven!',
+  cetvrtaDeseticaRadosna: 'Jesus, whom you have shown, Virgin, in the temple!',
   cetvrtaDeseticaSvjetla:
-    'Jesus, ENG koji se na gori preobrazio i svoju nam slavu objavio!',
-  petaDeseticaZalosna: 'Jesus, ENG koji je za nas raspet bio!',
-  petaDeseticaSlavna: 'Jesus, ENG koji je Tebe Djevice, na nebu okrunio!',
-  petaDeseticaRadosna: 'Jesus, ENG koga si Djevice, u hramu našla!',
-  petaDeseticaSvjetla: 'Jesus, ENG koji nam se u otajstvu euharistije darovao!',
+    'Jesus, who was transformed on the mountain and revealed his glory to us!',
+  petaDeseticaZalosna: 'Jesus, who was crucified for us!',
+  petaDeseticaSlavna: 'Jesus, who crowned Thee Virgin, in heaven!',
+  petaDeseticaRadosna: 'Jesus, whom you found, Virgin, in the temple!',
+  petaDeseticaSvjetla:
+    'Jesus, who was given to us in the mystery of the Eucharist!',
 };

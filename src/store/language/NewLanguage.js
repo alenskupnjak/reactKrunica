@@ -1,7 +1,6 @@
 export const newlanguage = {
   id: 'it',
   jezik: 'NewLanguage',
-  pocetak: 'CODE 000 To start',
   naslovna01: 'CODE 001 Hail Mary and Jesus!',
   naslovna02: 'CODE 002 Holy Mary Rosary',
   daniTjedan: [

@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     margin: ' auto',
     fontSize: '1.3rem',
     textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      color: '#093145',
+      fontSize: '2rem',
+    },
   },
 }));
 

@@ -73,6 +73,7 @@ import SlavaOcu from './SlavaOcu';
 import ZrnoDeset from './ZrnoDeset';
 import KrajKrunice from './KrajKrunice';
 import SlikaGospeNaslovna from './SlikaGospeNaslovna';
+import ZrnoText from './ZrnoText';
 
 const useStyles = makeStyles((theme) => ({
   zaglavlje: {
@@ -85,7 +86,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     fontSize: '2rem',
     marginTop: '1rem',
-    // backgroundColor: '#f7f7f7',
     justifyContent: 'space-between',
     backgroundSize: '1.5rem',
     padding: '0.5rem',
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     left: '0',
     top: '0',
     margin: 'auto',
-    height: '100vh',
+    height: '80vh',
     width: '100%',
   },
   sliBaza: {
@@ -156,11 +156,7 @@ function Krunica() {
   return (
     <div className={classes.slikaKrunice}>
       <Container>
-        {zrno !== -1 && (
-          <div className={classes.opisZrnaDesetice}>
-            {aktivnaZemlja[`naslov${zrno}`]}-{zrno}
-          </div>
-        )}
+        <ZrnoText />
         {zrno === -1 && <SlikaGospeNaslovna />}
         {zrno === 0 && <ApostolskoVjerovanje />}
         {zrno === 1 && <OceNas />}

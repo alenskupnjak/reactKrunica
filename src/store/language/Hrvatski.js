@@ -1,7 +1,6 @@
 export const hrvatski = {
   id: 'hr',
   jezik: 'Hrvatski',
-  pocetak: 'Povratak na početak',
   naslovna01: 'Hvaljen Isus i Marija!',
   naslovna02: 'Gospina Krunica',
   daniTjedan: [

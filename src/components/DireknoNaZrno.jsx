@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#FFE100',
     [theme.breakpoints.up('sm')]: {
       backgroundColor: 'transparent',
-      color: '#555',
       border: '1px solid #ece7e7',
     },
   },
