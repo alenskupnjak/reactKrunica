@@ -41,8 +41,6 @@ function ApostolskoVjerovanje() {
     apostolskoVjerovanjeText,
   } = aktivnaZemlja;
 
-  console.log('%c 00 ', 'color:green', aktivnaZemlja);
-
   return (
     <Fragment>
       <div className={classes.opisMolitve}>

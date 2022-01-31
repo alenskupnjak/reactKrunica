@@ -40,8 +40,6 @@ class KrunicaStore {
   zrno = -1;
 
   get aktivnaZemlja() {
-    console.log('xxxxxxxxx', this.trenutniJezik);
-
     const podaciZemlje = head(
       filter(getListaZemalja(), (data) => {
         return data.jezik === this.trenutniJezik;
@@ -217,16 +215,15 @@ class KrunicaStore {
   // Promjena jezika
   promjeniJezik = (e) => {
     this.trenutniJezik = e.target.value;
-    console.log(this.trenutniJezik);
+    // console.log(this.trenutniJezik);
     // pronadi podatke zemlje
-    const podaciZemlje = head(
-      filter(getListaZemalja(), (data) => {
-        return data.jezik === this.trenutniJezik;
-      }),
-    );
+    // const podaciZemlje = head(
+    //   filter(getListaZemalja(), (data) => {
+    //     return data.jezik === this.trenutniJezik;
+    //   }),
+    // );
 
-    this.initPodataka(podaciZemlje);
-    console.log(podaciZemlje);
+    // this.initPodataka(podaciZemlje);
 
     // console.log('Aktivan=', this.aktivniDan);
     this.prijevodOtajstva();
