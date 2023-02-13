@@ -133,7 +133,15 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #ece7e7',
     margin: 'auto',
     sliBaza: {
-      display: 'none',
+      position: 'absolute',
+      display: 'block',
+      marginTop: '0',
+      top: '-15px',
+      left: '25%',
+      width: '400px',
+      height: '300px',
+      translateX: '-50%',
+      opacity: '0.17',
     },
     slikaKrunice: {
       width: '70%',
@@ -222,7 +230,16 @@ function Krunica() {
       </Container>
       <Container>
         <div className={classes.sliBaza}>
-          {zrno === 0 && <img src={zrno00} alt="krunica" height="550" />}
+          {zrno === 0 && (
+            <img
+              src={zrno00}
+              alt="krunica"
+              height="550"
+              onError={(e) => {
+                console.log('%c 00 ', 'color:green', e);
+              }}
+            />
+          )}
           {zrno === 1 && <img src={zrno01} alt="krunica" height="550" />}
           {zrno === 2 && <img src={zrno02} alt="krunica" height="550" />}
           {zrno === 3 && <img src={zrno03} alt="krunica" height="550" />}

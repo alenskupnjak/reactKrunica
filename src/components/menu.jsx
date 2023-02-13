@@ -39,7 +39,7 @@ export default observer(function Menu() {
   } = storeKrunica;
   const classes = useStyles();
 
-  // Tab vrijednost
+  // Tab vrijednost u Browswru
   document.title = naslovna02;
 
   return (

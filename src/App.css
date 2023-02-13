@@ -404,13 +404,4 @@ a:active {
   .row .col-2-of-4 {
     width: 100%;
   }
-
-  .polagano-prikazivanje {
-    top: -100px;
-    /* background-color: yellow; */
-    right: -30px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-  }
 }

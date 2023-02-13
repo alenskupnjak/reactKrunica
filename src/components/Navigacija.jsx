@@ -73,22 +73,29 @@ function Navigacija() {
           <span>{prijevodOtajstvatext} †</span>
         </div>
       )}
-
+      {zrno === 0 && (
+        <ArrowRightAltIcon
+          onClick={() => {
+            naprijed();
+          }}
+          className={'polagano-prikazivanje-nav'}
+        />
+      )}
       <div className={classes.nivo}>
         {zrno !== -1 && (
-          <Avatar
-            src={avatarslika}
-            style={{ borderRadius: 20, color: 'transparent' }}
-            onClick={() => {
-              naprijed();
-            }}
-            className={
-              zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
-            }
-          />
+          <div>
+            <Avatar
+              src={avatarslika}
+              style={{ borderRadius: 20, color: 'transparent' }}
+              onClick={() => {
+                naprijed();
+              }}
+              className={
+                zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
+              }
+            />
+          </div>
         )}
-        <div></div>
-
         {zrno === -1 && (
           <div className={classes.nivo}>
             <ArrowRightAltIcon

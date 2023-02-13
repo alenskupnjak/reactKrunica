@@ -132,8 +132,6 @@ class KrunicaStore {
   // promjeni datum u tjednu
   promjeniDanUTjednu = (e) => {
     this.promjeniAktivniDan(e.target.value);
-
-    console.log(this.aktivniDan);
     if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
       this.promjeniaktivnoOtajstvo('otajstvoRadosna');
     }

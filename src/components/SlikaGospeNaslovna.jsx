@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react';
 import { storeKrunica } from '../store/KrunicaStore';
 
 function SlikaGospeNaslovna() {
@@ -66,4 +67,4 @@ function SlikaGospeNaslovna() {
   );
 }
 
-export default SlikaGospeNaslovna;
+export default observer(SlikaGospeNaslovna);

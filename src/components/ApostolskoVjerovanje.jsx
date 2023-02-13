@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: '1.3',
     },
   },
+  nivo: {
+    position: 'relative',
+    zIndex: '5',
+    margin: '0',
+  },
 }));
 
 function ApostolskoVjerovanje() {

@@ -46,7 +46,7 @@
 }
 @keyframes grow {
   from {
-    transform: translateX(-40%) scale(1);
+    transform: translateX(-40%) scale(0.5);
   }
   to {
     transform: translateX(0%) scale(1.5);
@@ -85,7 +85,7 @@
 
 @keyframes lijevo {
   from {
-    transform: translateX(50%) scale(1);
+    transform: translateX(0%) scale(0.5);
   }
   to {
     transform: translateX(0%) scale(1.5);
@@ -155,6 +155,38 @@
   height: 5px;
   width: 5px;
   border-radius: 50%;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  /* -webkit-animation-name: naslovna; */
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  /* -moz-animation-name: naslovna; */
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: strelica;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+/* Naslovna starna */
+.polagano-prikazivanje-nav {
+  position: absolute;
+  top: -40px;
+  /* background-color: yellow; */
+  right: 10px;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  color: black;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
