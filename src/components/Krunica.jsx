@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     width: '400px',
     height: '300px',
     translateX: '-50%',
-    opacity: '0.17',
+    opacity: '0.10',
     '&:hover': {
       display: 'none',
     },
@@ -141,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
       width: '400px',
       height: '300px',
       translateX: '-50%',
-      opacity: '0.17',
+      opacity: '0.10',
     },
     slikaKrunice: {
       width: '70%',

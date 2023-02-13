@@ -5,6 +5,7 @@ import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
 import SlavaOcu from './SlavaOcu';
+import Amen from './Amen';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
@@ -110,6 +111,7 @@ function Zrno() {
         </div>
         <div>
           <ZdravoMarijaKraj />
+          <Amen />
         </div>
         <div>
           <SlavaOcu />

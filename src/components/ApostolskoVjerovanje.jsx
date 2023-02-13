@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.15rem',
-    lineHeight: '1.05',
+    fontSize: '1.20rem',
+    lineHeight: '1.1',
   },
   [theme.breakpoints.up('sm')]: {
     color: '#555',
