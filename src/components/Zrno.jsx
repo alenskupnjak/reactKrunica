@@ -1,5 +1,5 @@
+import React from 'react';
 import { observer } from 'mobx-react';
-import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import ZdravoMarijaPocetak from './ZdravoMarijaPocetak';
 import ZdravoMarijaKraj from './ZdravoMarijaKraj';
@@ -38,7 +38,7 @@ function Zrno() {
   const { aktivnaZemlja, aktivnoOtajstvo, zrno } = storeKrunica;
 
   return (
-    <Fragment>
+    <React.Fragment>
       <div className={classes.opisMolitve}>
         <ZdravoMarijaPocetak />
         <div>
@@ -136,7 +136,7 @@ function Zrno() {
         <ZdravoMarijaKraj />
         <Amen />
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 

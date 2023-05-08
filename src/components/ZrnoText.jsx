@@ -1,5 +1,5 @@
+import React from 'react';
 import { observer } from 'mobx-react';
-import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
 import { storeKrunica } from '../store/KrunicaStore';
 
@@ -25,7 +25,7 @@ function ZrnoText() {
   const { aktivnaZemlja, zrno } = storeKrunica;
 
   return (
-    <Fragment>
+    <React.Fragment>
       <div className={classes.opisMolitve}>
         {zrno !== -1 && (
           <div>
@@ -35,7 +35,7 @@ function ZrnoText() {
           </div>
         )}
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 

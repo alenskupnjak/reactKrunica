@@ -1,5 +1,5 @@
+import React from 'react';
 import { observer } from 'mobx-react';
-import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import { makeStyles } from '@mui/styles';
 import Amen from './Amen';
@@ -23,7 +23,7 @@ function KrajKrunice() {
   const { aktivnaZemlja } = storeKrunica;
 
   return (
-    <Fragment>
+    <React.Fragment>
       <div className={classes.opisMolitve}>
         <div className="slomiLiniju">{aktivnaZemlja.zdravoKraljice}</div>
         <div>{aktivnaZemlja.uImeOcaSina}</div>
@@ -31,7 +31,7 @@ function KrajKrunice() {
           <Amen />
         </div>
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 

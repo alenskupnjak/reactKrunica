@@ -1,6 +1,6 @@
+import React from 'react';
 import { observer } from 'mobx-react';
 import { makeStyles } from '@mui/styles';
-import { Fragment } from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import Amen from './Amen';
 
@@ -39,14 +39,14 @@ function SlavaOcu() {
       : classes.opisMolitve;
 
   return (
-    <Fragment>
+    <React.Fragment>
       <div className={class10}>
         {aktivnaZemlja.slavaOcu}
         <div>
           <Amen />
         </div>
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 

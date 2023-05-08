@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { grey } from '@mui/material/colors';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 import './index.css';
 import App from './App';
-
-import { grey } from '@mui/material/colors';
-
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
@@ -23,6 +22,8 @@ const theme = createTheme({
     },
   },
 });
+
+//  Verzija 1.0
 
 ReactDOM.render(
   <React.StrictMode>
