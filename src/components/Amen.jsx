@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React from 'react';
 import { storeKrunica } from '../store/KrunicaStore';
 import { makeStyles } from '@mui/styles';
 import { observer } from 'mobx-react';
@@ -18,10 +18,11 @@ const useStyles = makeStyles((theme) => ({
 function Amen() {
   const classes = useStyles();
   const { aktivnaZemlja } = storeKrunica;
+
   return (
-    <Fragment>
+    <React.Fragment>
       <div className={classes.amen}>{aktivnaZemlja.amen}</div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 
