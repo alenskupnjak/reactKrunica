@@ -4,7 +4,7 @@ import { filter, head } from 'lodash';
 import { getListaZemalja, getOtajstva, getZrna } from './KrunicaService';
 
 class KrunicaStore {
-  constructor(fn) {
+  constructor() {
     makeObservable(this, {
       trenutniJezik: observable,
       aktivniDan: observable,
@@ -39,16 +39,15 @@ class KrunicaStore {
   prijevodOtajstvatext = null;
   zrno = -1;
 
+  // povlačenje podataka aktivne zemlje
   get aktivnaZemlja() {
     const podaciZemlje = head(
       filter(getListaZemalja(), (data) => {
         return data.jezik === this.trenutniJezik;
       }),
     );
-
     this.initPodataka(podaciZemlje);
-
-    // console.log(podaciZemlje);
+    console.log(podaciZemlje);
     this.promjeniNazivTjedna(podaciZemlje);
     return podaciZemlje;
   }
@@ -72,8 +71,6 @@ class KrunicaStore {
         text: podaciZemlje[data.id],
       };
     });
-
-    // console.log('this.listaZrnaRadno', this.listaZrnaRadno);
 
     // postavi dan u tjednu i aktivno otajstvo
     const d = new Date();

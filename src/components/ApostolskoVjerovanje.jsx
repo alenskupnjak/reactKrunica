@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useRef, useState, useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import { storeKrunica } from '../store/KrunicaStore';
 import { observer } from 'mobx-react';
@@ -7,20 +7,17 @@ import Amen from './Amen';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     justifyContent: 'space-between',
-    marginTop: '0.5rem',
     textAlign: 'center',
-    fontSize: '1.20rem',
-    lineHeight: '1.1',
+    fontSize: '1.2rem',
   },
   [theme.breakpoints.up('sm')]: {
-    color: '#555',
     border: '1px solid #ece7e7',
     width: '30%',
     margin: 'auto',
     opisZrna: {
       width: '60%',
       marginLeft: '20%',
-      boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.15)',
+      boxShadow: '0 1.5rem 1rem rgba(0, 0, 0, 0.2)',
     },
     opisMolitve: {
       fontSize: '2rem',
@@ -36,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ApostolskoVjerovanje() {
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
   const classes = useStyles();
   const { aktivnaZemlja } = storeKrunica;
   const {
@@ -46,9 +45,17 @@ function ApostolskoVjerovanje() {
     apostolskoVjerovanjeText,
   } = aktivnaZemlja;
 
+  useEffect(() => {
+    setHeight(ref.current.clientHeight);
+  }, []);
+
+  console.log('%c 00 ', 'color:green', window.innerHeight);
+
+  console.log('%c visina ', 'color:green', height);
+
   return (
     <Fragment>
-      <div className={classes.opisMolitve}>
+      <div id="apostolsko" className={classes.opisMolitve} ref={ref}>
         <div>
           <strong>{uImeOcaSina}</strong>
         </div>

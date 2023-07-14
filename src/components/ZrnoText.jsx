@@ -22,18 +22,18 @@ const useStyles = makeStyles((theme) => ({
 
 function ZrnoText() {
   const classes = useStyles();
-  const { aktivnaZemlja, zrno } = storeKrunica;
+  const { aktivnaZemlja, zrno, prijevodOtajstvatext } = storeKrunica;
 
   return (
     <React.Fragment>
       <div className={classes.opisMolitve}>
-        {zrno !== -1 && (
-          <div>
-            {process.env.NODE_ENV === 'development'
-              ? aktivnaZemlja[`naslov${zrno}`] + ' - ' + zrno
-              : aktivnaZemlja[`naslov${zrno}`]}
-          </div>
-        )}
+        {zrno !== -1 ? (
+          zrno === 0 ? (
+            <span>{prijevodOtajstvatext} †</span>
+          ) : (
+            <div>{aktivnaZemlja[`naslov${zrno}`]}</div>
+          )
+        ) : null}
       </div>
     </React.Fragment>
   );

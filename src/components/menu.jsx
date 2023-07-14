@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     color: 'transparent',
     width: '100%',
+    height: '50px',
     margin: '0',
     paddingLeft: '0',
     zIndex: '6',
@@ -39,16 +40,16 @@ export default observer(function Menu() {
   } = storeKrunica;
   const classes = useStyles();
 
-  // Tab vrijednost u Browswru
+  // Tab vrijednost u Browseru
   document.title = naslovna02;
 
   return (
     <div className={classes.menu}>
-      <Toolbar variant="dense">
+      <Toolbar variant="dense" style={{ width: '90%', margin: 'auto' }}>
         <TextField
           fullWidth
-          size="small"
           select
+          size="small"
           inputProps={{ MenuProps: { disableScrollLock: true } }}
           id="jezik"
           value={trenutniJezik}

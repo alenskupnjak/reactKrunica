@@ -16,12 +16,12 @@ const useStyles = makeStyles((theme) => ({
   },
   opisZrna: {
     position: 'absolute',
-    bottom: '0%',
+    top: '5%',
     left: '0',
     display: 'flex',
     width: '100%',
     fontSize: '1.5rem',
-    marginTop: '1.5rem',
+    marginTop: '1.2rem',
     color: '#3C6478',
     justifyContent: 'space-between',
     textAlign: 'center',
@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
 
 function Navigacija() {
   const classes = useStyles();
-  const { zrno, nazad, naprijed, prijevodOtajstvatext } = storeKrunica;
+  const { zrno, nazad, naprijed } = storeKrunica;
 
   return (
     <div className={classes.opisZrna}>
-      {zrno !== -1 && (
+      {
         <div align="left" className={classes.nivo}>
           <Avatar
             src={zgBiskupija}
@@ -66,14 +66,9 @@ function Navigacija() {
             className="pulsiranjeLijevo"
           />
         </div>
-      )}
+      }
 
-      {zrno !== -1 && (
-        <div className={classes.zaglavlje}>
-          <span>{prijevodOtajstvatext} †</span>
-        </div>
-      )}
-      {zrno === 0 && (
+      {(zrno === -1 || zrno === 0) && (
         <ArrowRightAltIcon
           onClick={() => {
             naprijed();
@@ -82,7 +77,7 @@ function Navigacija() {
         />
       )}
       <div className={classes.nivo}>
-        {zrno !== -1 && (
+        {
           <div>
             <Avatar
               src={avatarslika}
@@ -90,13 +85,14 @@ function Navigacija() {
               onClick={() => {
                 naprijed();
               }}
-              className={
-                zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
-              }
+              // className={
+              //   zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
+              // }
+              className={'pulsiranjeDesno'}
             />
           </div>
-        )}
-        {zrno === -1 && (
+        }
+        {
           <div className={classes.nivo}>
             <ArrowRightAltIcon
               onClick={() => {
@@ -105,7 +101,7 @@ function Navigacija() {
               className={'polagano-prikazivanje'}
             />
           </div>
-        )}
+        }
       </div>
     </div>
   );

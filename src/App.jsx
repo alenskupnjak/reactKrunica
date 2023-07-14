@@ -9,13 +9,13 @@ import Krunica from './components/Krunica';
 import Menu from './components/Menu';
 import Navigacija from './components/Navigacija';
 import Povratak from './components/Povratak';
-import DireknoNaZrno from './components/DireknoNaZrno';
+import { storeKrunica } from './store/KrunicaStore';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     position: 'relative',
     height: '100vh',
-    margin: 'auto',
+    margin: '0',
     overflowX: 'hidden',
     overflowy: 'hidden',
     [theme.breakpoints.up('sm')]: {
@@ -24,10 +24,15 @@ const useStyles = makeStyles((theme) => ({
       height: '70vh',
     },
   },
+  zaglavlje: {
+    fontSize: '1rem',
+    marginTop: '1.5rem',
+  },
 }));
 
 function App() {
   const classes = useStyles();
+  const { zrno, prijevodOtajstvatext } = storeKrunica;
   return (
     <Fragment>
       <Grid item xs={12} sm alignItems="center" className={classes.container}>
@@ -35,8 +40,12 @@ function App() {
         <Krunica />
         <Povratak />
         <Navigacija />
+        {zrno !== -1 && zrno !== 0 && (
+          <div className={classes.zaglavlje}>
+            <span>{prijevodOtajstvatext} †</span>
+          </div>
+        )}
       </Grid>
-      {process.env.NODE_ENV === 'development' && <DireknoNaZrno />}
     </Fragment>
   );
 }
