@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     top: '-15px',
     left: '0',
-    opacity: '0.12',
+    opacity: '0.1',
     '&:hover': {
       display: 'none',
     },

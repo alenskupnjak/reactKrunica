@@ -5,24 +5,15 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 const useStyles = makeStyles((theme) => ({
   povratak: {
+    display: 'flex',
     position: 'absolute',
     backgroundColor: '#FFE100',
-    top: '9%',
+    bottom: '20%',
     right: '20px',
-    display: 'flex',
     width: '100%',
     fontSize: '4rem',
     zIndex: '5',
     borderRadius: '50%',
-  },
-  [theme.breakpoints.up('sm')]: {
-    border: '1px solid #ece7e7',
-    width: '30%',
-    margin: 'auto',
-    povratak: {
-      right: '20%',
-      top: '85%',
-    },
   },
 }));
 
