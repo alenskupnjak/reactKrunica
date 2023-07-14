@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { grey } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import './index.css';
 import App from './App';
 
 const theme = createTheme({
@@ -23,7 +22,7 @@ const theme = createTheme({
   },
 });
 
-//  Verzija 1.1
+//  Verzija 2
 
 ReactDOM.render(
   <React.StrictMode>

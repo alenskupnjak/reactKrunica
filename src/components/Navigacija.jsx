@@ -77,7 +77,7 @@ function Navigacija() {
         />
       )}
       <div className={classes.nivo}>
-        {
+        {zrno !== 61 && (
           <div>
             <Avatar
               src={avatarslika}
@@ -85,13 +85,10 @@ function Navigacija() {
               onClick={() => {
                 naprijed();
               }}
-              // className={
-              //   zrno === -1 ? 'pulsiranjeDesnoNaslovna' : 'pulsiranjeDesno'
-              // }
               className={'pulsiranjeDesno'}
             />
           </div>
-        }
+        )}
         {
           <div className={classes.nivo}>
             <ArrowRightAltIcon

@@ -1,6 +1,7 @@
+import { Fragment } from 'react';
 import Grid from '@mui/material/Grid';
 import { observer } from 'mobx-react';
-import { Fragment } from 'react';
+
 import './App.css';
 import './Okretanje.css';
 import './Pulsiranje.css';
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   zaglavlje: {
     fontSize: '1rem',
-    marginTop: '1.5rem',
+    marginTop: '2rem',
   },
 }));
 

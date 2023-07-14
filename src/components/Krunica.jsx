@@ -81,12 +81,10 @@ const useStyles = makeStyles((theme) => ({
   },
   opisZrnaKrunica: {
     display: 'flex',
-    // margin: 'auto',
     fontSize: '2rem',
     marginTop: '1rem',
     justifyContent: 'space-between',
     backgroundSize: '1.5rem',
-    // padding: '0.5rem',
     marginBottom: '2rem',
     textAlign: 'center',
     borderRadius: '0.2rem',
@@ -103,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     top: '-15px',
     left: '0',
-    opacity: '0.1',
+    opacity: '0.05',
     '&:hover': {
       display: 'none',
     },

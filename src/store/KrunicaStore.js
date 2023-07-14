@@ -47,7 +47,6 @@ class KrunicaStore {
       }),
     );
     this.initPodataka(podaciZemlje);
-    console.log(podaciZemlje);
     this.promjeniNazivTjedna(podaciZemlje);
     return podaciZemlje;
   }
@@ -184,7 +183,6 @@ class KrunicaStore {
     for (const [key, value] of Object.entries(this.aktivnaZemlja)) {
       // console.log(`${key}: ${value}`);
       if (key === `text${this.zrno}`) {
-        // console.log('%c evo ga', 'color:red', `text${this.zrno}`);
         podatak = `${value}`;
       }
     }

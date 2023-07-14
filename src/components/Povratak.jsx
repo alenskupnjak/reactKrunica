@@ -6,12 +6,13 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 const useStyles = makeStyles((theme) => ({
   povratak: {
     display: 'flex',
+    height: '100px',
     position: 'absolute',
     backgroundColor: '#FFE100',
-    bottom: '20%',
-    right: '20px',
+    top: '50px',
+    right: '5%',
     width: '100%',
-    fontSize: '4rem',
+    fontSize: '6rem',
     zIndex: '5',
     borderRadius: '50%',
   },
@@ -29,7 +30,7 @@ function Povratak() {
             povratakNaPocetak();
           }}
         >
-          <RestartAltIcon className={classes.povratak} />
+          <RestartAltIcon fontSize="large" className={classes.povratak} />
         </div>
       ) : null}
     </div>
