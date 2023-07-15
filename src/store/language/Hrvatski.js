@@ -20,16 +20,16 @@ export const hrvatski = {
   oceNas: 'Oče naš',
   isuse: 'Isuse',
   oceNasText:
-    ', koji jesi na nebesima, sveti se ime tvoje. Dođi kraljevstvo tvoje. Budi volja tvoja, kako na nebu tako i na zemlji. Kruh naš svagdanji daj nam danas, i otpusti nam duge naše, kako i mi otpuštamo dužnicima našim, i ne uvedi nas u napast, nego izbavi nas od zla.',
+    ', koji jesi na nebesima, sveti se ime Tvoje. Dođi kraljevstvo Tvoje. Budi volja Tvoja, kako na nebu tako i na zemlji. Kruh naš svagdanji daj nam danas. I otpusti nam duge naše, kako i mi otpuštamo dužnicima našim. I ne uvedi nas u napast, nego izbavi nas od zla.',
   amen: 'Amen.',
   slavaOcu:
     'Slava Ocu i Sinu † i Duhu Svetomu. Kako bijaše na početku, tako i sada i vazda i u vijeke vjekova.',
   zdravoMarijaPocetak:
     'Zdravo Marijo, milosti puna, Gospodin s tobom. Blagoslovljena ti među ženama i blagoslovljen plod utrobe tvoje,',
   zdravoMarijaKraj:
-    'Sveta Marijo, Majko Božja, moli za nas grješnike, sada i na času smrti naše.',
+    'Sveta Marijo, Majko Božja, moli za nas grešnike, sada i na času smrti naše.',
   oMojIsuse:
-    'O moj Isuse, oprosti nam naše grijehe, očuvaj nas od paklenog ognja, dovedi u raj sve duše, osobito one, kojima je najpotrebnije tvoje milosrđe.',
+    'O, moj Isuse, oprosti nam naše grijehe, očuvaj nas od paklenog ognja, dovedi u raj sve duše, osobito one, kojima je najpotrebnije tvoje milosrđe.',
   zdravoKraljice:
     'Zdravo Kraljice, Majko milosrđa, živote, slasti i ufanje naše, zdravo!\n K tebi vapijemo prognani sinovi Evini. \n K tebi uzdišemo tugujući i plačući u ovoj suznoj dolini. \n Svrni, dakle, Zagovornice naša one svoje milostive oči na nas te nam poslije ovoga progonstva pokaži Isusa, blagoslovljeni plod utrobe svoje. \n O blaga, o mila, o slatka Djevice Marijo.',
   apostolskoUvod:
