@@ -1,9 +1,10 @@
 import { observer } from 'mobx-react';
-import { makeStyles } from '@mui/styles';
-import { storeKrunica } from '../store/KrunicaStore';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Avatar from '@mui/material/Avatar';
-import avatarslika from '../slike/Papacy.jpg';
+import { makeStyles } from '@mui/styles';
+
+import { storeKrunica } from '../store/KrunicaStore';
+import papinskiGrb from '../slike/Papacy.jpg';
 import zgBiskupija from '../slike/zgBiskupija.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   opisZrna: {
     position: 'absolute',
-    top: '5%',
+    bottom: '80px',
     left: '0',
     display: 'flex',
     width: '100%',
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   [theme.breakpoints.up('sm')]: {
+    backgroundColor: 'red',
     color: '#555',
     border: '1px solid #ece7e7',
     width: '30%',
@@ -67,20 +69,11 @@ function Navigacija() {
           />
         </div>
       }
-
-      {(zrno === -1 || zrno === 0) && (
-        <ArrowRightAltIcon
-          onClick={() => {
-            naprijed();
-          }}
-          className={'polagano-prikazivanje-nav'}
-        />
-      )}
       <div className={classes.nivo}>
         {zrno !== 61 && (
           <div>
             <Avatar
-              src={avatarslika}
+              src={papinskiGrb}
               style={{ borderRadius: 20, color: 'transparent' }}
               onClick={() => {
                 naprijed();
@@ -89,16 +82,14 @@ function Navigacija() {
             />
           </div>
         )}
-        {
-          <div className={classes.nivo}>
-            <ArrowRightAltIcon
-              onClick={() => {
-                naprijed();
-              }}
-              className={'polagano-prikazivanje'}
-            />
-          </div>
-        }
+        {(zrno === -1 || zrno === 0) && (
+          <ArrowRightAltIcon
+            onClick={() => {
+              naprijed();
+            }}
+            className={'prikazivanje-strelice'}
+          />
+        )}
       </div>
     </div>
   );

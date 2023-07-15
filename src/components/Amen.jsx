@@ -5,11 +5,11 @@ import { observer } from 'mobx-react';
 
 const useStyles = makeStyles((theme) => ({
   amen: {
-    margin: ' auto',
-    fontSize: '1.3rem',
+    margin: '0',
+    fontSize: '1.2rem',
     textAlign: 'center',
+    padding: '0',
     [theme.breakpoints.up('sm')]: {
-      fontSize: '2rem',
       color: '#093145',
     },
   },

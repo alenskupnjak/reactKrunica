@@ -22,7 +22,7 @@ const theme = createTheme({
   },
 });
 
-//  Verzija 2
+//  Verzija 3
 
 ReactDOM.render(
   <React.StrictMode>
