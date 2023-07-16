@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   opisZrna: {
     position: 'absolute',
-    bottom: '80px',
+    bottom: '100px',
     left: '0',
     display: 'flex',
     width: '100%',
@@ -58,6 +58,14 @@ function Navigacija() {
 
   return (
     <div className={classes.opisZrna}>
+      {zrno === 0 && (
+        <ArrowRightAltIcon
+          onClick={() => {
+            naprijed();
+          }}
+          className={'strelica-lijevo'}
+        />
+      )}
       {
         <div align="left" className={classes.nivo}>
           <Avatar
@@ -87,7 +95,7 @@ function Navigacija() {
             onClick={() => {
               naprijed();
             }}
-            className={'prikazivanje-strelice'}
+            className={'strelica-desno'}
           />
         )}
       </div>

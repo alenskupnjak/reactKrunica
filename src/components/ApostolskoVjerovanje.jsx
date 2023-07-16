@@ -1,4 +1,4 @@
-import { Fragment, useRef, useState, useEffect } from 'react';
+import { Fragment } from 'react';
 import { makeStyles } from '@mui/styles';
 import { storeKrunica } from '../store/KrunicaStore';
 import { observer } from 'mobx-react';
@@ -33,8 +33,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ApostolskoVjerovanje() {
-  const [height, setHeight] = useState(0);
-  const ref = useRef(null);
   const classes = useStyles();
   const { aktivnaZemlja } = storeKrunica;
   const {
@@ -45,17 +43,9 @@ function ApostolskoVjerovanje() {
     apostolskoVjerovanjeText,
   } = aktivnaZemlja;
 
-  useEffect(() => {
-    setHeight(ref.current.clientHeight);
-  }, []);
-
-  console.log('%c 00 ', 'color:green', window.innerHeight);
-
-  console.log('%c visina ', 'color:green', height);
-
   return (
     <Fragment>
-      <div id="apostolsko" className={classes.opisMolitve} ref={ref}>
+      <div id="apostolsko" className={classes.opisMolitve}>
         <div>
           <strong>{uImeOcaSina}</strong>
         </div>

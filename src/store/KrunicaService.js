@@ -2,8 +2,7 @@ import { hrvatski } from './language/Hrvatski';
 import { english } from './language/Engleski';
 import { newlanguage } from './language/NewLanguage';
 
-//
-// Vrijednosti otajstva
+// otajstva
 export const getOtajstva = () => [
   { id: 'otajstvoRadosna', text: null },
   { id: 'otajstvoSvjetla', text: null },
@@ -11,15 +10,13 @@ export const getOtajstva = () => [
   { id: 'otajstvoSlavno', text: null },
 ];
 
-//
 // lista zemalja
 const listaZemalja = () => [hrvatski, english, newlanguage];
 export const getListaZemalja = () => {
   return listaZemalja();
 };
 
-//
-// Vrijednosti zran za laksi rad
+// Vrijednosti zrna za laksi rad
 export const getZrna = () => [
   { value: -1, label: 'Beginning' },
   { value: 0, label: "The Apostles' Creed" },

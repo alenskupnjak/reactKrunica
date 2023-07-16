@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
     justifyContent: 'space-between',
-    marginTop: '0.5rem',
+    // // marginTop: '0.5rem',
     margin: ' auto',
     fontSize: '1.4rem',
     textAlign: 'center',

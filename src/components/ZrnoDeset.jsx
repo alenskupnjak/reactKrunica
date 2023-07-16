@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   zeleno: {
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
-    fontSize: '1.3rem',
-    textAlign: 'center',
+    fontSize: '1.2rem',
+    // textAlign: 'center',
     color: '#1b921b;',
     [theme.breakpoints.up('sm')]: {
       color: '#093145',

@@ -28,7 +28,7 @@ class KrunicaStore {
     });
   }
 
-  // Inicijalne vrijednosti u app
+  // inicijalne vrijednosti u app
   trenutniJezik = 'English';
   aktivnoOtajstvo = '';
   listaOtajstva = [];
@@ -103,14 +103,13 @@ class KrunicaStore {
         this.promjeniaktivnoOtajstvo('otajstvoRadosna');
         break;
       default:
-        console.log('Dani u tjednu');
     }
 
     this.promjeniListuJezika();
     this.prijevodOtajstva();
   };
 
-  // Povlačimo listu jezika
+  // povlačimo listu jezika
   get getlistaJezika() {
     return this.listaJezika;
   }
@@ -120,7 +119,7 @@ class KrunicaStore {
     return this.nazivdanTjedan;
   }
 
-  // Vracamo na pocetak
+  // vracamo na pocetak
   povratakNaPocetak = () => {
     this.zrno = -1;
   };
@@ -177,11 +176,10 @@ class KrunicaStore {
     });
   }
 
-  //Pronalazi text vrijednost
+  // pronalazi text vrijednost
   get aktivanTekstZrno() {
     let podatak;
     for (const [key, value] of Object.entries(this.aktivnaZemlja)) {
-      // console.log(`${key}: ${value}`);
       if (key === `text${this.zrno}`) {
         podatak = `${value}`;
       }
@@ -197,7 +195,7 @@ class KrunicaStore {
     this.zrno++;
   };
 
-  // Mijenja zrno nazad
+  // mijenja zrno nazad
   nazad = () => {
     if (this.zrno === -1) {
       return;
@@ -205,20 +203,10 @@ class KrunicaStore {
     this.zrno--;
   };
 
-  // Promjena jezika
+  // promjena jezika
   promjeniJezik = (e) => {
     this.trenutniJezik = e.target.value;
-    // console.log(this.trenutniJezik);
-    // pronadi podatke zemlje
-    // const podaciZemlje = head(
-    //   filter(getListaZemalja(), (data) => {
-    //     return data.jezik === this.trenutniJezik;
-    //   }),
-    // );
 
-    // this.initPodataka(podaciZemlje);
-
-    // console.log('Aktivan=', this.aktivniDan);
     this.prijevodOtajstva();
 
     if (this.aktivniDan === 'pon' || this.aktivniDan === 'sub') {
@@ -228,7 +216,6 @@ class KrunicaStore {
       this.aktivnoOtajstvo = 'otajstvoZalosno';
     }
     if (this.aktivniDan === 'sri' || this.aktivniDan === 'ned') {
-      console.log('SLAVNO');
       this.aktivnoOtajstvo = 'otajstvoSlavno';
     }
     if (this.aktivniDan === 'cet') {

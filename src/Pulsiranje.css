@@ -20,8 +20,8 @@
   transition-property: -moz-transform;
   transition-duration: 1s;
   animation-name: pulsiranjeDesno;
-  animation-duration: 3s;
-  animation-iteration-count: 5;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
@@ -44,7 +44,7 @@
 }
 @keyframes pulsiranjeDesno {
   from {
-    transform: translateX(0%) scale(0.3);
+    transform: translateX(0%) scale(0.5);
     opacity: 0;
   }
   to {
@@ -75,15 +75,15 @@
   transition-property: -moz-transform;
   transition-duration: 1s;
   animation-name: pulsiranjeLijevo;
-  animation-duration: 3s;
-  animation-iteration-count: 5;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
 
 @keyframes pulsiranjeLijevo {
   from {
-    transform: translateX(0%) scale(0.3);
+    transform: translateX(0%) scale(0.5);
     opacity: 0;
   }
   to {
@@ -92,35 +92,75 @@
   }
 }
 
-/* Strelica*/
-.prikazivanje-strelice {
+/* Strelica desno */
+.strelica-desno {
   position: absolute;
   top: -7px;
   right: 10px;
   border-radius: 50%;
   color: black;
   -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
+  -webkit-transition-duration: 2s;
   -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-  -webkit-animation-name: strelica;
-  -webkit-animation-duration: 3s;
+  -moz-transition-duration: 2s;
+  -webkit-animation-name: strelica-desno;
+  -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-name: strelica;
+  -moz-animation-name: strelica-desno;
   -moz-animation-duration: 2s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
   transition-property: -moz-transform;
   transition-duration: 1s;
-  animation-name: strelica;
-  animation-duration: 3s;
+  animation-name: strelica-desno;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
 
-@keyframes strelica {
+@keyframes strelica-desno {
+  from {
+    transform: translateX(0%) scale(2);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Strelica lijevo */
+.strelica-lijevo {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  border-radius: 50%;
+  rotate: 180deg;
+  color: black;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: strelica-lijevo;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: strelica-lijevo;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  transition-property: -moz-transform;
+  transition-duration: 1s;
+  animation-name: strelica-lijevo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes strelica-lijevo {
   from {
     transform: translateX(0%) scale(2);
     opacity: 1;
