@@ -1,11 +1,3 @@
-/* karta koja se okrece */
-
-.card {
-  /* position: relative; */
-  /* perspective: 150rem; */
-  /* height: 56rem; */
-}
-
 .card__side {
   width: 90%;
   position: absolute;
@@ -18,7 +10,6 @@
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem black;
-  animation: okrenistranicu 4s forwards ease-in;
 }
 
 .card__side--front {
@@ -41,7 +32,7 @@
 }
 
 .card__heading-span {
-  padding: 1rem 1rem;
+  padding: 0.3rem 0.3rem;
 }
 
 .card__heading-span--1 {
@@ -129,13 +120,4 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-@keyframes prikaziSliku {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }

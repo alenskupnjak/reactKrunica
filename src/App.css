@@ -13,12 +13,12 @@ body {
 
 .text-srednji {
   font-size: 1.2rem;
-  padding: 0.7rem;
-  z-index: 15;
+  padding: 0.3rem;
+  /* z-index: 15; */
   color: #263238 !important;
 }
 
-a:visited {
+/* a:visited {
   text-decoration: none;
   color: #c2280c;
   opacity: 1;
@@ -41,7 +41,7 @@ a:hover {
 a:active {
   text-decoration: none;
   color: #c2280c;
-}
+} */
 
 /* Mobile - aktivira se na sve manje od 768 px*/
 @media only screen and (max-width: 768px) {
@@ -49,13 +49,13 @@ a:active {
     display: none;
   }
 
-  .row .col-1-of-2 {
+  /* .row .col-1-of-2 {
     width: 100%;
-  }
+  } */
 
-  .col-1-of-2 {
+  /* .col-1-of-2 {
     width: 100%;
-  }
+  } */
 
   .card__picture {
     width: 100%;
@@ -74,7 +74,7 @@ a:active {
     transform: translateX(-50%);
   }
 
-  .row .col-2-of-4 {
+  /* .row .col-2-of-4 {
     width: 100%;
-  }
+  } */
 }

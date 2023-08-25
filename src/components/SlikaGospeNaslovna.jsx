@@ -34,31 +34,31 @@ function SlikaGospeNaslovna() {
         <div className="card__cta">
           <div className="card__price-box">
             <div className="text-srednji">
-              {daniTjedan[0].label}-{otajstvoRadosna}
+              {daniTjedan[0].label}- {otajstvoRadosna}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[1].label}-{otajstvoZalosno}
+              {daniTjedan[1].label}- {otajstvoZalosno}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[2].label}-{otajstvoSlavno}
+              {daniTjedan[2].label}- {otajstvoSlavno}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[3].label}-{otajstvoSvjetla}
+              {daniTjedan[3].label}- {otajstvoSvjetla}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[4].label}-{otajstvoZalosno}
+              {daniTjedan[4].label}- {otajstvoZalosno}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[5].label}-{otajstvoRadosna}
+              {daniTjedan[5].label}- {otajstvoRadosna}
             </div>
             <div className="text-srednji">
               {' '}
-              {daniTjedan[6].label}-{otajstvoSlavno}
+              {daniTjedan[6].label}- {otajstvoSlavno}
             </div>
           </div>
         </div>
