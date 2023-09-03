@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "mv build rosary",
+    "postbuild": "mv build tempRosary",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

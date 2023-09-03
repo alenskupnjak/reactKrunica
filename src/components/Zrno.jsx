@@ -8,7 +8,6 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   opisMolitve: {
-    animation: `$pomakDesno 1000ms ${theme.transitions.easing.easeInOut}`,
     justifyContent: 'space-between',
     marginTop: '0.5rem',
     margin: ' auto',
@@ -25,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
   },
+  zeleno: {
+    color: '#1b921b',
+    animation: `$pomakDesno 1000ms ${theme.transitions.easing.easeInOut}`,
+    '&:hover': {
+      color: 'green',
+    },
+  },
   '@keyframes pomakDesno': {
     '0%': {
       opacity: 0,
@@ -33,12 +39,6 @@ const useStyles = makeStyles((theme) => ({
     '100%': {
       opacity: 1,
       transform: 'translateX(0)',
-    },
-  },
-  zeleno: {
-    color: '#1b921b',
-    '&:hover': {
-      color: 'pink',
     },
   },
 }));
