@@ -2,7 +2,7 @@ export const english = {
   id: 'en',
   jezik: 'English',
   naslovna01: 'Hail Mary and Jesus!',
-  naslovna02: 'Holy Mary Rosary',
+  naslovna02: 'The Holy Rosary',
   daniTjedan: [
     { value: 'pon', label: 'Monday' },
     { value: 'uto', label: 'Tuesday' },

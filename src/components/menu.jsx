@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#e9e9e9',
       color: '#555',
       border: '1px solid #ece7e7',
-      width: '40%',
+      width: '68%',
       margin: 'auto',
     },
   },

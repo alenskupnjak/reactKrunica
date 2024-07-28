@@ -99,12 +99,13 @@ const useStyles = makeStyles((theme) => ({
   sliBaza: {
     position: 'absolute',
     display: 'block',
+    width: '300px',
     top: '-15px',
     left: '0',
     opacity: '0.05',
-    '&:hover': {
-      display: 'none',
-    },
+    // '&:hover': {
+    //   display: 'none',
+    // },
   },
   slomiLiniju: {
     whiteSpace: 'pre-line',
@@ -125,10 +126,17 @@ const useStyles = makeStyles((theme) => ({
       position: 'absolute',
       display: 'block',
       top: '-10px',
+      left: '-50%',
+      width: '300px',
+      height: '400px',
       opacity: '0.10',
     },
     slikaKrunice: {
-      width: '70%',
+      position: 'relative',
+      left: '31%',
+      top: '0',
+      height: '100vh',
+      width: '40%',
     },
     opisZrnaKrunica: {
       padding: '3rem',
@@ -143,8 +151,8 @@ const useStyles = makeStyles((theme) => ({
 function Krunica() {
   const classes = useStyles();
   const { zrno } = storeKrunica;
-  var sirina = window.innerWidth;
-  var visina = window.innerHeight * 0.8;
+  // var sirina = window.innerWidth;
+  // var visina = window.innerHeight * 0.8;
 
   return (
     <div className={classes.slikaKrunice}>
@@ -216,189 +224,67 @@ function Krunica() {
       </Container>
       <Container>
         <div className={classes.sliBaza}>
-          {zrno === 1 && (
-            <img src={zrno01} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 2 && (
-            <img src={zrno02} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 3 && (
-            <img src={zrno03} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 4 && (
-            <img src={zrno04} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 5 && (
-            <img src={zrno05} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 6 && (
-            <img src={zrno06} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 7 && (
-            <img src={zrno07} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 8 && (
-            <img src={zrno08} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 9 && (
-            <img src={zrno09} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 10 && (
-            <img src={zrno10} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 11 && (
-            <img src={zrno11} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 12 && (
-            <img src={zrno12} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 13 && (
-            <img src={zrno13} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 14 && (
-            <img src={zrno14} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 15 && (
-            <img src={zrno15} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 16 && (
-            <img src={zrno16} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 17 && (
-            <img src={zrno17} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 18 && (
-            <img src={zrno18} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 19 && (
-            <img src={zrno19} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 20 && (
-            <img src={zrno20} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 21 && (
-            <img src={zrno21} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 22 && (
-            <img src={zrno22} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 23 && (
-            <img src={zrno23} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 24 && (
-            <img src={zrno24} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 25 && (
-            <img src={zrno25} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 26 && (
-            <img src={zrno26} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 27 && (
-            <img src={zrno27} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 28 && (
-            <img src={zrno28} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 29 && (
-            <img src={zrno29} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 30 && (
-            <img src={zrno30} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 31 && (
-            <img src={zrno31} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 32 && (
-            <img src={zrno32} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 33 && (
-            <img src={zrno33} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 34 && (
-            <img src={zrno34} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 35 && (
-            <img src={zrno35} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 36 && (
-            <img src={zrno36} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 37 && (
-            <img src={zrno37} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 38 && (
-            <img src={zrno38} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 39 && (
-            <img src={zrno39} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 40 && (
-            <img src={zrno40} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 41 && (
-            <img src={zrno41} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 42 && (
-            <img src={zrno42} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 43 && (
-            <img src={zrno43} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 44 && (
-            <img src={zrno44} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 45 && (
-            <img src={zrno45} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 46 && (
-            <img src={zrno46} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 47 && (
-            <img src={zrno47} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 48 && (
-            <img src={zrno48} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 49 && (
-            <img src={zrno49} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 50 && (
-            <img src={zrno50} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 51 && (
-            <img src={zrno51} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 52 && (
-            <img src={zrno52} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 53 && (
-            <img src={zrno53} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 54 && (
-            <img src={zrno54} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 55 && (
-            <img src={zrno55} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 56 && (
-            <img src={zrno56} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 57 && (
-            <img src={zrno57} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 58 && (
-            <img src={zrno58} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 59 && (
-            <img src={zrno59} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 60 && (
-            <img src={zrno60} alt="rosary" height={visina} width={sirina} />
-          )}
-          {zrno === 61 && (
-            <img src={zrno61} alt="rosary" height={visina} width={sirina} />
-          )}
+          {zrno === 1 && <img src={zrno01} alt="rosary" />}
+          {zrno === 2 && <img src={zrno02} alt="rosary" />}
+          {zrno === 3 && <img src={zrno03} alt="rosary" />}
+          {zrno === 4 && <img src={zrno04} alt="rosary" />}
+          {zrno === 5 && <img src={zrno05} alt="rosary" />}
+          {zrno === 6 && <img src={zrno06} alt="rosary" />}
+          {zrno === 7 && <img src={zrno07} alt="rosary" />}
+          {zrno === 8 && <img src={zrno08} alt="rosary" />}
+          {zrno === 9 && <img src={zrno09} alt="rosary" />}
+          {zrno === 10 && <img src={zrno10} alt="rosary" />}
+          {zrno === 11 && <img src={zrno11} alt="rosary" />}
+          {zrno === 12 && <img src={zrno12} alt="rosary" />}
+          {zrno === 13 && <img src={zrno13} alt="rosary" />}
+          {zrno === 14 && <img src={zrno14} alt="rosary" />}
+          {zrno === 15 && <img src={zrno15} alt="rosary" />}
+          {zrno === 16 && <img src={zrno16} alt="rosary" />}
+          {zrno === 17 && <img src={zrno17} alt="rosary" />}
+          {zrno === 18 && <img src={zrno18} alt="rosary" />}
+          {zrno === 19 && <img src={zrno19} alt="rosary" />}
+          {zrno === 20 && <img src={zrno20} alt="rosary" />}
+          {zrno === 21 && <img src={zrno21} alt="rosary" />}
+          {zrno === 22 && <img src={zrno22} alt="rosary" />}
+          {zrno === 23 && <img src={zrno23} alt="rosary" />}
+          {zrno === 24 && <img src={zrno24} alt="rosary" />}
+          {zrno === 25 && <img src={zrno25} alt="rosary" />}
+          {zrno === 26 && <img src={zrno26} alt="rosary" />}
+          {zrno === 27 && <img src={zrno27} alt="rosary" />}
+          {zrno === 28 && <img src={zrno28} alt="rosary" />}
+          {zrno === 29 && <img src={zrno29} alt="rosary" />}
+          {zrno === 30 && <img src={zrno30} alt="rosary" />}
+          {zrno === 31 && <img src={zrno31} alt="rosary" />}
+          {zrno === 32 && <img src={zrno32} alt="rosary" />}
+          {zrno === 33 && <img src={zrno33} alt="rosary" />}
+          {zrno === 34 && <img src={zrno34} alt="rosary" />}
+          {zrno === 35 && <img src={zrno35} alt="rosary" />}
+          {zrno === 36 && <img src={zrno36} alt="rosary" />}
+          {zrno === 37 && <img src={zrno37} alt="rosary" />}
+          {zrno === 38 && <img src={zrno38} alt="rosary" />}
+          {zrno === 39 && <img src={zrno39} alt="rosary" />}
+          {zrno === 40 && <img src={zrno40} alt="rosary" />}
+          {zrno === 41 && <img src={zrno41} alt="rosary" />}
+          {zrno === 42 && <img src={zrno42} alt="rosary" />}
+          {zrno === 43 && <img src={zrno43} alt="rosary" />}
+          {zrno === 44 && <img src={zrno44} alt="rosary" />}
+          {zrno === 45 && <img src={zrno45} alt="rosary" />}
+          {zrno === 46 && <img src={zrno46} alt="rosary" />}
+          {zrno === 47 && <img src={zrno47} alt="rosary" />}
+          {zrno === 48 && <img src={zrno48} alt="rosary" />}
+          {zrno === 49 && <img src={zrno49} alt="rosary" />}
+          {zrno === 50 && <img src={zrno50} alt="rosary" />}
+          {zrno === 51 && <img src={zrno51} alt="rosary" />}
+          {zrno === 52 && <img src={zrno52} alt="rosary" />}
+          {zrno === 53 && <img src={zrno53} alt="rosary" />}
+          {zrno === 54 && <img src={zrno54} alt="rosary" />}
+          {zrno === 55 && <img src={zrno55} alt="rosary" />}
+          {zrno === 56 && <img src={zrno56} alt="rosary" />}
+          {zrno === 57 && <img src={zrno57} alt="rosary" />}
+          {zrno === 58 && <img src={zrno58} alt="rosary" />}
+          {zrno === 59 && <img src={zrno59} alt="rosary" />}
+          {zrno === 60 && <img src={zrno60} alt="rosary" />}
+          {zrno === 61 && <img src={zrno61} alt="rosary" />}
         </div>
       </Container>
     </div>

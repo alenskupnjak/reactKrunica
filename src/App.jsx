@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       backgroundColor: '#e9e9e9',
       border: '1px solid #ece7e7',
-      height: '70vh',
+      height: '100vh',
     },
   },
   zaglavlje: {
