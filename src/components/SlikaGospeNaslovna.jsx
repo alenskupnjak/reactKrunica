@@ -61,6 +61,8 @@ function SlikaGospeNaslovna() {
               {daniTjedan[6].label}- {otajstvoSlavno}
             </div>
           </div>
+          <div className="autor">alenskupnjak@yahoo.com</div>
+          <div>v1.3</div>
         </div>
       </div>
     </div>
