@@ -22,8 +22,6 @@ const theme = createTheme({
   },
 });
 
-//  Verzija 3
-
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

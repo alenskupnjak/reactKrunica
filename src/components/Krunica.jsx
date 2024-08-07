@@ -219,67 +219,189 @@ function Krunica() {
       </Container>
       <Container>
         <div className={classes.sliBaza}>
-          {zrno === 1 && <img src={zrno01} height={visina} width={sirina} />}
-          {zrno === 2 && <img src={zrno02} height={visina} width={sirina} />}
-          {zrno === 3 && <img src={zrno03} height={visina} width={sirina} />}
-          {zrno === 4 && <img src={zrno04} height={visina} width={sirina} />}
-          {zrno === 5 && <img src={zrno05} height={visina} width={sirina} />}
-          {zrno === 6 && <img src={zrno06} height={visina} width={sirina} />}
-          {zrno === 7 && <img src={zrno07} height={visina} width={sirina} />}
-          {zrno === 8 && <img src={zrno08} height={visina} width={sirina} />}
-          {zrno === 9 && <img src={zrno09} height={visina} width={sirina} />}
-          {zrno === 10 && <img src={zrno10} height={visina} width={sirina} />}
-          {zrno === 11 && <img src={zrno11} height={visina} width={sirina} />}
-          {zrno === 12 && <img src={zrno12} height={visina} width={sirina} />}
-          {zrno === 13 && <img src={zrno13} height={visina} width={sirina} />}
-          {zrno === 14 && <img src={zrno14} height={visina} width={sirina} />}
-          {zrno === 15 && <img src={zrno15} height={visina} width={sirina} />}
-          {zrno === 16 && <img src={zrno16} height={visina} width={sirina} />}
-          {zrno === 17 && <img src={zrno17} height={visina} width={sirina} />}
-          {zrno === 18 && <img src={zrno18} height={visina} width={sirina} />}
-          {zrno === 19 && <img src={zrno19} height={visina} width={sirina} />}
-          {zrno === 20 && <img src={zrno20} height={visina} width={sirina} />}
-          {zrno === 21 && <img src={zrno21} height={visina} width={sirina} />}
-          {zrno === 22 && <img src={zrno22} height={visina} width={sirina} />}
-          {zrno === 23 && <img src={zrno23} height={visina} width={sirina} />}
-          {zrno === 24 && <img src={zrno24} height={visina} width={sirina} />}
-          {zrno === 25 && <img src={zrno25} height={visina} width={sirina} />}
-          {zrno === 26 && <img src={zrno26} height={visina} width={sirina} />}
-          {zrno === 27 && <img src={zrno27} height={visina} width={sirina} />}
-          {zrno === 28 && <img src={zrno28} height={visina} width={sirina} />}
-          {zrno === 29 && <img src={zrno29} height={visina} width={sirina} />}
-          {zrno === 30 && <img src={zrno30} height={visina} width={sirina} />}
-          {zrno === 31 && <img src={zrno31} height={visina} width={sirina} />}
-          {zrno === 32 && <img src={zrno32} height={visina} width={sirina} />}
-          {zrno === 33 && <img src={zrno33} height={visina} width={sirina} />}
-          {zrno === 34 && <img src={zrno34} height={visina} width={sirina} />}
-          {zrno === 35 && <img src={zrno35} height={visina} width={sirina} />}
-          {zrno === 36 && <img src={zrno36} height={visina} width={sirina} />}
-          {zrno === 37 && <img src={zrno37} height={visina} width={sirina} />}
-          {zrno === 38 && <img src={zrno38} height={visina} width={sirina} />}
-          {zrno === 39 && <img src={zrno39} height={visina} width={sirina} />}
-          {zrno === 40 && <img src={zrno40} height={visina} width={sirina} />}
-          {zrno === 41 && <img src={zrno41} height={visina} width={sirina} />}
-          {zrno === 42 && <img src={zrno42} height={visina} width={sirina} />}
-          {zrno === 43 && <img src={zrno43} height={visina} width={sirina} />}
-          {zrno === 44 && <img src={zrno44} height={visina} width={sirina} />}
-          {zrno === 45 && <img src={zrno45} height={visina} width={sirina} />}
-          {zrno === 46 && <img src={zrno46} height={visina} width={sirina} />}
-          {zrno === 47 && <img src={zrno47} height={visina} width={sirina} />}
-          {zrno === 48 && <img src={zrno48} height={visina} width={sirina} />}
-          {zrno === 49 && <img src={zrno49} height={visina} width={sirina} />}
-          {zrno === 50 && <img src={zrno50} height={visina} width={sirina} />}
-          {zrno === 51 && <img src={zrno51} height={visina} width={sirina} />}
-          {zrno === 52 && <img src={zrno52} height={visina} width={sirina} />}
-          {zrno === 53 && <img src={zrno53} height={visina} width={sirina} />}
-          {zrno === 54 && <img src={zrno54} height={visina} width={sirina} />}
-          {zrno === 55 && <img src={zrno55} height={visina} width={sirina} />}
-          {zrno === 56 && <img src={zrno56} height={visina} width={sirina} />}
-          {zrno === 57 && <img src={zrno57} height={visina} width={sirina} />}
-          {zrno === 58 && <img src={zrno58} height={visina} width={sirina} />}
-          {zrno === 59 && <img src={zrno59} height={visina} width={sirina} />}
-          {zrno === 60 && <img src={zrno60} height={visina} width={sirina} />}
-          {zrno === 61 && <img src={zrno61} height={visina} width={sirina} />}
+          {zrno === 1 && (
+            <img src={zrno01} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 2 && (
+            <img src={zrno02} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 3 && (
+            <img src={zrno03} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 4 && (
+            <img src={zrno04} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 5 && (
+            <img src={zrno05} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 6 && (
+            <img src={zrno06} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 7 && (
+            <img src={zrno07} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 8 && (
+            <img src={zrno08} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 9 && (
+            <img src={zrno09} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 10 && (
+            <img src={zrno10} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 11 && (
+            <img src={zrno11} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 12 && (
+            <img src={zrno12} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 13 && (
+            <img src={zrno13} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 14 && (
+            <img src={zrno14} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 15 && (
+            <img src={zrno15} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 16 && (
+            <img src={zrno16} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 17 && (
+            <img src={zrno17} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 18 && (
+            <img src={zrno18} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 19 && (
+            <img src={zrno19} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 20 && (
+            <img src={zrno20} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 21 && (
+            <img src={zrno21} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 22 && (
+            <img src={zrno22} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 23 && (
+            <img src={zrno23} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 24 && (
+            <img src={zrno24} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 25 && (
+            <img src={zrno25} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 26 && (
+            <img src={zrno26} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 27 && (
+            <img src={zrno27} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 28 && (
+            <img src={zrno28} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 29 && (
+            <img src={zrno29} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 30 && (
+            <img src={zrno30} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 31 && (
+            <img src={zrno31} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 32 && (
+            <img src={zrno32} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 33 && (
+            <img src={zrno33} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 34 && (
+            <img src={zrno34} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 35 && (
+            <img src={zrno35} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 36 && (
+            <img src={zrno36} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 37 && (
+            <img src={zrno37} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 38 && (
+            <img src={zrno38} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 39 && (
+            <img src={zrno39} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 40 && (
+            <img src={zrno40} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 41 && (
+            <img src={zrno41} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 42 && (
+            <img src={zrno42} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 43 && (
+            <img src={zrno43} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 44 && (
+            <img src={zrno44} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 45 && (
+            <img src={zrno45} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 46 && (
+            <img src={zrno46} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 47 && (
+            <img src={zrno47} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 48 && (
+            <img src={zrno48} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 49 && (
+            <img src={zrno49} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 50 && (
+            <img src={zrno50} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 51 && (
+            <img src={zrno51} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 52 && (
+            <img src={zrno52} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 53 && (
+            <img src={zrno53} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 54 && (
+            <img src={zrno54} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 55 && (
+            <img src={zrno55} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 56 && (
+            <img src={zrno56} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 57 && (
+            <img src={zrno57} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 58 && (
+            <img src={zrno58} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 59 && (
+            <img src={zrno59} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 60 && (
+            <img src={zrno60} height={visina} width={sirina} alt="Krunica" />
+          )}
+          {zrno === 61 && (
+            <img src={zrno61} height={visina} width={sirina} alt="Krunica" />
+          )}
         </div>
       </Container>
     </div>
