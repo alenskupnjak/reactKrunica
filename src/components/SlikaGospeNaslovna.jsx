@@ -62,7 +62,7 @@ function SlikaGospeNaslovna() {
             </div>
           </div>
           <div className="autor">alenskupnjak@yahoo.com</div>
-          <div>v1.4</div>
+          <div>v1.5</div>
         </div>
       </div>
     </div>
